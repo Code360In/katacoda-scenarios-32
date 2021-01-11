@@ -4,8 +4,8 @@ Execute
 
 
 <br/>
-Access the localhost at port 20080. (Use "docker" to replace localhost in Katacoda)
-`curl docker:20080`{{execute}}
+Access the localhost at port 20080. 
+`curl localhost:20080`{{execute "T2"} }
 
 
 Visit localhost:20080 in browser
