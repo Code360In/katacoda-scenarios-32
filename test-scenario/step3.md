@@ -5,12 +5,12 @@ Execute
 
 <br/>
 Access the localhost at port 20080. 
-`curl localhost:20080`{{execute "T2"} }
+`curl localhost:20080`{{execute "T2"}}
 
 
 Visit localhost:20080 in browser
 
-</br>
-Render port 20080:
 https://[[HOST_SUBDOMAIN]]-20080-[[KATACODA_HOST]].environments.katacoda.com/
-Stop the server with Ctrl+C
+
+Stop the server with Ctrl+C.
+
