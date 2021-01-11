@@ -7,9 +7,9 @@ The following pull command fetches the busybox image from the Docker registry an
 Run the ubuntu docker image:	<br/>
 `docker run ubuntu:18.04`{{execute}}
 
+The container will stop immediately.
 
-The container will stop immediately
-Show running containers:
+Show the running containers:
 `docker ps`{{execute}}
 
 
@@ -28,7 +28,6 @@ In the docker container, type some commands, e.g.<br/>
 Exit the docker container.
 
 `exit`{{execute}}
-
 
 
 You may append a command to execute when the container starts:
