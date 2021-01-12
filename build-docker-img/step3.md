@@ -13,8 +13,8 @@ def add():
 
 Wait until the above updates are saved. 
 
-Execute:
-`docker cp app.py app:/app`{{execute}}
+In the second terminal, execute:
+`docker cp app.py app:/app`{{execute T2}}
 
 
 Test the application in browser at 

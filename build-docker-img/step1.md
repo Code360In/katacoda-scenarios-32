@@ -49,5 +49,7 @@ Flask
 </pre>
 
 
+Wait until the above updates are saved. 
+
 Build docker image:
 `docker build -t mywebapp .`{{execute}}
