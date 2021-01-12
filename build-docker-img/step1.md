@@ -1,3 +1,7 @@
+<h1>Building docker image for a python flask application</h1>
+
+Define the following python flask application app.py:
+
 <pre class="file" data-filename="app.py" data-target="replace">
 import os
 import socket
@@ -18,6 +22,7 @@ if __name__ == "__main__":
 </pre>
 
 
+Create a file named "DockerFile" as follows:
 
 <pre class="file" data-filename="Dockerfile" data-target="replace">
 # Use an official Python runtime as a parent image
@@ -36,7 +41,24 @@ RUN pip install -r requirements.txt
 CMD ["python", "app.py"]
 </pre>
 
-<pre class="file" data-filename="Requirement.txt" data-target="replace">
+Define the file "requirements.txt" as follows.
+<pre class="file" data-filename="requirements.txt" data-target="replace">
 Flask
 </pre>
+
+
+Build docker image:
+`docker build -t mywebapp .`{{execute}}
+
+Run the image as a docker container.
+`docker run -p 80:8080 mywebapp``{{execute}}
+Note that the -p switch exposes port 80 externally in the host and map to port 8080 inside the container.
+
+Verify that the flask app can be accessed localhost at 80.
+`curl localhost:80`{{execute}}}
+
+Test the application in browser at http://localhost
+
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
+Stop the server with Ctrl+C.
 

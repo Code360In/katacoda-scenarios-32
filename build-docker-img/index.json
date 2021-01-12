@@ -54,7 +54,7 @@
     }
   },
   "files": [
-        "app.py", "Dockerfile","Requirement.txt"
+        "app.py", "Dockerfile","requirements.txt"
     ],
   "environment": {
     "uilayout": "editor-terminal"
