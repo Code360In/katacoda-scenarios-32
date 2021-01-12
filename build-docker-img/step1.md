@@ -28,7 +28,7 @@ Create a file named "DockerFile" as follows:
 
 <pre class="file" data-filename="Dockerfile" data-target="replace">
 # Use an official Python runtime as a parent image
-FROM python:3
+FROM python:slim
 
 # Set the working directory to /app
 WORKDIR /app
