@@ -12,7 +12,7 @@ Check the downloaded image.
 
 Start a new Docker container for a MySQL Server.
 
-`docker run --name=mysql1 -e MYSQL_ROOT_PASSWORD="12345"  -p 33306:3306 -d mysql/mysql-server:8.0`{{execute}}
+`docker run --name=mysql -e MYSQL_ROOT_PASSWORD="12345" -p 33306:3306 -d mysql/mysql-server:8.0`{{execute}}
 * -d option used in the docker run command above makes the container run in the background.
 * -e MYSQL_ROOT_PASSWORD="12345" specifies initial root user password to be "12345"
 
@@ -29,11 +29,3 @@ To connect to the MySQL Server, use the docker exec -it command to start a mysql
 
 
 
-
-Type exit to exit mysql shell.
-
-`exit`{{execute}}
-
-
-Stop the running instance of MySQL.
-`docker rm -f mysql`{{execute}}
