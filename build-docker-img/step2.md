@@ -5,11 +5,17 @@ Run the image as a docker container. Note that the -p switch exposes port 80 ext
 `docker run -p 80:8080 mywebapp`{{execute}}
 
 
-Verify that the flask app can be accessed localhost at 80.
-`curl localhost:80`{{execute}}}
+Verify that the flask app can be accessed localhost at port 80.
 
-Test the application in browser at http://localhost
+`curl localhost:80/`{{execute T2}}}
+`curl localhost:80/about`{{execute T2}}}
+
+Test the application in browser at 
 
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
-Stop the server with Ctrl+C.
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/about
+
+
+Stop the python flask server with Ctrl+C.
+
 
