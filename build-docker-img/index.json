@@ -53,6 +53,9 @@
       "text": "finish.md"
     }
   },
+  "files": [
+        "app.py", "Dockerfile"
+    ],
   "environment": {
     "uilayout": "editor-terminal"
   },
