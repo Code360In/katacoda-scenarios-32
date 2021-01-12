@@ -11,7 +11,7 @@ Verify that the flask app can be accessed localhost at port 80.
 
 `curl localhost:80/about`{{execute T2}}
 
-Test the application in browser at 
+Test the application in browser at:
 
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
 
