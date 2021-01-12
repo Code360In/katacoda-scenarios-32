@@ -1,5 +1,3 @@
-<h1>Users and Privileges</h1>
-
 Connect as **system** user in SALESPDB using sqlplus.
 
 `rlwrap sqlplus system/12345@localhost/SALESPDB`{{execute T1}}

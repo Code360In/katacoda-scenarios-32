@@ -1,5 +1,3 @@
-<h1>Launching Oracle 18cXE Docker Container</h1>
-
 Pull the docker image from Docker Hub.
 
 `docker pull cswclui/oracle18cxe`{{execute}}
@@ -24,7 +22,8 @@ After the container has started, run the following commands in the command promp
 `docker ps`{{execute}}
 
 
-Launch a shell in the container. 
+Launch a shell in the Oracle18C XE container. 
+
 `docker exec -it oracle-xe /bin/sh`{{execute}}
 
 

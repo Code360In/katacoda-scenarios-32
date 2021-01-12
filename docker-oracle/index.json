@@ -6,44 +6,24 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Launching Oracle 18cXE Docker Container",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Unlock HR account",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Creating Pluggable Database",
         "text": "step3.md"
       },
       {
-        "title": "Step 4",
+        "title": "Users and Privileges",
         "text": "step4.md"
       },
       {
-        "title": "Step 5",
+        "title": "Exercise",
         "text": "step5.md"
-      },
-      {
-        "title": "Step 6",
-        "text": "step6.md"
-      },
-      {
-        "title": "Step 7",
-        "text": "step7.md"
-      },
-      {
-        "title": "Step 8",
-        "text": "step8.md"
-      },
-      {
-        "title": "Step 9",
-        "text": "step9.md"
-      },
-      {
-        "title": "Step 10",
-        "text": "step10.md"
       }
     ],
     "intro": {

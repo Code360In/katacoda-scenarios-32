@@ -1,5 +1,3 @@
-<h1>Exerise</h1>
-
 <h2>Preparation</h2>
 Launch a shell in the Oracle18C XE container. 
 
@@ -43,6 +41,7 @@ Can u2 grant the select privilege to others?  Explain your answer.
  
  
 b) The owner of an object can grant it to another user by specifying the **WITH GRANT OPTION** clause in the GRANT statement. The new grantee can then grant the same level of access to other users or roles.
+
 As user u1, grant u2 the SELECT privilege WITH GRANT option.
 
 Review the object privilege of the granted object privileges.
