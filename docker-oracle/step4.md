@@ -7,7 +7,7 @@ Connect as **system** user in SALESPDB using sqlplus.
 
 Check the current PDB: 
 
-`show conn`{{execute T1}}
+`show con_name`{{execute T1}}
 
 
 As **system** user, create user mickey with password mickey in SALESPDB as the default tablespace.
@@ -16,8 +16,9 @@ As **system** user, create user mickey with password mickey in SALESPDB as the d
 
 
 Open another terminal. In terminal 2, login as mickey.
-
-`sqlplus mickey/mickey@localhost:51521/SALESPDB`{{execute T2}}
+`docker exec -it oracle-xe /bin/sh`{{execute T2}
+`su oracle`{{execute T2}
+`sqlplus mickey/mickey@localhost/SALESPDB`{{execute T2}}
 
 The mickey account currently doesn't have "Create Session" Privilege.
 
@@ -34,7 +35,7 @@ Show the granted system privileges by querying the DBA_SYS_PRIVS view.
 
 In terminal 2, login as mickey again. The login should be successful.
 
-`sqlplus mickey/mickey@localhost:51521/SALESPDB`{{execute T2}}
+`sqlplus mickey/mickey@localhost/SALESPDB`{{execute T2}}
 
 
 As mickey, create a "customers" table .
@@ -44,7 +45,7 @@ As mickey, create a "customers" table .
 
 As system user, show the system privilege associated with the "RESOURCE" role.
 
-`select * from dba_sys_privs where grantee='RESOURCE';`{{execute}}
+`select * from dba_sys_privs where grantee='RESOURCE';`{{execute T1}}
 
 ``{{execute T1}}
 
@@ -65,14 +66,14 @@ We need to ensure our new user has disk space allocated in the system to actuall
 
 You may also grant unlimited quota to mickey as follows.
 
-`grant unlimited tablespace to mickey`{{execute T1}}
+`grant unlimited tablespace to mickey;`{{execute T1}}
 
 
 Logout from Mickey’s session and login again to refresh the permission.
 
-`exit`{{execute}}
+`exit`{{execute T2}}
 
-`sqlplus mickey/mickey@localhost:51521/SALESPDB`{{execute}}
+`sqlplus mickey/mickey@localhost/SALESPDB`{{execute T2}}
 
 
 As Mickey, try to create a “customers” table again, insert data and select from it.
@@ -82,15 +83,6 @@ As Mickey, try to create a “customers” table again, insert data and select f
 
 `SELECT * FROM CUSTOMERS;`{{execute}}
 
-``{{execute}}
+Exit the sqlplus environment.
+`exit`{{execute}}
 
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}

@@ -5,7 +5,8 @@ Connect as sys user using sqlplus.
 `rlwrap sqlplus / as sysdba`{{execute}}
 
 
-Create a pluggable database named SALESPDB. We make use of the SEED pluggable database (/opt/oracle/oradata/XE/pdbseed) as a template for creating fresh pluggable databases and specify that the data files of the new PDB to be located at /opt/oracle/oradata/XE/SALESPDB inside the container.
+Create a pluggable database named SALESPDB. 
+We make use of the SEED pluggable database (/opt/oracle/oradata/XE/pdbseed) as a template for creating fresh pluggable databases and specify that the data files of the new PDB to be located at /opt/oracle/oradata/XE/SALESPDB inside the container.
 
 `CREATE PLUGGABLE DATABASE SALESPDB ADMIN USER salesadm IDENTIFIED BY oracle FILE_NAME_CONVERT=('/opt/oracle/oradata/XE/pdbseed','/opt/oracle/oradata/XE/SALESPDB');`{{execute}}
 
@@ -49,6 +50,6 @@ Show the data files associated with the created tablespace
 Exit the sqlplus environment.
 `exit`{{execute}}
 
-
-
+Exit the docker container 
+`exit`{{execute}}
 
