@@ -1,7 +1,7 @@
 <h1>Update the containerized application</h1>
 
 Insert the following code after hello() in "app.py" to define a REST API endpoint for adding two numbers.
-<pre class="file" data-filename="app.py" data-target="append">
+<pre class="file" data-filename="app.py" data-target="insert" data-marker="#TODO-add">
 
 @app.route('/add', methods=['GET'])
 def add():
@@ -10,6 +10,7 @@ def add():
     return jsonify({"operand 1": a, "operand 2": b, "sum":a+b}) #return JSON object
 	
 </pre>
+
 
 Build and run the docker image:
 
