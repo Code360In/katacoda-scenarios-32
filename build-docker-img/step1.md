@@ -1,4 +1,4 @@
-<pre class="file" data-filename="app" data-target="replace">
+<pre class="file" data-filename="app.py" data-target="replace">
 var http = require('http');
 var requestListener = function (req, res) {
   res.writeHead(200);
