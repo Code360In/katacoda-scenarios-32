@@ -50,6 +50,3 @@ Show the data files associated with the created tablespace
 Exit the sqlplus environment.
 `exit`{{execute}}
 
-Exit the docker container 
-`exit`{{execute}}
-

@@ -86,3 +86,6 @@ As Mickey, try to create a “customers” table again, insert data and select f
 Exit the sqlplus environment.
 `exit`{{execute}}
 
+Exit the docker container shell.
+`exit`{{execute}}
+

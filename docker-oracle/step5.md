@@ -70,3 +70,7 @@ Review the object privileges of the various users after the revocation
 Exit the sqlplus environment.
 `exit`{{execute}}
 
+
+Exit the docker container shell.
+`exit`{{execute}}
+
