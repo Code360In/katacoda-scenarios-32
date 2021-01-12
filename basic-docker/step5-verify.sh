@@ -1,1 +1,1 @@
-curl localhost:20082 --silent |grep "This is server 1" >/dev/null && curl localhost:20081 --silent |grep "This is server 2" >/dev/null && curl localhost:20081 --silent |grep "This is server 3" >/dev/null && echo "done"
+curl localhost:20080 --silent |grep "This is server 1" >/dev/null && curl localhost:20081 --silent |grep "This is server 2" >/dev/null && curl localhost:20082 --silent |grep "This is server 3" >/dev/null && echo "done"
