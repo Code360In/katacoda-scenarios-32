@@ -11,13 +11,11 @@ def add():
 	
 </pre>
 
-
 Build and run the docker image:
 
 `docker build -t mywebapp .`{{execute}}
 
-`docker run -p 80:8080 mywebapp`{{execute}}
-
+`docker run --name app -p 80:8080 mywebapp`{{execute}}
 
 Access the the new endpoint "/add".
 
@@ -28,7 +26,7 @@ Access the the new endpoint "/add".
 Test the application in browser at 
 
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/add?op1=3&op2=5
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/about/add?op1=100&op2=200
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/add?op1=100&op2=200
 
 Stop the python flask server with Ctrl+C.
 
