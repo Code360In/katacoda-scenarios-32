@@ -10,7 +10,7 @@ Verify that the flask app can be accessed localhost at port 80.
 `curl localhost:80/`{{execute T2}}
 
 `curl localhost:80/about`{{execute T2}}
-
+ 
 Test the application in browser at:
 
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
@@ -19,5 +19,8 @@ https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/about
 
 
 Stop the python flask server with Ctrl+C.
+
+Stop and remove the app's docker container
+`docker rm -f app`{{execute}}
 
 

@@ -19,9 +19,9 @@ Build and run the docker image:
 
 Access the the new endpoint "/add".
 
-`curl localhost/add?op1=3&op2=5`{{execute T2}}}
+`curl "localhost/add?op1=3&op2=5"`{{execute T2}}}
 
-`curl localhost/add?op1=100&op2=200`{{execute T2}}}
+`curl "localhost/add?op1=100&op2=200"`{{execute T2}}}
 
 Test the application in browser at 
 
