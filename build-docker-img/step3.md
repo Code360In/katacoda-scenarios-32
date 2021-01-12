@@ -21,14 +21,14 @@ Build and run the docker image:
 
 Access the the new endpoint "/add".
 
-`curl localhost/add?3+5`{{execute T2}}}
+`curl localhost/add?op1=3&op2=5`{{execute T2}}}
 
-`curl localhost/add?100+200`{{execute T2}}}
+`curl localhost/add?op1=100&op2=200`{{execute T2}}}
 
 Test the application in browser at 
 
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/add?3+5
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/about/add?100+200
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/add?op1=3&op2=5
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/about/add?op1=100&op2=200
 
 Stop the python flask server with Ctrl+C.
 

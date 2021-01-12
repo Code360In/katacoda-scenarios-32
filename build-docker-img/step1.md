@@ -5,7 +5,7 @@ Define the following python flask application app.py:
 <pre class="file" data-filename="app.py" data-target="replace">
 import os
 import socket
-from flask import Flask
+from flask import Flask,request
 app = Flask(__name__)
 
 @app.route("/")
