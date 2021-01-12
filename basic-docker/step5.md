@@ -18,7 +18,7 @@ Check that there are TWO running nginx containers:
 
 `docker exec ws2 /bin/bash -c "echo 'This is server 2' > /usr/share/nginx/html/index.html"`{{execute}}
 
-Similarly, create the third web instance of the webserver  which outputs "This is server 3. Map the container port "80" to host port "20082".
+Similarly, create the third web instance of the webserver  which outputs "This is server 3". Map the container port "80" to host port "20082".
 
 Access the three instances of webservers at
 <pre>http://localhost:20080/, http://localhost:20081/, http://localhost:20082/</pre>
@@ -29,5 +29,4 @@ https://[[HOST_SUBDOMAIN]]-20081-[[KATACODA_HOST]].environments.katacoda.com/
 
 https://[[HOST_SUBDOMAIN]]-20082-[[KATACODA_HOST]].environments.katacoda.com/
 
-Stop and remove the container after completing the exercise.
-<pre>docker rm –f [container_id1] [container_id2], ...</pre>
+

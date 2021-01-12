@@ -1,0 +1,1 @@
+curl localhost:20082 --silent |grep "This is sa" >/dev/null && curl localhost:20081 --silent |grep "This is sa" >/dev/null && curl localhost:20081 --silent |grep "This is sa" >/dev/null && echo "done"
