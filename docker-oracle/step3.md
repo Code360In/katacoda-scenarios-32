@@ -9,7 +9,7 @@ We make use of the SEED pluggable database (/opt/oracle/oradata/XE/pdbseed) as a
 `CREATE PLUGGABLE DATABASE SALESPDB ADMIN USER salesadm IDENTIFIED BY oracle FILE_NAME_CONVERT=('/opt/oracle/oradata/XE/pdbseed','/opt/oracle/oradata/XE/SALESPDB');`{{execute}}
 
 
-Check the status after the PDB creation. You may format the column width of “Name” column to be 30 characters wide with the column command in sqlplus. 
+Check the status after the PDB creation. You may format the column width of "Name" column to be 30 characters wide with the column command in sqlplus. 
 
 `column name format a30`{{execute}}
 
@@ -27,11 +27,12 @@ Change to the pluggable database SALESPDB.
 `alter session set container=SALESPDB;`{{execute}}
 
 
-Show the tablespace inside the pluggable database SALESPDB
+Show the tablespace inside the pluggable database SALESPDB.
+
 `select tablespace_name from dba_tablespaces;`{{execute}}
 
 
-Create a new tablespace “USERS” to store user’s data
+Create a new tablespace “USERS” to store user’s data.
 
 `CREATE TABLESPACE USERS DATAFILE '/opt/oracle/oradata/XE/SALESPDB/users.dbf'  SIZE 1m  ;`{{execute}}
 
@@ -41,7 +42,8 @@ The USERS tablespace will now appear in dba_tablespaces inside the pluggable dat
 `select tablespace_name from dba_tablespaces;`{{execute}}
 
 
-Show the data files associated with the created tablespace
+Show the data files associated with the created tablespace.
+
 `select file_name, tablespace_name from DBA_DATA_FILES;`{{execute}}
 
 
