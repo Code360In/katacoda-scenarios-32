@@ -6,15 +6,15 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Launching a MySQL8 Docker Container",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Create table and Insert Data in MySQL",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Cleaning up",
         "text": "step3.md"
       }
     ],

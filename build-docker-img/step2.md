@@ -3,7 +3,7 @@ Run the image as a docker container. Note that the -p switch exposes port 80 ext
 `docker run --name app -p 80:8080 mywebapp`{{execute}}
 
 
-Open a second terminal and verify that the flask app can be accessed localhost at port 80.
+Open a second terminal and verify that the flask app can be accessed at localhost at port 80.
 
 `curl localhost:80/`{{execute T2}}
 

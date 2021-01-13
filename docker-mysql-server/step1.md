@@ -1,5 +1,3 @@
-<h1>Launching a MySQL8 Docker Container</h1>
-
 Download the latest MySQL 8.0 Database image.
 
 `docker pull mysql/mysql-server:8.0`{{execute}}

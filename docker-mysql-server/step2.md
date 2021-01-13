@@ -1,4 +1,4 @@
-<h1>Try the following commands inside mysql client</h1>
+Try the following commands inside mysql client
 
 `SHOW DATABASES;`{{execute}}
 
@@ -14,4 +14,8 @@
 
 `SELECT * FROM Persons;`{{execute}}
 
+
+Type exit to exit mysql shell.
+
+`exit`{{execute}}
 
