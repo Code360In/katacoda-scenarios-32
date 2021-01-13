@@ -10,9 +10,10 @@ Change the user to "oracle".
 `su oracle`{{execute}}
 
 
-Connect to the database with sqlplus as sys user. 
+Connect to the database with sqlplus as system user. 
 
-`rlwrap sqlplus / as  sysdba`{{execute}}
+`rlwrap sqlplus system/12345`{{execute}}
+
 
 Change to SALESPDB  (created in previous steps)
 
@@ -20,7 +21,7 @@ Change to SALESPDB  (created in previous steps)
 
 
 <h2>Tasks</h2>
-As sys/system user, 
+As system user, 
 * create 3 three local users u1, u2 and u3 in SALESPDB in sqlplus. 
 * Grant the create session privilege to the 3 users. 
 * Grant create table privilege to u1 and grant u1 1MB quota on USERS tablespace.
