@@ -48,7 +48,6 @@ As system user, show the system privilege associated with the "RESOURCE" role.
 
 `select * from dba_sys_privs where grantee='RESOURCE';`{{execute T1}}
 
-``{{execute T1}}
 
 
 Grant the Resource role to Mickey.
@@ -77,7 +76,8 @@ Logout from Mickey’s session and login again to refresh the permission.
 `sqlplus mickey/mickey@localhost/SALESPDB`{{execute T2}}
 
 
-As Mickey, try to create a “customers” table again, insert data and select from it.
+As Mickey, try to create a "customers" table again, insert data and select from it.
+
 `CREATE TABLE customers(customer_id NUMBER, name VARCHAR2(255) NOT NULL);`{{execute}}
 
 `INSERT into CUSTOMERS (CUSTOMER_ID,NAME) values (177,'United Continental Holdings'); `{{execute}}

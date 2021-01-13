@@ -31,16 +31,19 @@ To format the column width in sqlplus (where n is the the desired display width 
 <pre> COLUMN columnname FORMAT An </pre>
 
 Try:
+
 `COLUMN username FORMAT a40`{{execute}}
 
 `select username, account_status from dba_users where username='HR';`{{execute}}
  
 
 To unlock the HR account:
+
 `alter  user  hr identified  by hr account unlock;`{{execute}}
 
 
 The HR account should now be opened.
+
 `select username, account_status from dba_users where username='HR';`{{execute}}
 
 
@@ -58,6 +61,7 @@ Try the following commands in sqlplus to examine the tables in XEPDB1.
 `select * from employees;`{{execute}}
 
 Exit the sqlplus environment.
+
 `exit`{{execute}}
 
 
@@ -67,4 +71,5 @@ To connect to HR account using the sqlplus command line insider the Docker conta
 
 
 Exit the sqlplus environment.
+
 `exit`{{execute}}
