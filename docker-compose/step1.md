@@ -14,13 +14,16 @@ Clone the project from github.
 
 
 Execute:
+
 `cd example-voting-app/`{{execute}}
 
-`docker-compose up`{{execute}}
+`example-voting-app/docker-compose up`{{execute}}
 
 
 View the docker compose file which configure your application's services.
 `example-voting-app/docker-compose.yml`{{open}}
+
+Wait until the docker images are built and various containers have started up.
 
 
 View the voting app at localhost:5000:

@@ -1,9 +1,3 @@
-<h1>Cleaning up</h1>
-
-Type exit to exit mysql shell.
-
-`exit`{{execute}}
-
-
-Stop the running instance of MySQL.
-`docker rm -f mysql`{{execute}}
+References
+1. https://www.freecodecamp.org/news/a-practical-introduction-to-docker-compose/
+2. https://github.com/dockersamples/example-voting-app
