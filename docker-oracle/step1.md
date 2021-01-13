@@ -22,3 +22,24 @@ After the container has started, run the following commands in the command promp
 
 `docker ps`{{execute}}
 
+
+Check the log of the container.
+
+`docker logs oracle-xe`{{execute}}
+
+If the database is started up successfully, the log will contain the following:
+
+<pre>
+Database exists
+Starting Oracle Net Listener.
+Oracle Net Listener started.
+Starting Oracle Database instance XE.
+Oracle Database instance XE started.
+
+The Oracle base remains unchanged with value /opt/oracle
+#########################
+DATABASE IS READY TO USE!
+#########################
+...
+</pre>
+
