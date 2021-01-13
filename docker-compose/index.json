@@ -53,9 +53,7 @@
       "text": "finish.md"
     }
   },
-  "files": [
-        "docker-compose.yml"
-	],
+ 
   "environment": {
     "uilayout": "editor-terminal"
   },

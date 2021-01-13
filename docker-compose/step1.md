@@ -20,65 +20,8 @@ Execute:
 
 
 View the docker compose file which configure your application's services.
-`docker-compose.yml`{{open}}
+`/root/example-voting-app/docker-compose.yml`{{open}}
 
-<pre>
-version: "3"
-
-services:
-  vote:
-    build: ./vote
-    command: python app.py
-    volumes:
-     - ./vote:/app
-    ports:
-      - "5000:80"
-    networks:
-      - front-tier
-      - back-tier
-
-  result:
-    build: ./result
-    command: nodemon server.js
-    volumes:
-      - ./result:/app
-    ports:
-      - "5001:80"
-      - "5858:5858"
-    networks:
-      - front-tier
-      - back-tier
-
-  worker:
-    build:
-      context: ./worker
-    depends_on:
-      - "redis"
-    networks:
-      - back-tier
-
-  redis:
-    image: redis:alpine
-    container_name: redis
-    ports: ["6379"]
-    networks:
-      - back-tier
-
-  db:
-    image: postgres:9.4
-    container_name: db
-    volumes:
-      - "db-data:/var/lib/postgresql/data"
-    networks:
-      - back-tier
-
-volumes:
-  db-data:
-
-networks:
-  front-tier:
-  back-tier:
-</pre>
 
 View the voting app at localhost:5000:
 https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/
