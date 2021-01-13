@@ -27,7 +27,7 @@ Check the log of the container.
 
 `docker logs oracle-xe`{{execute}}
 
-If the database is started up successfully, the log will contain the following:
+If the database is started up successfully, the log will show:
 
 <pre>
 Database exists
