@@ -10,12 +10,16 @@
         "text": "step1.md"
       },
       {
-        "title": "Exploring the database containers",
+        "title": "Viewing the docker-compose.yml file",
         "text": "step2.md"
       },
       {
-        "title": "References",
+        "title": "Exploring the database containers",
         "text": "step3.md"
+      },
+      {
+        "title": "References",
+        "text": "step4.md"
       }
     ],
     "intro": {

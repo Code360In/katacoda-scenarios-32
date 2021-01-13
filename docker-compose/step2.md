@@ -1,44 +1,65 @@
-Open another terminal (terminal 2). Execute the following commands in terminal 2.
+View the docker compose file which configure your application's services.
+`example-voting-app/docker-compose.yml`{{open}}
 
-View the docker images and running containers.
+<pre class='file' data-filename='docker-compose.yml'>
+version: "3"
 
-`docker images`{{execute T2}}
+services:
+  vote:
+    build: ./vote
+    command: python app.py
+    volumes:
+     - ./vote:/app
+    ports:
+      - "5000:80"
+    networks:
+      - front-tier
+      - back-tier
 
-`docker container ls`{{execute T2}}
+  result:
+    build: ./result
+    command: nodemon server.js
+    volumes:
+      - ./result:/app
+    ports:
+      - "5001:80"
+      - "5858:5858"
+    networks:
+      - front-tier
+      - back-tier
 
+  worker:
+    build:
+      context: ./worker
+    depends_on:
+      - "redis"
+      - "db"
+    networks:
+      - back-tier
 
-Connect to the postgres DB which stores the votes.
-`docker exec -it db  /bin/sh`{{execute T2}}
-`su postgres`{{execute T2}}
-`psql`{{execute T2}}
+  redis:
+    image: redis:5.0-alpine3.10
+    container_name: redis
+    ports: ["6379"]
+    networks:
+      - back-tier
 
-Input the following commands inside the Postgres database command line interface.
+  db:
+    image: postgres:9.4
+    container_name: db
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+    volumes:
+      - "db-data:/var/lib/postgresql/data"
+    networks:
+      - back-tier
 
-List the databases.
-`\l`{{execute T2}}
+volumes:
+  db-data:
 
+networks:
+  front-tier:
+  back-tier:
 
-Connect to the *postgres* database show the tables in the DB.
-`\c postgres`{{execute T2}}
-
-
-`\dt`{{execute T2}}
-
-
-Select the rows from the votes table.
-`select * from votes;`{{execute T2}}
-
-
-Cast some votes using the voting app and examine the records in the table.
-
-
-Quiz the postgres CLI and exit the container after completing the above tasks.
-
-`\q`{{execute T2}}
-
-`exit`{{execute T2}}
-
-`exit`{{execute T2}}
-
-
-
+</pre>

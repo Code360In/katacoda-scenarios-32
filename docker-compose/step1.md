@@ -5,7 +5,7 @@ In this tutorial, we will use Docker compose to Build and Deploy a "Voting App" 
 * **Result-App**: Frontend of the application written in Node.js, displays the voting results.
 * **Redis**: In-memory database used as intermediate storage.
 * **DB**: PostgreSQL database used as database.
-* **Worker**: The .Net worker service fetches the vote and stores it in the Postgres DB which is accessed by the Node.js frontend.
+* **Worker**: The .Net worker service fetches the vote and stores it in the Postgres DB, which is then accessed by the Node.js frontend.
 
 Clone the project from github.
 `git clone https://github.com/cswclui/example-voting-app`{{execute}}
