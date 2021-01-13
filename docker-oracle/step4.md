@@ -2,6 +2,15 @@ Connect as **system** user in SALESPDB using sqlplus.
 
 `rlwrap sqlplus system/12345@localhost/SALESPDB`{{execute T1}}
 
+Setup the output format for various columns
+
+`column granted_role format a20`{{execute T1}}
+
+`column grantee format a20`{{execute T1}}
+
+`column ADMIN_OPTION format a15`{{execute T1}}
+
+
 
 Check the current PDB: 
 
@@ -21,7 +30,7 @@ Open another terminal. In terminal 2, login as mickey.
 
 `sqlplus mickey/mickey@localhost/SALESPDB`{{execute T2}}
 
-The mickey account currently doesn't have "Create Session" Privilege.
+The mickey account currently doesn't have "Create Session" Privilege. Press Ctrl+C to break out of the the login program.
 
 
 Switch to terminal 1. As SYSTEM user, grant micky the  "create session" permission.
@@ -32,6 +41,11 @@ Switch to terminal 1. As SYSTEM user, grant micky the  "create session" permissi
 Show the granted system privileges by querying the DBA_SYS_PRIVS view.
 
 `select * from DBA_SYS_PRIVS where GRANTEE = 'MICKEY';`{{execute T1}}
+
+
+Describe the DBA_SYS_PRIVS table to understsand more about the attributes:
+
+`describe DBA_SYS_PRIVS`{{execute T1}}
 
 
 In terminal 2, login as mickey again. The login should be successful.
