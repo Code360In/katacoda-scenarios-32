@@ -1,5 +1,3 @@
-<h1>Overview</h1>
-
 Docker compose is a tool for defining and running multi-container Docker application.
 
 In this web, we will use Docker compose to launch a "Voting App" with the following components:
