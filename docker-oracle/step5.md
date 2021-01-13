@@ -1,4 +1,5 @@
 <h2>Preparation</h2>
+
 Launch a shell in the Oracle18C XE container. 
 
 `docker exec -it oracle-xe /bin/sh`{{execute}}
@@ -12,6 +13,10 @@ Change the user to "oracle".
 Connect to the database with sqlplus as sys user. 
 
 `rlwrap sqlplus / as  sysdba`{{execute}}
+
+Change to SALESPDB  (created in previous steps)
+
+`alter  session  set  container  = SALESPDB;`{{execute}}
 
 
 <h2>Tasks</h2>
