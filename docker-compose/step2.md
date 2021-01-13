@@ -1,17 +1,13 @@
-<h1>Try the following commands inside mysql client</h1>
+<h1>Exploring the images and containers</h1>
 
-`SHOW DATABASES;`{{execute}}
+Open another terminal (terminal 2). 
+Execute the following commands in terminal 2.
 
-`CREATE DATABASE UNIVERSITY;`{{execute}}
+`docker images`{{execute T2}}
 
-`USE UNIVERSITY;`{{execute}}
-
-`CREATE TABLE Persons (PersonID int, LastName varchar(100), FirstName varchar(100), City varchar(100) );`{{execute}}
-
-`SHOW DATABASES;`{{execute}}
-
-`INSERT INTO Persons (PersonID, LastName, FirstName, City) VALUES (1, 'Chan', ' Alice', 'Hong Kong');`{{execute}}
-
-`SELECT * FROM Persons;`{{execute}}
+`docker container ls`{{execute T2}}
 
 
+Reference:
+1. https://www.freecodecamp.org/news/a-practical-introduction-to-docker-compose/
+2. https://github.com/dockersamples/example-voting-app
