@@ -15,6 +15,11 @@ Try the following commands inside mysql client
 `SELECT * FROM Persons;`{{execute}}
 
 
+You may also modify the password of the root user in MySQL Server 8.
+
+<pre>ALTER USER 'root'@'localhost' IDENTIFIED BY <your password></pre>
+
+
 Type exit to exit mysql shell.
 
 `exit`{{execute}}
