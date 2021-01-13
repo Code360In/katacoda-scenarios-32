@@ -1,5 +1,3 @@
-<h1>Unlock HR account</h1>
-
 SQLPlus in Linux environment does not support using up/down arrows for accessing the previous/next command.
 
 The rlwrap (readline wrapper) utility provides a command history and editing of keyboard input for any other command. Start sqlplus with the rlwrap utility.

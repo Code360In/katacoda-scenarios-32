@@ -48,8 +48,6 @@ Review the object privilege of the granted object privileges.
 
 `select * from USER_TAB_PRIVS;`{{execute}}
 
-``{{execute}}
-
 As user u2, grant the SELECT privilege on u1.t to u3.
 
 As user u3, verify that that the user can select on the table u1.t.

@@ -1,5 +1,3 @@
-<h1>Creating Pluggable Database</h1>
-
 Connect as sys user using sqlplus.
 
 `rlwrap sqlplus / as sysdba`{{execute}}

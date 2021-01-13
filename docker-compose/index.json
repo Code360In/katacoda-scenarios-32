@@ -1,5 +1,5 @@
 {
-  "title": "For Test Only",
+  "title": "Docker Compose",
   "description": "",
   "difficulty": "Beginner",
   "time": "20",
@@ -53,9 +53,11 @@
       "text": "finish.md"
     }
   },
-  
+  "files": [
+        "docker_compose.yml"
+	],
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "editor-terminal"
   },
   "backend": {
     "imageid": "ubuntu:2004"
