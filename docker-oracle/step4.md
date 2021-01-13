@@ -30,7 +30,7 @@ Open another terminal. In terminal 2, login as mickey.
 
 `sqlplus mickey/mickey@localhost/SALESPDB`{{execute T2}}
 
-The mickey account currently doesn't have "Create Session" Privilege. Press Ctrl+C to break out of the the login program.
+The mickey account currently doesn't have "Create Session" Privilege. Press Ctrl+C to break out of the login program.
 
 
 Switch to terminal 1. As SYSTEM user, grant micky the  "create session" permission.
