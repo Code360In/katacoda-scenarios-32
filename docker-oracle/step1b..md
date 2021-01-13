@@ -18,7 +18,7 @@ Change the password of the **system** user.
 `alter user system identified by "12345";`{{execute}}
 
 
-The user accounts in oracle are stored in all_users view.
+The user accounts in oracle are stored in **all_users** view.
 
 `describe all_users`{{execute}}
 

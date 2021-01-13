@@ -43,7 +43,7 @@ Show the granted system privileges by querying the DBA_SYS_PRIVS view.
 `select * from DBA_SYS_PRIVS where GRANTEE = 'MICKEY';`{{execute T1}}
 
 
-Describe the DBA_SYS_PRIVS table to understsand more about the attributes:
+Describe the DBA_SYS_PRIVS table to understand  more about the attributes:
 
 `describe DBA_SYS_PRIVS`{{execute T1}}
 
