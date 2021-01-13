@@ -7,12 +7,15 @@ View the docker images and running containers.
 `docker container ls`{{execute T2}}
 
 
-Connect to the postgres DB which stores the votes.
+Connect to the postgres DB which stores the vote count.
+
 `docker exec -it db  /bin/sh`{{execute T2}}
+
 `su postgres`{{execute T2}}
+
 `psql`{{execute T2}}
 
-Input the following commands inside the Postgres database command line interface.
+Examine the Postgres database using the command line interface.
 
 List the databases.
 `\l`{{execute T2}}
@@ -32,7 +35,7 @@ Select the rows from the votes table.
 Cast some votes using the voting app and examine the records in the table.
 
 
-Quiz the postgres CLI and exit the container after completing the above tasks.
+Quit the postgres CLI and exit the container after completing the above tasks.
 
 `\q`{{execute T2}}
 
