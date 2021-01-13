@@ -18,8 +18,7 @@ Execute:
 `example-voting-app/docker-compose up`{{execute}}
 
 
-View the docker compose file which configure your application's services.
-`example-voting-app/docker-compose.yml`{{open}}
+
 
 Wait until the docker images are built and various containers have started up.
 
