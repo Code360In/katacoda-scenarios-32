@@ -1,6 +1,6 @@
 Docker compose is a tool for defining and running multi-container Docker application.
 
-In this web, we will use Docker compose to launch a "Voting App" with the following components:
+In this tutorial, we will use Docker compose to Build and Deploy a "Voting App" with the following components:
 * **Voting-App**: Frontend of the application written in Python, used by users to cast their votes. Each vote cast on the Voting app is stored in the Redis in-memory database.
 * **Result-App**: Frontend of the application written in Node.js, displays the voting results.
 * **Redis**: In-memory database used as intermediate storage.

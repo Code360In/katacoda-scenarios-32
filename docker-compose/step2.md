@@ -1,5 +1,3 @@
-<h1>Exploring the votes database</h1>
-
 Open another terminal (terminal 2). Execute the following commands in terminal 2.
 
 View the docker images and running containers.
@@ -43,7 +41,4 @@ Quiz the postgres CLI and exit the container after completing the above tasks.
 `exit`{{execute T2}}
 
 
-Reference:
-1. https://www.freecodecamp.org/news/a-practical-introduction-to-docker-compose/
-2. https://github.com/dockersamples/example-voting-app
 
