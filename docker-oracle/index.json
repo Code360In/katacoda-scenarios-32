@@ -1,13 +1,17 @@
 {
-  "title": "Running Oracle 18C Express Edition in Docker",
+  "title": "Oracle 18C Express Edition",
   "description": "",
   "difficulty": "Beginner",
   "time": "50",
   "details": {
     "steps": [
       {
-        "title": "Launching Oracle 18cXE Docker Container",
+        "title": "Preparation",
         "text": "step1.md"
+      },
+	  {
+        "title": "Connecting to Oracle database",
+        "text": "step1b.md"
       },
       {
         "title": "Unlock HR account",
@@ -18,11 +22,11 @@
         "text": "step3.md"
       },
       {
-        "title": "Users and Privileges",
+        "title": "Users and Authorization",
         "text": "step4.md"
       },
       {
-        "title": "Exercise",
+        "title": "Exercise: Users and Authorization",
         "text": "step5.md"
       }
     ],
