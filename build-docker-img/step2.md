@@ -1,5 +1,3 @@
-<h1>Running the python flask app docker image</h1>
-
 Run the image as a docker container. Note that the -p switch exposes port 80 externally in the host and map to port 8080 inside the container.
 
 `docker run --name app -p 80:8080 mywebapp`{{execute}}

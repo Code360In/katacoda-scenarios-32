@@ -1,5 +1,3 @@
-<h1>Building a docker image for a python flask application</h1>
-
 Define the following python flask application app.py:
 
 <pre class="file" data-filename="app.py" data-target="replace">
