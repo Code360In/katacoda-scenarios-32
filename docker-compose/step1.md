@@ -20,7 +20,7 @@ Execute:
 
 
 View the docker compose file which configure your application's services.
-`/root/example-voting-app/docker-compose.yml`{{open}}
+`example-voting-app/docker-compose.yml`{{open}}
 
 
 View the voting app at localhost:5000:
