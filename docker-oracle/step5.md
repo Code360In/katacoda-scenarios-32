@@ -11,7 +11,7 @@ Change the user to "oracle".
 
 Connect to the database with sqlplus as sys user. 
 
-`sqlplus / as  sysdba`{{execute}}
+`rlwrap sqlplus / as  sysdba`{{execute}}
 
 
 <h2>Tasks</h2>

@@ -14,8 +14,11 @@ As **system** user, create user mickey with password mickey in SALESPDB as the d
 
 
 Open another terminal. In terminal 2, login as mickey.
+
 `docker exec -it oracle-xe /bin/sh`{{execute T2}
+
 `su oracle`{{execute T2}
+
 `sqlplus mickey/mickey@localhost/SALESPDB`{{execute T2}}
 
 The mickey account currently doesn't have "Create Session" Privilege.
