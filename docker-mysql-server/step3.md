@@ -1,8 +1,6 @@
 docker run --name=mysql -e MYSQL_ROOT_PASSWORD="12345" -p 33306:3306 -d mysql:8
 
-In the host machine's shell,
-
-Download and unzip the sakila sample DB scripts.
+In the host machine's shell, download and unzip the sakila sample DB scripts.
 
 `wget https://downloads.mysql.com/docs/sakila-db.zip`{{execute}}
 
