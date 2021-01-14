@@ -17,9 +17,13 @@ INSERT INTO USER (name, password, email) VALUES ('Bob','555','Bob@abc.com');
 INSERT INTO USER (name, password, email) VALUES ('Carol','3721','Carol@abc.com');
 ```
 
-Execute the script in the mysql container.
+Copy the script into the docker container.
+`docker cp users.sql mysql:/root`{{execute}}
 
-`docker exec  mysql mysql -u root -p12345 <users.sql`{{execute}}
+Execute the above script in the mysql container.
+
+` docker exec  mysql mysql -u root -p12345  -e "source /root/users.sql"`{{execute}}
+` docker exec  mysql mysql -u root -p12345 mydb -e "show databases"`{{execute}}
 
 
 Create login.php with the following code
@@ -78,7 +82,11 @@ Copy login.php to the apache container.
 `docker cp login.php apache:/var/www/html`{{execute}}
 
 Visit localhost at port 80 with browser.
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/test3.php
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/login.php
+
+Try:
+* Login with username:alice and password:123
+* Login with an unknown user
 
 
 ``{{execute}}
