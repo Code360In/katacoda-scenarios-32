@@ -1,24 +1,3 @@
-Startup a new instance of apache server named "apache" and connect the container to my-network.
-
-`docker rm -f apache`{{execute}}
-
-`docker run --net my-network --name apache -d -p 80:80 php:apache`{{execute}}
-
-
-Install mysql extension for php in the apache container.
-
-`docker exec -it apache bash`{{execute}}
-
-`docker-php-ext-install mysqli`{{execute}}
-
-Exit the container's shell.
-`exit`{{execute}}
-
-Restart the apache server container.
-
-`docker restart apache`{{execute}}
-
-
 Define "test2.php" in the host machine as follows.
 ```php
 <?php
