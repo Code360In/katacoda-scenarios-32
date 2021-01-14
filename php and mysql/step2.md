@@ -22,5 +22,5 @@ SOURCE /sakila-db/sakila-schema.sql`{{execute}}
 
 SOURCE /sakila-db/sakila-data.sql`{{execute}}
 
-exit`{{execute}}
+exit```{{execute}}
 
