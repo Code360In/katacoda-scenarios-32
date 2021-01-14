@@ -79,7 +79,6 @@ if (isset($_GET["user_name"]) && isset($_GET["password"])) {
     $conn->close();
 }
 ?>
-
 ```{{copy}}
 
 Copy login.php to the apache container.
