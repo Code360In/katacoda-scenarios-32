@@ -1,6 +1,6 @@
-Download the latest MySQL 8.0 Database image.
+Download the latest MySQL 8.0 Database image
 
-`docker pull mysql/mysql-server:8.0`{{execute}}
+`docker pull mysql:8`{{execute}}
 
 
 Check the downloaded image.
@@ -10,7 +10,8 @@ Check the downloaded image.
 
 Start a new Docker container for a MySQL Server.
 
-`docker run --name=mysql -e MYSQL_ROOT_PASSWORD="12345" -p 33306:3306 -d mysql/mysql-server:8.0`{{execute}}
+`docker run --name=mysql -e MYSQL_ROOT_PASSWORD="12345" -p 33306:3306 -d mysql:8`{{execute}}
+
 * -d option used in the docker run command above makes the container run in the background.
 * -e MYSQL_ROOT_PASSWORD="12345" specifies initial root user password to be "12345"
 
