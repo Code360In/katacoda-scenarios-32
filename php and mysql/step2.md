@@ -1,9 +1,9 @@
-<h2>Create docker network</h2>
+
 First, create a docker network.
 
 `docker network create my-network`{{execute}}
 
-<h2>Start mysql server container</h2>
+
 
 Start mysql server container and connect to my-network.
 
@@ -11,8 +11,8 @@ Start mysql server container and connect to my-network.
 
 
 
-<h2>Start apache container</h2>
 Startup a new instance of apache server named "apache" and connect the container to my-network.
+
 `docker rm -f apache`{{execute}}
 
 `docker run --net my-network --name apache -d -p 80:80 php:apache`{{execute}}
@@ -20,16 +20,19 @@ Startup a new instance of apache server named "apache" and connect the container
 
 Install mysql extension for php in the apache container.
 
-`docker exec -it php /bin/sh`{{execute}}
+`docker exec -it apache bash`{{execute}}
 
 `docker-php-ext-install mysqli`{{execute}}
 
-Exit the container shell.
+Exit the container's shell.
 `exit`{{execute}}
 
 Restart the apache server container.
 
-`docker restart php`{{execute}}
+`docker restart apaches`{{execute}}
+
+
+
 
 Define the file "test2.php".
 ```php
@@ -44,17 +47,17 @@ Define the file "test2.php".
 	if ($conn->connect_error){
 		die("Connection failed:".$conn->connect_error);
 	}
-	echo "Connected Successfullly"
+	echo "Connected to MySQL Successfullly"
 ?>
 ```
 
 Copy test2.php to the apache container.
 
-`docker cp test2.php php:var/www/html`{{execute}}
+`docker cp test2.php apache:/var/www/html`{{execute}}
 
-Test the php application.
+Test the PHP script.
+
 `curl localhost/test2.php`{{execute}}
-
 
 Visit localhost at port 80 with browser.
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/test2.php
@@ -85,17 +88,6 @@ docker stop php
 
 
 nano test.php
-
-Define the following file and save it.
-```php
-<h1> Hello </h1> <?php printf(phpversion());?>
-```
-
-
-
-
-
-
 
 
 ***

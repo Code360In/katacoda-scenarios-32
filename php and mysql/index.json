@@ -54,7 +54,7 @@
     }
   },
   "files": [
-        "test.php", "test2.php","test3.php"
+        "test.php", "test2.php","test3.php",,"test4.php","test5.php"
     ],
   "environment": {
     "uilayout": "editor-terminal"
