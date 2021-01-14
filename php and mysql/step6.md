@@ -4,7 +4,7 @@ Malicious SQL statements are inserted by attackers to trick data-driven applicat
 
 In the login page, input the following username and submit the form
 
-` ``or 1=1 -- `{{copy}}
+<pre> `or 1=1 -- </pre>
 
 
 Visit localhost at port 80 with browser.
