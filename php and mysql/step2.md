@@ -1,23 +1,40 @@
-First, create a docker network.
 
-`docker network create my-network`{{execute}}
+Pull and run a apache container with php.
 
+`docker pull php:apache`{{execute}}
 
-Start mysql server container and connect to my-network.
-
-`docker run --net my-network --name=mysql -e MYSQL_ROOT_PASSWORD="12345" -p 33306:3306 -d mysql:8`{{execute}}
+`docker run --name apache -d -p 80:80 php:apache`{{execute}}
 
 
-Setup the sakila sample database DB.
+Launch a shell in the container.
+
+` docker exec -it apache /bin/bash`{{execute}}
+
+`exit`{{execute}}
+
+
+Define test.php in the host machine as follows.
+```
+<h1> Hello </h1> 
+
+PHP Version is: 
+<?php 
+	printf(phpversion());
+?>
 
 ```
-wget https://downloads.mysql.com/docs/sakila-db.zip
-unzip sakila-db.zip
-docker cp  sakila-db/ mysql:/
-```{{execute}}
 
-```
-docker exec  mysql mysql -u root -p12345 -e 'SOURCE /sakila-db/sakila-schema.sql'
-docker exec  mysql mysql -u root -p12345 -e 'SOURCE /sakila-db/sakila-data.sql'
-```{{execute}}
+
+Copy test.php into the container.
+
+`docker cp test.php apache:var/www/html`{{execute}}
+
+
+`curl localhost/test.php`{{execute}}
+
+Visit localhost at port 80 with browser.
+
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/test.php
+
+
 

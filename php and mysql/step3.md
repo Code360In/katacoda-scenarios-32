@@ -1,5 +1,3 @@
-
-
 Startup a new instance of apache server named "apache" and connect the container to my-network.
 
 `docker rm -f apache`{{execute}}
