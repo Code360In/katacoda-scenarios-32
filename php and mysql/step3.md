@@ -18,25 +18,25 @@ Exit the container's shell.
 
 Restart the apache server container.
 
-`docker restart apaches`{{execute}}
+`docker restart apache`{{execute}}
 
 
 Define "test2.php" in the host machine as follows.
 ```php
 <?php
-	$servername = "mysql:3306";
-	$username = "root";
-	$password = "12345";
+    $servername = "mysql:3306";
+    $username = "root";
+    $password = "12345";
 
-	// Create connection
-	$conn = new mysqli($servername, $username, $password);
-	
-	if ($conn->connect_error){
-		die("Connection failed:".$conn->connect_error);
-	}
-	echo "Connected to MySQL Successfullly"
-	
-	$conn->close();
+    // Create connection
+    $conn = new mysqli($servername, $username, $password);
+
+    if ($conn->connect_error){
+        die("Connection failed:".$conn->connect_error);
+    }
+    echo "Connected to MySQL Successfullly<br/>";
+
+    $conn->close();
 ?>
 
 ```
