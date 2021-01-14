@@ -51,6 +51,11 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+	"assets": {
+        "host01": [
+            {"file": "setup.sh", "target": "/usr/local/bin/", "chmod": "+x"}
+        ]
     }
   },
   "files": [
