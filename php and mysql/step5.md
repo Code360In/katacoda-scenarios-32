@@ -1,4 +1,4 @@
-Define the SQL script "users.sql" to create a user tables and insert a number of users as follows.
+Define the following SQL script "users.sql" to create a user table and insert user data.
 
 ```
 CREATE DATABASE mydb;
