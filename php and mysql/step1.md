@@ -12,14 +12,14 @@ Pull and run a apache container with php.
 ` docker exec -it php /bin/bash`{{execute}}
 
 Define test.php inside the container.
-```php
+`
 
 <pre class="file" data-filename="test.php" data-target="replace">
 <h1> Hello </h1> 
 <?php 
 	printf(phpversion());
 ?>
-```
+`{{copy}}
 
 
 Copy test.php into the container.
