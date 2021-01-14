@@ -1,9 +1,21 @@
-<h1>Cleaning up</h1>
+``{{execute}}
 
-Type exit to exit mysql shell.
+``{{execute}}
 
-`exit`{{execute}}
+``{{execute}}
 
+``{{execute}}
 
-Stop the running instance of MySQL.
-`docker rm -f mysql`{{execute}}
+``{{execute}}
+
+``{{execute}}
+
+``{{execute}}
+
+``{{execute}}
+
+``{{execute}}
+
+``{{execute}}
+
+``{{execute}}

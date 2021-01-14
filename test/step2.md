@@ -1,17 +1,21 @@
-<h1>Try the following commands inside mysql client</h1>
+``{{execute}}
 
-`SHOW DATABASES;`{{execute}}
+``{{execute}}
 
-`CREATE DATABASE UNIVERSITY;`{{execute}}
+``{{execute}}
 
-`USE UNIVERSITY;`{{execute}}
+``{{execute}}
 
-`CREATE TABLE Persons (PersonID int, LastName varchar(100), FirstName varchar(100), City varchar(100) );`{{execute}}
+``{{execute}}
 
-`SHOW DATABASES;`{{execute}}
+``{{execute}}
 
-`INSERT INTO Persons (PersonID, LastName, FirstName, City) VALUES (1, 'Chan', ' Alice', 'Hong Kong');`{{execute}}
+``{{execute}}
 
-`SELECT * FROM Persons;`{{execute}}
+``{{execute}}
 
+``{{execute}}
 
+``{{execute}}
+
+``{{execute}}
