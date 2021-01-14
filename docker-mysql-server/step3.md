@@ -5,7 +5,8 @@ In the host machine's shell, download and unzip the sakila sample DB scripts.
 `unzip sakila-db.zip`{{execute}}
 
 
-Copy the scripts into mysql container
+Copy the DB scripts into mysql container.
+
 `docker cp  sakila-db/ mysql:/`{{execute}}
 
 
@@ -27,13 +28,13 @@ Exploring the tables in the sakila DB.
 `select * from actor;`{{execute}}
 
 
-**Exercise**: Write the SQL statement for the following queries.
-* Which actors have the first name 'Scarlett'?
-* Which actors have the last name 'Johansson'?
-* How many distinct actors last names are there?
-* Which actor's last names are not repeated?
-* What is that average running time of all the films?
-* What is the average running time of films by category?
+> **Exercise**: Write the SQL statement for the following queries.
+> * Which actors have the first name 'Scarlett'?
+> * Which actors have the last name 'Johansson'?
+> * How many distinct actors last names are there?
+> * Which actor's last names are not repeated?
+> * What is that average running time of all the films?
+> * What is the average running time of films by category?
 
 
 Type exit to exit mysql shell.
