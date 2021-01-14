@@ -9,11 +9,12 @@ Start mysql server container and connect to my-network.
 
 `docker run --net my-network --name=mysql -e MYSQL_ROOT_PASSWORD="12345" -p 33306:3306 -d mysql:8`{{execute}}
 
-`docker exec -it mysql mysql -u root -p12345`{{execute}}
 
 
 <h2>Start apache container</h2>
 Startup a new instance of apache server named "apache" and connect the container to my-network.
+`docker rm -f apache`{{execute}}
+
 `docker run --net my-network --name apache -d -p 80:80 php:apache`{{execute}}
 
 
@@ -61,6 +62,7 @@ https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/test2.
 
 
 
+`docker exec -it mysql mysql -u root -p12345`{{execute}}
 ``{{execute}}
 
 ``{{execute}}
