@@ -60,7 +60,6 @@ if (isset($_GET["user_name"]) && isset($_GET["password"])) {
     $sql = "SELECT name, password FROM mydb.USER WHERE name='"
         .$_GET["user_name"]."' and password='".$_GET["password"]."';";
 
-    //$sql = "SELECT name, password FROM lab1.USER WHERE name='1'";
     printf("The SQL Statement:<br> $sql<br/></br>");
 
 
@@ -90,7 +89,7 @@ Copy login.php to the apache container.
 Visit localhost at port 80 with browser.
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/login.php
 
-Try:
-* Login with username "Alice" and password "123"
-* Login with an unknown user or wrong password
+> Try:
+> * Login with username "Alice" and password "123"
+> * Login with an unknown user or wrong password
 
