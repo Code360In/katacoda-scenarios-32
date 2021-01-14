@@ -1,21 +1,42 @@
-``{{execute}}
+Define "test3.php" in the host machine as follows.
 
-``{{execute}}
+```
+<?php
+	$servername = "mysql:3306";
+	$username = "root";
+	$password = "12345";
 
-``{{execute}}
+	// Create connection
+	$conn = new mysqli($servername, $username, $password);
+	
+	if ($conn->connect_error){
+		die("Connection failed:".$conn->connect_error);
+	}
+	echo "Connected Successfullly"
+?>
 
-``{{execute}}
+<H1>Show Actor Table</H1>
+<?php
 
-``{{execute}}
+	$sql = "select * from sakila.actor ";
+	$resultSet = $conn->query($sql);
+	printf($resultSet->num_rows);
+	
+?>
 
-``{{execute}}
+<?php
+	$conn->close();
+	
+?>
+```
 
-``{{execute}}
+Copy test2.php to the apache container.
 
-``{{execute}}
+`docker cp test2.php apache:/var/www/html`{{execute}}
 
-``{{execute}}
+Test the PHP script.
 
-``{{execute}}
+`curl localhost/test2.php`{{execute}}
 
-``{{execute}}
+Visit localhost at port 80 with browser.
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/test2.php

@@ -13,7 +13,7 @@ Launch a shell in the container.
 `exit`{{execute}}
 
 
-Define test.php in the host machine.
+Define test.php in the host machine as follows.
 ```
 <h1> Hello </h1> 
 
