@@ -10,7 +10,8 @@ Start mysql server container and connect to my-network.
 
 Setup the sakila sample database DB (if not done previously).
 
-```wget https://downloads.mysql.com/docs/sakila-db.zip
+```
+wget https://downloads.mysql.com/docs/sakila-db.zip
 
 unzip sakila-db.zip`{{execute}}
 
@@ -22,5 +23,6 @@ SOURCE /sakila-db/sakila-schema.sql`{{execute}}
 
 SOURCE /sakila-db/sakila-data.sql`{{execute}}
 
-exit```{{execute}}
+exit
+```{{execute}}
 
