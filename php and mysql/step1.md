@@ -13,8 +13,6 @@ Pull and run a apache container with php.
 
 Define test.php inside the container.
 `
-
-<pre class="file" data-filename="test.php" data-target="replace">
 <h1> Hello </h1> 
 <?php 
 	printf(phpversion());
