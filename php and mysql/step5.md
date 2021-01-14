@@ -15,14 +15,20 @@ INSERT INTO USER (name, password, email) VALUES ('Admin','1581', 'Admin@abc.com'
 INSERT INTO USER (name, password, email) VALUES ('Alice','123','Alice@abc.com');
 INSERT INTO USER (name, password, email) VALUES ('Bob','555','Bob@abc.com');
 INSERT INTO USER (name, password, email) VALUES ('Carol','3721','Carol@abc.com');
-```
+```{{copy}}
 
 Copy the script into the docker container.
+
 `docker cp users.sql mysql:/root`{{execute}}
 
 Execute the above script in the mysql container.
 
 ` docker exec  mysql mysql -u root -p12345  -e "source /root/users.sql"`{{execute}}
+
+Verify the created databases and tables.
+
+` docker exec  mysql mysql -u root -p12345 mydb -e "show databases"`{{execute}}
+
 ` docker exec  mysql mysql -u root -p12345 mydb -e "show databases"`{{execute}}
 
 

@@ -1,6 +1,6 @@
 Define "test3.php" in the host machine as follows.
 
-```php
+```
 
 <?php
     $servername = "mysql:3306";
@@ -41,7 +41,7 @@ Define "test3.php" in the host machine as follows.
     $conn->close();
 
 ?>
-```
+```{{copy}}
 
 Copy test2.php to the apache container.
 
