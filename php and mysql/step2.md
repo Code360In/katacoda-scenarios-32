@@ -12,17 +12,11 @@ Setup the sakila sample database DB.
 
 ```
 wget https://downloads.mysql.com/docs/sakila-db.zip
-
-unzip sakila-db.zip`{{execute}}
-
-docker cp  sakila-db/ mysql:/`{{execute}}
-
-docker exec -it mysql mysql -u root -p12345`{{execute}}
-
-SOURCE /sakila-db/sakila-schema.sql`{{execute}}
-
-SOURCE /sakila-db/sakila-data.sql`{{execute}}
-
+unzip sakila-db.zip`
+docker cp  sakila-db/ mysql:/`
+docker exec -it mysql mysql -u root -p12345`
+SOURCE /sakila-db/sakila-schema.sql`
+SOURCE /sakila-db/sakila-data.sql`
 exit
 ```{{execute}}
 
