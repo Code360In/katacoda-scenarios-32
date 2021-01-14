@@ -10,17 +10,17 @@ Start mysql server container and connect to my-network.
 
 Setup the sakila sample database DB (if not done previously).
 
-`wget https://downloads.mysql.com/docs/sakila-db.zip`{{execute}}
+```wget https://downloads.mysql.com/docs/sakila-db.zip
 
-`unzip sakila-db.zip`{{execute}}
+unzip sakila-db.zip`{{execute}}
 
-`docker cp  sakila-db/ mysql:/`{{execute}}
+docker cp  sakila-db/ mysql:/`{{execute}}
 
-`docker exec -it mysql mysql -u root -p12345`{{execute}}
+docker exec -it mysql mysql -u root -p12345`{{execute}}
 
-`SOURCE /sakila-db/sakila-schema.sql`{{execute}}
+SOURCE /sakila-db/sakila-schema.sql`{{execute}}
 
-`SOURCE /sakila-db/sakila-data.sql`{{execute}}
+SOURCE /sakila-db/sakila-data.sql`{{execute}}
 
-`exit`{{execute}}
+exit`{{execute}}
 
