@@ -4,7 +4,7 @@ Malicious SQL statements are inserted by attackers to trick data-driven applicat
 
 In the login page, input the following username and submit the form
 
-<pre> `or 1=1 -- </pre>
+<pre> \`or 1=1 -- </pre>
 
 
 Visit localhost at port 80 with browser.
@@ -14,9 +14,7 @@ https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/login.
 
 Observe whether you can login successfully.
 
-
-> **Exercise**: 
->  Launch SQL injection to login as Bob without password
+> **Exercise**: Launch SQL injection to login as Bob without password
 
 
 <h2> Prepared Statements</h2>
