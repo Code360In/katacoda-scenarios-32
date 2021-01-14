@@ -1,9 +1,5 @@
-Start a new Docker container for a MySQL Server.
 
-`docker run --name=mysql -e MYSQL_ROOT_PASSWORD="12345" -p 33306:3306 -d mysql:8`{{execute}}
-
-`docker exec -it mysql mysql -u root -p12345`{{execute}}
-
+Pull and run a apache container with php.
 
 `docker pull php:apache`{{execute}}
 
@@ -15,19 +11,23 @@ Start a new Docker container for a MySQL Server.
 
 ` docker exec -it php /bin/bash`{{execute}}
 
+Define index.html inside the container.
+```php
 
-`docker exec -it php /bin/sh -c "echo 'hi'>/var/www/html/index.html"`{{execute}}
+<h1> Hello </h1> 
+<?php 
+	printf(phpversion());
+?>
+
+```
+
+`docker exec -it php /bin/sh -c "echo '<h1> Hello </h1> <?php printf(phpversion());?>'>/var/www/html/index.html"`{{execute}}
 
 `curl localhost`{{execute}}
 
 Visit localhost at port 80 with browser.
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
 
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
 
 
 ``{{execute}}
@@ -36,6 +36,13 @@ https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
 
 ``{{execute}}
 
+
+``{{execute}}
+
+``{{execute}}
+
+``{{execute}}
+
 ``{{execute}}
 
 ``{{execute}}
@@ -45,3 +52,4 @@ https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
 ``{{execute}}
 
 ``{{execute}}
+
