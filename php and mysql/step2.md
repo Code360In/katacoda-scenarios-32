@@ -56,7 +56,7 @@ Test the php application.
 
 
 Visit localhost at port 80 with browser.
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/test2.php
 
 
 
