@@ -22,4 +22,5 @@ Setup the sakila sample database DB (if not done previously).
 
 `SOURCE /sakila-db/sakila-data.sql`{{execute}}
 
+`exit`{{execute}}
 

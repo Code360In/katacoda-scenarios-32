@@ -51,6 +51,11 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+	"assets": {
+        "host01": [
+            {"file": "setup_sakila.sh", "target": "/usr/local/bin/", "chmod": "+x"}
+        ]
     }
   },
   "files": [
@@ -62,4 +67,5 @@
   "backend": {
     "imageid": "ubuntu:2004"
   }
+  
 }
