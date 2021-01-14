@@ -10,6 +10,13 @@ Start mysql server container and connect to my-network.
 `docker run --net my-network --name=mysql -e MYSQL_ROOT_PASSWORD="12345" -p 33306:3306 -d mysql:8`{{execute}}
 
 
+Check the container log and wait until the database is initialized.
+
+`docker logs mysql`{{execute}}
+
+The container log should show the following message when the initialization is completed 
+`MySQL init process done. Ready for start up.`
+
 
 Setup the sakila sample database DB.
 
@@ -24,9 +31,6 @@ docker exec  mysql mysql -u root -p12345 -e 'SOURCE /sakila-db/sakila-schema.sql
 docker exec  mysql mysql -u root -p12345 -e 'SOURCE /sakila-db/sakila-data.sql'
 ```{{execute}}
 
-If the above  step is not successul , you may need to wait for the database to startup completely. To check the container log: 
-
-`docker logs mysql`{{execute}}
 
 Verify if the sakila database is created.
 

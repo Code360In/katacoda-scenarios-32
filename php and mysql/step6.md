@@ -1,15 +1,18 @@
 <h2> SQL Injection</h2>
 Malicious SQL statements are inserted by attackers to trick data-driven applications into executing unintended commands or bypassing security controls.
-E.g. dump the database contents to the attackers, logging in without username and password, privilege escalation
+E.g. dump the database contents to the attackers, logging in without username and password, privilege escalation.
 
 
 In the login page, input the following username and submit the form
 ``` or 1=1 -- ```
 
-This is an example of SQL Injection attack
+Visit localhost at port 80 with browser.
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/login.php
+
+Observe whether you can login successfully.
 
 
-> *Exercise*: 
+> **Exercise**: 
 >  Launch SQL injection to login as Bob without password
 
 
@@ -19,7 +22,7 @@ Modify login.php to make use of parametized query to defend against SQL injectio
 
 ```
 <h1>Login</h1>
-<form action="login2.php" method="GET">
+<form action="login.php" method="GET">
 Username:
 <input type="text" name="user_name"><br>
 Password:
@@ -72,6 +75,9 @@ if (isset($_GET["user_name"]) && isset($_GET["password"])) {
 ?>    
 ```{{copy}}
 
+Copy login.php to the apache container.
+
+`docker cp login.php apache:/var/www/html`{{execute}}
 
 Check that SQL injection no longer works.
 
