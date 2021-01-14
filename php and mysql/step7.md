@@ -1,7 +1,4 @@
 
-
-<h2> Prepared Statements</h2>
-
 Modify login.php to make use of parametized query to defend against SQL injection.
 
 ```

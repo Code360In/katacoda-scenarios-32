@@ -27,6 +27,7 @@ Test the PHP script.
 `curl localhost/test2.php`{{execute}}
 
 Visit localhost at port 80 with browser.
+
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/test2.php
 
 

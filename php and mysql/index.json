@@ -6,44 +6,32 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Preparation",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Create PHP script",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Connect to MYSQL from PHP script (I)",
         "text": "step3.md"
       },
       {
-        "title": "Step 4",
+        "title": "Connect to MYSQL from PHP script (II)",
         "text": "step4.md"
       },
       {
-        "title": "Step 5",
+        "title": "Login Page",
         "text": "step5.md"
       },
       {
-        "title": "Step 6",
+        "title": "SQL Injection",
         "text": "step6.md"
       },
       {
-        "title": "Step 7",
+        "title": "Prepared Statements",
         "text": "step7.md"
-      },
-      {
-        "title": "Step 8",
-        "text": "step8.md"
-      },
-      {
-        "title": "Step 9",
-        "text": "step9.md"
-      },
-      {
-        "title": "Step 10",
-        "text": "step10.md"
       }
     ],
     "intro": {
