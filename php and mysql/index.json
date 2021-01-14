@@ -59,7 +59,7 @@
     }
   },
   "files": [
-        "test.php", "test2.php","test3.php","login.php","users.sql"
+        "test.php", "test2.php","test3.php","login.php",  "users.sql"
     ],
   "environment": {
     "uilayout": "editor-terminal"
