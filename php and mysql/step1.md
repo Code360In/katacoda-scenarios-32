@@ -11,17 +11,19 @@ Pull and run a apache container with php.
 
 ` docker exec -it php /bin/bash`{{execute}}
 
-Define index.html inside the container.
-```php
-
+Define test.php inside the container.
+<pre class="file" data-filename="test.php" data-target="replace">
 <h1> Hello </h1> 
 <?php 
 	printf(phpversion());
 ?>
+</pre>
 
-```
 
-`docker exec -it php /bin/sh -c "echo '<h1> Hello </h1> <?php printf(phpversion());?>'>/var/www/html/index.html"`{{execute}}
+Copy test.php into the container.
+`docker cp test.php php:var/www/html`{{execute}}
+
+
 
 `curl localhost`{{execute}}
 
@@ -29,6 +31,7 @@ Visit localhost at port 80 with browser.
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
 
 
+`docker exec -it php /bin/sh -c "echo '<h1> Hello </h1> <?php printf(phpversion());?>'>/var/www/html/index.html"`{{execute}}
 
 ``{{execute}}
 
