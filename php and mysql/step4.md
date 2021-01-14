@@ -21,9 +21,9 @@ Define "test3.php" in the host machine as follows.
 
     $sql = "select * from sakila.actor ";
     $resultSet = $conn->query($sql);
-    printf($resultSet->num_rows);
+    printf("Number of rows: %d <br/> ",$resultSet->num_rows);
     
-    print("<br/>")
+
     
     if ($resultSet->num_rows > 0) {
 		
@@ -47,9 +47,11 @@ Copy test2.php to the apache container.
 
 `docker cp test3.php apache:/var/www/html`{{execute}}
 
-Test the PHP script.
-
-`curl localhost/test3.php`{{execute}}
 
 Visit localhost at port 80 with browser.
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/test3.php
+
+
+> **Exercise**:
+> Modify the script to show the last name of each actor
+

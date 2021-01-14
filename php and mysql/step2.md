@@ -12,7 +12,8 @@ Setup the sakila sample database DB.
 
 ```
 wget https://downloads.mysql.com/docs/sakila-db.zip
-unzip sakila-db.zip`
+unzip sakila-db.zip
+docker cp  sakila-db/ mysql:/
 ```{{execute}}
 
 ```
