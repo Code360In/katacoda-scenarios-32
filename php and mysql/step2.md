@@ -1,11 +1,4 @@
 
-Pull and run a apache container with php.
-
-`docker pull php:apache`{{execute}}
-
-`docker run --name apache -d -p 80:80 php:apache`{{execute}}
-
-
 Launch a shell in the container.
 
 ` docker exec -it apache /bin/bash`{{execute}}

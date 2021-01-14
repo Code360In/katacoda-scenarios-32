@@ -27,9 +27,9 @@ Execute the above script in the mysql container.
 
 Verify the created databases and tables.
 
-` docker exec  mysql mysql -u root -p12345 mydb -e "show databases"`{{execute}}
+` docker exec  mysql mysql -u root -p12345  -e "show databases"`{{execute}}
 
-` docker exec  mysql mysql -u root -p12345 mydb -e "show databases"`{{execute}}
+` docker exec  mysql mysql -u root -p12345  -e "select * from mydb.USER"`{{execute}}
 
 
 Create login.php with the following code
@@ -47,40 +47,40 @@ Password:
 
 <?php
 if (isset($_GET["user_name"]) && isset($_GET["password"])) {
-   $servername = "localhost:3306";
+  $servername = "mysql:3306";
    $username = "root";
    $password = "12345";
    // Create connection
    $conn = new mysqli($servername, $username, $password);
    // Check connection
    if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-	}
-	
-	
-	$sql = "SELECT name, password FROM mydb.USER WHERE name='"
-		.$_GET["user_name"]."' and password='".$_GET["password"]."';";
-			
-	//$sql = "SELECT name, password FROM lab1.USER WHERE name='1'";
-	printf("The SQL Statement:<br> $sql<br/></br>");
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "SELECT name, password FROM mydb.USER WHERE name='"
+        .$_GET["user_name"]."' and password='".$_GET["password"]."';";
+
+    //$sql = "SELECT name, password FROM lab1.USER WHERE name='1'";
+    printf("The SQL Statement:<br> $sql<br/></br>");
 
 
-	$resultSet = $conn->query($sql);
+    $resultSet = $conn->query($sql);
       if (!$resultSet) {
-		trigger_error('Invalid query: ' . $conn->error);
+        trigger_error('Invalid query: ' . $conn->error);
       }
 
       if ($resultSet->num_rows > 0) {
-     	 $row = $resultSet ->fetch_assoc(); //fetch a result row as an associative array
-			echo "<h2> Welcome: ".$row["name"]."</h2>";
+          $row = $resultSet ->fetch_assoc(); //fetch a result row as an associative array
+            echo "<h2> Welcome: ".$row["name"]."</h2>";
       }
       else {
-      	echo "<h2>Invalid username/password!</h2>";
+          echo "<h2>Invalid username/password!</h2>";
       }
 
-	$conn->close();
+    $conn->close();
 }
 ?>
+
 ```{{copy}}
 
 Copy login.php to the apache container.
@@ -91,26 +91,6 @@ Visit localhost at port 80 with browser.
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/login.php
 
 Try:
-* Login with username:alice and password:123
-* Login with an unknown user
+* Login with username "Alice" and password "123"
+* Login with an unknown user or wrong password
 
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
