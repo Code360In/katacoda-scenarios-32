@@ -1,5 +1,4 @@
-
-Modify login.php to make use of parametized query to defend against SQL injection.
+Modify login.php to make use of parameterized query to defend against SQL injection.
 
 ```
 <h1>Login</h1>
@@ -59,6 +58,7 @@ if (isset($_GET["user_name"]) && isset($_GET["password"])) {
 Copy login.php to the apache container.
 
 `docker cp login.php apache:/var/www/html`{{execute}}
+
 
 Check that SQL injection no longer works.
 

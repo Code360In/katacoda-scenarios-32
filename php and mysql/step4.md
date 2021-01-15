@@ -49,9 +49,11 @@ Copy test2.php to the apache container.
 
 
 Visit localhost at port 80 with browser.
+
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/test3.php
 
 
 > **Exercise**:
-> Modify the script to show the last name of each actor
+> Modify the script to show the last name of each actor.
+
 

@@ -2,7 +2,7 @@
   "title": "PHP and MySQL",
   "description": "",
   "difficulty": "Beginner",
-  "time": "50",
+  "time": "30",
   "details": {
     "steps": [
       {
@@ -55,5 +55,4 @@
   "backend": {
     "imageid": "ubuntu:2004"
   }
-  
 }

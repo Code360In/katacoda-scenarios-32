@@ -50,6 +50,7 @@ if (isset($_GET["user_name"]) && isset($_GET["password"])) {
   $servername = "mysql:3306";
    $username = "root";
    $password = "12345";
+   
    // Create connection
    $conn = new mysqli($servername, $username, $password);
    // Check connection
@@ -86,6 +87,7 @@ Copy login.php to the apache container.
 `docker cp login.php apache:/var/www/html`{{execute}}
 
 Visit localhost at port 80 with browser.
+
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/login.php
 
 > Try:

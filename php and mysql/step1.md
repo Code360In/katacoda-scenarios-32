@@ -14,7 +14,8 @@ Check the container log and wait until the database is initialized.
 
 `docker logs mysql`{{execute}}
 
-The container log should show the following message when the initialization is completed 
+The container log should show the following message when the initialization is completed.
+ 
 `MySQL init process done. Ready for start up.`
 
 
@@ -39,7 +40,7 @@ Verify if the sakila database is created.
  
  <h3> Setup Apache server with PHP</h3>
  
- Startup a  instance of apache server named "apache" and connect the container to my-network.
+ Startup an instance of apache server docker container named "apache" and connect the container to my-network.
 
 `docker run --net my-network --name apache -d -p 80:80 php:apache`{{execute}}
 
