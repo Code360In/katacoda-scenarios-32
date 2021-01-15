@@ -1,20 +1,20 @@
 {
-  "title": "Building Docker Images ",
+  "title": "Python Flask REST API",
   "description": "",
   "difficulty": "Beginner",
   "time": "15",
   "details": {
     "steps": [
       {
-        "title": "Building the docker image ",
+        "title": "Deploy a Python Flask REST API",
         "text": "step1.md"
       },
       {
-        "title": "Running the python flask app docker image",
+        "title": "Update the flask app",
         "text": "step2.md"
       },
       {
-        "title": "Update the application code",
+        "title": "Exercise",
         "text": "step3.md"
       }
     ],
