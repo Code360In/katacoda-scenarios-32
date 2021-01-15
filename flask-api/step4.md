@@ -7,11 +7,10 @@ def delete_book_by_id(book_id):
     return jsonify({'status':'success'}),200 
 </pre>
 
-``{{execute}}
 
-To delete the second book, execute in Terminal 2:
+E.g. To delete the second book, execute in Terminal 2:
 
-`curl -X DELETE  http://localhost:5000/books/1`{{execute T2}
+`curl -X DELETE  http://localhost:5000/books/1`{{execute T2}}
 
 
 Visit localhost:5000/books in browser to list the books.
