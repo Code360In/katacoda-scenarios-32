@@ -2,7 +2,7 @@
   "title": "Python Flask REST API",
   "description": "",
   "difficulty": "Beginner",
-  "time": "15",
+  "time": "30",
   "details": {
     "steps": [
       {
@@ -24,6 +24,10 @@
       {
         "title": "Exercise: Update book",
         "text": "step5.md"
+      },
+      {
+        "title": "Reference",
+        "text": "step6.md"
       }
     ],
     "intro": {
