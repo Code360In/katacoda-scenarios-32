@@ -50,7 +50,7 @@ Execute the flask app.
 Visit localhost:5000/books in browser to list all the books.
 https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books 
 
-To support getting a book by book_id, add the following code to app.py.
+To support getting a book by book_id, add the following function to app.py.
 
 <pre class="file" data-filename="app.py" data-target="insert" data-marker="#TODO-get_book_by_id">
 
