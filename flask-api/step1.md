@@ -51,9 +51,11 @@ app.run(host='0.0.0.0', port=5000, debug=True)
 </pre>
 
 
-Install Flask using the pip package manager for Python.
+Install Flask using the pip package manager for Python (if not installed).
 
 `pip install flask`{{execute}}
+
+Execute the flask app.
 
 `python app.py`{{execute}}
 
@@ -82,9 +84,7 @@ https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/book
 
 ``{{execute}}
 
-``{{execute}}
-
-``{{execute}}
+To allow getting book by book_id, add the following code to app.py.
 
 <pre class="file" data-filename="app.py" data-target="insert" data-marker="#TODO-get_book_by_id">
 
@@ -94,6 +94,7 @@ def get_book_by_id(book_id):
     return jsonify(book),200 
 </pre>
 
+To allow deleting book by book_id, add the following code to app.py.
 
 <pre class="file" data-filename="app.py" data-target="insert" data-marker="#TODO-delete_book_by_id">
 @app.route('/books/<book_id>', methods=['DELETE'])
@@ -101,15 +102,5 @@ def delete_book_by_id(book_id):
     del books[int(book_id)]
     return jsonify({'status':'success'}),200 
 </pre>
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
 
 ``{{execute}}
