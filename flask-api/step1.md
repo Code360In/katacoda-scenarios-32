@@ -50,8 +50,6 @@ Execute the flask app.
 Visit localhost:5000/books in browser to list all the books.
 https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books 
 
-hi
-
 To support getting a book by book_id, add the following function to app.py.
 
 <pre class="file" data-filename="app.py" data-target="insert" data-marker="#TODO-get_book_by_id">
@@ -62,7 +60,7 @@ def get_book_by_id(book_id):
     return jsonify(book),200 
 </pre>
 
-> Try:
+> Access the endpoints /book/0 and /book/1 to retrieve data about the first and second book:
 > * https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books/0
 > * https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books/1
 
@@ -104,10 +102,8 @@ You may use the HTTP request and response with -v option.
 `curl -v -X POST -d @book.json -H "Content-Type: application/json" http://localhost:5000/books`{{execute T2}}
 
 
-
 If you are using Chrome browser, you may use REST API client such as [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop/related?hl=en) or [Advanced REST client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo).
 Generate a HTTP post request to https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books and specify  the HTTP header ```content-type=application/json```{{copy}}.
-
 
 
 After adding the new books, visit localhost:5000/books in browser to retrieve the updated book list.
@@ -116,10 +112,11 @@ https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/book
 
 ``{{execute}}
 
+
 To allow deleting book by book_id, add the following code to app.py.
 
 <pre class="file" data-filename="app.py" data-target="insert" data-marker="#TODO-delete_book_by_id">
-@app.route('/books/<book_id>', methods=['DELETE'])
+@app.route('/books/\<book_id\>', methods=['DELETE'])
 def delete_book_by_id(book_id):
     del books[int(book_id)]
     return jsonify({'status':'success'}),200 
