@@ -10,7 +10,7 @@ Copy the DB scripts into mysql container.
 `docker cp  sakila-db/ mysql:/`{{execute}}
 
 
-In the mysql client inside the mysql container, unip the scripts to create the sample DB.
+In the mysql client inside the mysql container, unzip the scripts to create the sample DB.
 
 `docker exec -it mysql mysql -u root -p12345`{{execute}}
 

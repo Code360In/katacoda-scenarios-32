@@ -32,7 +32,7 @@ Verify the created databases and tables.
 ` docker exec  mysql mysql -u root -p12345  -e "select * from mydb.USER"`{{execute}}
 
 
-Create login.php with the following code
+Create login.php with the following code.
 
 ```
 <h1>Login</h1>
