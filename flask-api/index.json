@@ -41,8 +41,7 @@
         "app.py","book.json"
     ],
   "environment": {
-    "uilayout": "editor-terminal",
-	"hideintro": "false"
+    "uilayout": "editor-terminal"
   },
   "backend": {
     "imageid": "python:3.8"
