@@ -16,7 +16,7 @@ E.g. Suppose we want to  update the first book to
 
 Execute:
 
-`curl -X PUT -H "Content-Type: application/json" -d '{"title": "Python programming (2nd Ed)", "author":"author 1", "rating": 7.1}' localhost:5000/books/0`{{execute T2}}
+`curl -X PUT -H "Content-Type: application/json" -d '{"title": "Python programming (2nd Ed)", "author":"author 5", "rating": 7.1}' localhost:5000/books/0`{{execute T2}}
 
 Visit localhost:5000/books in browser to verify the result.
 
