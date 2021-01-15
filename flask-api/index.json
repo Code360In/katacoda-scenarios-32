@@ -42,7 +42,7 @@
     ],
   "environment": {
     "uilayout": "editor-terminal",
-	"hideintro": "true"
+	"hideintro": "false"
   },
   "backend": {
     "imageid": "python:3.8"

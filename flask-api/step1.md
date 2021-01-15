@@ -1,7 +1,3 @@
-<h2>What is flask?</h2>
-Flask is a web framework for Python, meaning that it provides functionality for building web applications, including managing HTTP requests and rendering templates.
-
-<h2>Define and deploy a flask app</h2>
 Define app.py as follows.
 
 <pre class="file" data-filename="app.py" data-target="replace">
