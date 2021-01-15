@@ -5,7 +5,16 @@
 > The updated book data in JSON will be sent in the body of the HTTP request.
 
 
-E.g. To update the first book to {"title": "Python programming (2nd Ed)", "author":"author 5", "rating": 7.1}, execute:
+E.g. Suppose we want to  update the first book to 
+```json
+{
+	"title": "Python programming (2nd Ed)", 
+	"author":"author 5", 
+	"rating": 7.1
+	}
+```
+
+Execute:
 
 `curl -X PUT -H "Content-Type: application/json" -d '{"title": "Python programming (2nd Ed)", "author":"author 1", "rating": 7.1}' localhost:5000/books/0`{{execute T2}}
 

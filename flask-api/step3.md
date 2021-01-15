@@ -48,7 +48,7 @@ If you are using Chrome browser, you may install one of the following REST API c
 * [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop/related?hl=en) 
 * [Advanced REST client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo). 
 
-Specify  the HTTP header ```content-type=application/json```{{copy}}. Generete a POST request to the endpoint `https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books .`{{copy}}. 
+Specify  the HTTP header ```content-type=application/json```{{copy}}. Generate a POST request to the endpoint `https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books .`{{copy}}. 
 
 Visit localhost:5000/books in browser to check if new book is added.
 
