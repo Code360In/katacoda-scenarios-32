@@ -54,7 +54,7 @@ To support getting a book by book_id, add the following function to app.py.
 
 <pre class="file" data-filename="app.py" data-target="insert" data-marker="#TODO-get_book_by_id">
 
-@app.route('/books/\<book_id\>', methods=['GET'])
+@app.route('/books/\<book_id>', methods=['GET'])
 def get_book_by_id(book_id):
     book = books[int(book_id)]
     return jsonify(book),200 
@@ -116,7 +116,7 @@ https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/book
 To allow deleting book by book_id, add the following code to app.py.
 
 <pre class="file" data-filename="app.py" data-target="insert" data-marker="#TODO-delete_book_by_id">
-@app.route('/books/\<book_id\>', methods=['DELETE'])
+@app.route('/books/\<book_id>', methods=['DELETE'])
 def delete_book_by_id(book_id):
     del books[int(book_id)]
     return jsonify({'status':'success'}),200 
