@@ -20,6 +20,10 @@
       {
         "title": "Delete book",
         "text": "step4.md"
+      },
+      {
+        "title": "Exercise: Update book",
+        "text": "step5.md"
       }
     ],
     "intro": {

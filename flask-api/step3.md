@@ -50,3 +50,8 @@ If you are using Chrome browser, you may install one of the following REST API c
 
 Specify  the HTTP header ```content-type=application/json```{{copy}}. Generete a POST request to the endpoint https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books . Check if new book is added.
 
+Visit localhost:5000/books in browser to verify the result.
+
+https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books 
+
+
