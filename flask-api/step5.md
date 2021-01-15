@@ -2,7 +2,7 @@
 >
 > Modify the API to support updating to a book.
 > Application may send a HTTP PUT request to the endpoint to update a book. 
-> The updated book data is sent in the body of the HTTP request.
+> The updated book data in JSON will be sent in the body of the HTTP request.
 
 
 E.g. To update the first book to {"title": "Python programming", "rating": 7.1}, execute:
