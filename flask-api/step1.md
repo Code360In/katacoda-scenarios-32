@@ -50,7 +50,6 @@ Execute the flask app.
 Visit localhost:5000/books in browser to list all the books.
 https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books 
 
-xxxxx
 
 To support getting a book by book_id, add the following function to app.py.
 
@@ -98,9 +97,12 @@ Add a book by running the following command in T2.
 
 `curl -X POST -d @book.json -H "Content-Type: application/json" http://localhost:5000/books`{{execute T2}}
 
-The above command generates an HTTP POST request to the /books endpoint with the following JSON object with the header `content-type=application/json`.
+Visit localhost:5000/books in browser to list all the books.
+https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books 
 
-You may use the HTTP request and response with -v option.
+
+The above command generates an HTTP POST request to the /books endpoint with the following JSON object with the header `content-type=application/json`. You may use the HTTP request and response with -v option.
+
 `curl -v -X POST -d @book.json -H "Content-Type: application/json" http://localhost:5000/books`{{execute T2}}
 
 
@@ -118,7 +120,7 @@ https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/book
 To allow deleting book by book_id, add the following code to app.py.
 
 <pre class="file" data-filename="app.py" data-target="insert" data-marker="#TODO-delete_book_by_id">
-@app.route('/books/\<book_id>', methods=['DELETE'])
+@app.route('/books/&lt;book_id>', methods=['DELETE'])
 def delete_book_by_id(book_id):
     del books[int(book_id)]
     return jsonify({'status':'success'}),200 
