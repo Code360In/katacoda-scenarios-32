@@ -1,4 +1,4 @@
-To support adding new books, add the following code to app.py.
+Add the following code to app.py.
 
 <pre class="file" data-filename="app.py" data-target="insert" data-marker="#TODO-add_book">
 @app.route('/books', methods=['POST'])
@@ -30,7 +30,7 @@ Add a book by running the following command in T2.
 
 `curl -X POST -d @book.json -H "Content-Type: application/json" http://localhost:5000/books`{{execute T2}}
 
-Visit localhost:5000/books in browser to list all the books.
+Visit localhost:5000/books in browser to list the books.
 
 https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books 
 
@@ -38,7 +38,7 @@ https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/book
 > Use the API to create a book "MySQL in a Nutshell" with rating 9 and view the created book.
 
 
-The above command generates an HTTP POST request to the /books endpoint with the following JSON object with the header `content-type=application/json`. You may use the HTTP request and response with -v option.
+The above command generates an HTTP POST request to the /books endpoint with the following JSON object with the header `content-type=application/json`. You may view the HTTP request and response with -v option in curl.
 
 `curl -v -X POST -d @book.json -H "Content-Type: application/json" http://localhost:5000/books`{{execute T2}}
 
@@ -48,6 +48,5 @@ If you are using Chrome browser, you may install one of the following REST API c
 * [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop/related?hl=en) 
 * [Advanced REST client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo). 
 
-Generate a HTTP POST request and  specify  the HTTP header ```content-type=application/json```{{copy}}. Send the request to 
+Specify  the HTTP header ```content-type=application/json```{{copy}}. Generete a POST request to the endpoint https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books . Check if new book is added.
 
-https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books.
