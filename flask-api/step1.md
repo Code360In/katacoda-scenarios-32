@@ -106,8 +106,7 @@ The above command generates an HTTP POST request to the /books endpoint with the
 `curl -v -X POST -d @book.json -H "Content-Type: application/json" http://localhost:5000/books`{{execute T2}}
 
 
-If you are using Chrome browser, you may use REST API client such as [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop/related?hl=en) or [Advanced REST client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo).
-Generate a HTTP post request to https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books and specify  the HTTP header ```content-type=application/json```{{copy}}.
+If you are using Chrome browser, you may use REST API client such as [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop/related?hl=en) or [Advanced REST client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo). to generate a HTTP post request to https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books and specify  the HTTP header ```content-type=application/json```{{copy}}.
 
 
 After adding the new books, visit localhost:5000/books in browser to retrieve the updated book list.
