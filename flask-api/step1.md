@@ -86,8 +86,9 @@ Create books.json and define the following JSON object.
 }
 </pre>
 
-Add a book by running the following command.
-curl -X POST -d book.json http://localhost/books/
+Open a second terminal (T2). 
+Add a book by running the following command in T2.
+`curl -X POST -d book.json http://localhost/books/`{{execute T2}}
 
 
 The above command generates an HTTP POST request to the /books endpoint with the following JSON object with the header `content-type=application/json`.
