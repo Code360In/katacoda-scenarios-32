@@ -48,7 +48,7 @@ Execute the flask app.
 `python app.py`{{execute}}
 
 Visit localhost:5000/books in browser to list all the books.
-
+https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books 
 
 To support getting a book by book_id, add the following code to app.py.
 
@@ -60,7 +60,11 @@ def get_book_by_id(book_id):
     return jsonify(book),200 
 </pre>
 
-https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books
+> Try:
+> * https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books/0
+> * https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books/1
+
+To support adding new books, add the following code to app.py.
 
 <pre class="file" data-filename="app.py" data-target="insert" data-marker="#TODO-add_book">
 @app.route('/books', methods=['POST'])
@@ -87,11 +91,17 @@ Create books.json and define the following JSON object.
 </pre>
 
 Open a second terminal (T2). 
-Add a book by running the following command in T2.
-`curl -X POST -d book.json http://localhost/books/`{{execute T2}}
 
+Add a book by running the following command in T2.
+
+`curl -X POST -d @book.json -H "Content-Type: application/json" http://localhost:5000/books`{{execute T2}}
 
 The above command generates an HTTP POST request to the /books endpoint with the following JSON object with the header `content-type=application/json`.
+
+You may use the HTTP request and response with -v option.
+`curl -v -X POST -d @book.json -H "Content-Type: application/json" http://localhost:5000/books`{{execute T2}}
+
+
 
 If you are using Chrome browser, you may use REST API client such as [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop/related?hl=en) or [Advanced REST client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo).
 Generate a HTTP post request to https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books and specify  the HTTP header ```content-type=application/json```{{copy}}.
