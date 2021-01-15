@@ -29,7 +29,8 @@
         "app.py"
     ],
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "editor-terminal",
+	"hideintro": "true"
   },
   "backend": {
     "imageid": "python:3.8"
