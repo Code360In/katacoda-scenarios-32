@@ -5,11 +5,11 @@
 > The updated book data in JSON will be sent in the body of the HTTP request.
 
 
-E.g. To update the first book to {"title": "Python programming", "author":"author 5", "rating": 7.1}, execute:
+E.g. To update the first book to {"title": "Python programming (2nd Ed)", "author":"author 5", "rating": 7.1}, execute:
 
-`curl -X PUT -H "Content-Type: application/json" -d '{"title": "Python programming", "author":"author 5", "rating": 7.1}' localhost:5000/books/0`{{execute T2}}
+`curl -X PUT -H "Content-Type: application/json" -d '{"title": "Python programming (2nd Ed)", "author":"author 1", "rating": 7.1}' localhost:5000/books/0`{{execute T2}}
 
-Visit localhost:5000/books in browser to verify the result.
+Visit localhost:5000/books in browser to verify the result.s
 
 https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books 
 	
