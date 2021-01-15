@@ -10,12 +10,16 @@
         "text": "step1.md"
       },
       {
-        "title": "Update the flask app",
+        "title": "Get book by ID",
         "text": "step2.md"
       },
-      {
-        "title": "Exercise",
+	  {
+        "title": "Add book",
         "text": "step3.md"
+      },
+      {
+        "title": "Delete book",
+        "text": "step4.md"
       }
     ],
     "intro": {
