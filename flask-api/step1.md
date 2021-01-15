@@ -74,6 +74,9 @@ To create a new book, create a HTTP POST request to the /books endpoint with the
 Set the header of the HTTP request:
 ```content-type=application/json```{{copy}}
 
+You may use REST API client such as "Advanced REST client", a plugin for Chrome browser.
+
+https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo
 
 Visit localhost:5000/books in browser to retrieve the updated book list.
 
