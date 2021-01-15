@@ -14,7 +14,7 @@ def add_books():
     return jsonify({'status':'success'}),200 
 </pre>
 
-Create books.json and define the following JSON object.
+Create a JSON document book.json and define the following JSON object.
 
 <pre class="file" data-filename="book.json" data-target="replace">
 {
@@ -48,9 +48,9 @@ If you are using Chrome browser, you may install one of the following REST API c
 * [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop/related?hl=en) 
 * [Advanced REST client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo). 
 
-Specify  the HTTP header ```content-type=application/json```{{copy}}. Generete a POST request to the endpoint `https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books .`{{copy}}. Check if new book is added.
+Specify  the HTTP header ```content-type=application/json```{{copy}}. Generete a POST request to the endpoint `https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books .`{{copy}}. 
 
-Visit localhost:5000/books in browser to verify the result.
+Visit localhost:5000/books in browser to check if new book is added.
 
 https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books 
 
