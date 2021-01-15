@@ -9,7 +9,7 @@ E.g. Suppose we want to  update the first book to
 ```json
 {
 	"title": "Python programming (2nd Ed)", 
-	"author":"Author 5", 
+	"author": "Author 5", 
 	"rating": 7.1
 	}
 ```
