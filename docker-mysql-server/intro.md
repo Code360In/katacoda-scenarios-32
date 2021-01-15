@@ -1,8 +1,7 @@
-In this tutorial, you will learn about 
-
 **Learning Objectives**:
 
-* running MySQL Server 8 in Docker Environment.
+* Running MySQL Server 8 database in Docker .
+* Setup the Sakila Sample DB in MySQL Server.
 
 <br/><br/>
 
