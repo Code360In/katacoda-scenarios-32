@@ -34,7 +34,9 @@ def get_books():
 #TODO-delete_book_by_id
 
 #start flask server
-app.run(host='0.0.0.0', port=5000, debug=True)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
+
 </pre>
 
 Install Flask using the pip package manager for Python (if not previously installed).
