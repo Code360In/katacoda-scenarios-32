@@ -44,11 +44,9 @@ https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/book
 
 > **Exercise**:
 > Use the API to create a book "MySQL in a Nutshell" with rating 9 and view the created book.
-
-
-
-Visit localhost:5000/books in browser to check if new book is added.
-
-https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books 
+>
+> Visit localhost:5000/books in browser to check if new book is added.
+>
+> https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books 
 
 
