@@ -1,4 +1,4 @@
-Modify the code to add the about_me function. Put your studentID and name in my_info variable.
+Modify `app.py` to add the following code at #TODO-get_books.
 
 <pre class="file" data-filename="app.py" data-target="insert" data-marker="#TODO-get_books">
 #book list

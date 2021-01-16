@@ -1,4 +1,4 @@
-Add the following function to app.py.
+Add the following function to app.py under #TODO-get_book_by_id.
 
 <pre class="file" data-filename="app.py" data-target="insert" data-marker="#TODO-get_book_by_id">
 @app.route('/books/&lt;book_id>', methods=['GET'])
