@@ -19,9 +19,7 @@ def about_me():
 >
 > Put your studentID and name in my_info variable
 >
-> Open a second terminal (Terminal 2). 
->
-> Verify if the API response contain your student name and student ID :
+> In terminal 2, verify if the API response contain your student name and student ID :
 >
 > `curl http://localhost:5000/me`{{execute T2}}
 >
