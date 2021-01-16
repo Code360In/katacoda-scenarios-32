@@ -15,13 +15,11 @@ def about_me():
 
 
 
-> **Exercise:**
->
-> Put your studentID and name in my_info variable
->
-> In terminal 2, verify if the API response contain your student name and student ID :
->
-> `curl http://localhost:5000/me`{{execute T2}}
->
-> https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/me 
->
+
+Put your studentID and name in my_info variable
+
+In terminal 2, verify if the API response contain your student name and student ID :
+
+`curl http://localhost:5000/me`{{execute T2}}
+
+https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/me 
