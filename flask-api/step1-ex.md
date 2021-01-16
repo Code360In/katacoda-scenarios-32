@@ -5,7 +5,10 @@ Modify the code to add the about_me function. Put your studentID and name in my_
 def about_me():
 
 	#Put your studentID and name in my_info variable
-    my_info = {'id':'put your studentID ','name':'put your name'}
+    my_info = {
+				'id':'put your studentID',
+				'name':'put your name'
+				}
     
 	return jsonify(my_info)
 </pre>
