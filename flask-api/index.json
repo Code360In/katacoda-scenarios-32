@@ -28,7 +28,8 @@
       },
       {
         "title": "Exercise: Update book",
-        "text": "step5.md"
+        "text": "step5.md",
+		"verify": "step1-verify.sh"
       }
     ],
     "intro": {
