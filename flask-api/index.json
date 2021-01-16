@@ -9,6 +9,10 @@
         "title": "Deploy a Python Flask REST API",
         "text": "step1.md"
       },
+	  {
+        "title": "Exercise: About me",
+        "text": "step1-ex.md"
+      },
       {
         "title": "Get book by ID",
         "text": "step2.md"
