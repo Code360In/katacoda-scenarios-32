@@ -53,7 +53,8 @@ In terminal 2, send HTTP GET requests to the following end points.
 
 Visit the end points in the browser at localhost:5000/books 
 
-https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/me
+https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books
+
 
 
 
