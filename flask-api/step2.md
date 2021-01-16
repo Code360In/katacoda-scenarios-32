@@ -1,7 +1,6 @@
 Add the following function to app.py.
 
 <pre class="file" data-filename="app.py" data-target="insert" data-marker="#TODO-get_book_by_id">
-
 @app.route('/books/&lt;book_id>', methods=['GET'])
 def get_book_by_id(book_id):
     book = books[int(book_id)]

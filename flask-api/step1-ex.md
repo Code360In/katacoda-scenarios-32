@@ -1,25 +1,31 @@
 Modify the code to add the about_me function. Put your studentID and name in my_info variable.
 
-<pre class="file" data-filename="app.py" data-target="insert" data-marker="#TODO-me">
-@app.route('/me', methods=['GET'])
-def about_me():
+<pre class="file" data-filename="app.py" data-target="insert" data-marker="#TODO-get_books">
+#book list
+books = [{
+    "title": "Python programming",
+    "author": "Author 1",
+    "rating": 7.1
+    },
+    {
+    "title": "Introduction to DBMS",
+    "author": "Author 2",
+    "rating": 9
+    }
+]
 
-	#Put your studentID and name in my_info variable
-    my_info = {
-				'id':'put your studentID',
-				'name':'put your name'
-				}
-    
-	return jsonify(my_info)
+@app.route('/books', methods=['GET'])
+def get_books():
+    print("get books")
+    return jsonify(books),200 	#200: HTTP response code
 </pre>
 
 
 
+In terminal 2, send HTTP GET requests to the following end points.
 
-Put your studentID and name in my_info variable
+`curl http://localhost:5000/books`{{execute T2}}
 
-In terminal 2, verify if the API response contain your student name and student ID :
+Visit the end points in the browser at localhost:5000/books 
 
-`curl http://localhost:5000/me`{{execute T2}}
-
-https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/me 
+https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books

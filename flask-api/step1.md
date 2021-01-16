@@ -7,25 +7,16 @@ import requests,json
 #initialize flask app object
 app = Flask(__name__)
 
-#book list
-books = [{
-    "title": "Python programming",
-    "author": "Author 1",
-    "rating": 7.1
-    },
-    {
-    "title": "Introduction to DBMS",
-    "author": "Author 2",
-    "rating": 9
-    }
-]
+@app.route('/me', methods=['GET'])
+def about_me():
+	#Put your studentID and name in my_info variable
+    my_info = {
+				'id':'put your studentID',
+				'name':'put your name'
+				}
+	return jsonify(my_info)
 
-@app.route('/books', methods=['GET'])
-def get_books():
-    print("get books")
-    return jsonify(books),200 	#200: HTTP response code
-
-#TODO-me
+#TODO-get_books
 	
 #TODO-add_book
 
@@ -47,16 +38,20 @@ Execute the flask app.
 
 `python app.py`{{execute T1}}
 
-Open a second terminal.
 
-In terminal 2, send HTTP GET requests to the following end points.
 
-`curl http://localhost:5000/books`{{execute T2}}
 
-Visit the end points in the browser at localhost:5000/books 
-
-https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books
-
+> Exercise:
+>
+> Put your studentID and name in `my_info` variable in `app.py`
+>
+> Open a second terminal.
+>
+> In terminal 2, verify if the API response contain your student name and student ID :
+>
+> `curl http://localhost:5000/me`{{execute T2}}
+>
+> https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/me 
 
 
 
