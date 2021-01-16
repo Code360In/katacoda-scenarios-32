@@ -1,12 +1,3 @@
-#### **`hello_world.js`**
-```py
-def get_books():
-    print("get books")
-    return jsonify(books),200 	#200: HTTP response code
-
-```
-
-
 Define `app.py` as follows.
 
 <pre class="file" data-filename="app.py" data-target="replace">
