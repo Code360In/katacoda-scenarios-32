@@ -46,17 +46,6 @@ https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/book
 > Use the API to create a book "MySQL in a Nutshell" with rating 9 and view the created book.
 
 
-The above command generates an HTTP POST request to the /books endpoint with the following JSON object with the header `content-type=application/json`. You may view the HTTP request and response with -v option in curl.
-
-`curl -v -X POST -d @book.json -H "Content-Type: application/json" http://localhost:5000/books`{{execute T2}}
-
-
-If you are using Chrome browser, you may install one of the following REST API client plugin.
-
-* [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop/related?hl=en) 
-* [Advanced REST client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo). 
-
-Specify  the HTTP header ```content-type=application/json```{{copy}}. Generate a POST request to the endpoint `https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books .`{{copy}}. 
 
 Visit localhost:5000/books in browser to check if new book is added.
 
