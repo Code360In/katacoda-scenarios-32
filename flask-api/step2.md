@@ -10,5 +10,12 @@ def get_book_by_id(book_id):
 
 Access the endpoints /book/0 and /book/1 to retrieve data about the first and second book:
 
+In terminal 2, send HTTP GET requests to the following end points.
+
+`curl http://localhost:5000/books/0`{{execute T2}}
+`curl http://localhost:5000/books/1`{{execute T2}}
+
+You may also retrieve the data using a browser.
+
 * https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books/0
 * https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books/1
