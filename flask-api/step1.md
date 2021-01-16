@@ -39,15 +39,15 @@ app.run(host='0.0.0.0', port=5000, debug=True)
 
 Install Flask using the pip package manager for Python (if not previously installed).
 
-`pip install flask`{{execute}}
+`pip install flask`{{execute T1}}
 
 Execute the flask app.
 
-`python app.py`{{execute}}
+`python app.py`{{execute T1}}
 
 Send HTTP GET requests to the following end points.
 
-`curl http://localhost:5000/books`{{execute}}
+`curl http://localhost:5000/books`{{execute T2}}
 
 Visit the end points in the browser at localhost:5000/books 
 
