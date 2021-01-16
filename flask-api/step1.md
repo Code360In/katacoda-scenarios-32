@@ -17,10 +17,10 @@ def about_me():
 	return jsonify(my_info)
 
 #TODO-get_books
-	
-#TODO-add_book
 
 #TODO-get_book_by_id
+	
+#TODO-add_book
 
 #TODO-delete_book_by_id
 
