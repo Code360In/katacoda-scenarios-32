@@ -8,6 +8,7 @@ def get_book_by_id(book_id):
     return jsonify(book),200 
 </pre>
 
-> Access the endpoints /book/0 and /book/1 to retrieve data about the first and second book:
-> * https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books/0
-> * https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books/1
+Access the endpoints /book/0 and /book/1 to retrieve data about the first and second book:
+
+* https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books/0
+* https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books/1
