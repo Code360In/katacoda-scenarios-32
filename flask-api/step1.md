@@ -19,11 +19,15 @@ books = [{
     "rating": 9
     }
 ]
-
+@app.route('/me', methods=['GET'])
+def about_me():
+    my_info = {'id':'put your studentID ','name':'put your name'}
+    return jsonify(my_info)
+	
 @app.route('/books', methods=['GET'])
 def get_books():
     print("get books")
-    return jsonify(books),200 #200 is the response code
+    return jsonify(books),200 	#200: HTTP response code
 
 #TODO-add_book
 
@@ -43,6 +47,10 @@ Install Flask using the pip package manager for Python (if not previously instal
 Execute the flask app.
 
 `python app.py`{{execute}}
+
+Send a HTTP GET to localhost:5000/books to retrieve all books' data.
+
+`curl http://localhost:5000/books`{{execute}}
 
 Visit localhost:5000/books in browser to list all the books.
 
