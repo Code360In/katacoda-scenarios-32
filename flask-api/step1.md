@@ -1,3 +1,9 @@
+#### **`hello_world.js`**
+``` js
+alert("Hello world!");
+```
+
+
 Define app.py as follows.
 
 <pre class="file" data-filename="app.py" data-target="replace">
