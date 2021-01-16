@@ -12,7 +12,7 @@
 	  {
         "title": "Exercise: About me",
         "text": "step1-ex.md",
-		"verify": "step5-verify.sh"
+		"verify": "step1-verify.sh"
       },
       {
         "title": "Get book by ID",
