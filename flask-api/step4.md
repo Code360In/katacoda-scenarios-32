@@ -13,6 +13,11 @@ E.g. To delete the second book, execute in Terminal 2:
 `curl -X DELETE  http://localhost:5000/books/1`{{execute T2}}
 
 
+In terminal 2, use the following command to verify the result.
+
+`curl http://localhost:5000/books`{{execute T2}}
+
+
 Visit localhost:5000/books in browser to verify the result.
 
 https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books 

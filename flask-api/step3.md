@@ -30,9 +30,17 @@ Add a book by running the following command in T2.
 
 `curl -X POST -d @book.json -H "Content-Type: application/json" http://localhost:5000/books`{{execute T2}}
 
-Visit localhost:5000/books in browser to list the books.
+
+In terminal 2, use the following command to verify the result.
+
+`curl http://localhost:5000/books`{{execute T2}}
+
+
+Visit localhost:5000/books in browser to show the list of books.
 
 https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books 
+
+
 
 > **Exercise**:
 > Use the API to create a book "MySQL in a Nutshell" with rating 9 and view the created book.
