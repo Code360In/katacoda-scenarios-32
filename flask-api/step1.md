@@ -4,7 +4,7 @@ alert("Hello world!");
 ```
 
 
-Define app.py as follows.
+Define `app.py` as follows.
 
 <pre class="file" data-filename="app.py" data-target="replace">
 from flask import Flask, request,jsonify
