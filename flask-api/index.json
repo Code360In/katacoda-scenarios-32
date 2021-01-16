@@ -29,10 +29,6 @@
       {
         "title": "Exercise: Update book",
         "text": "step5.md"
-      },
-      {
-        "title": "Reference",
-        "text": "step6.md"
       }
     ],
     "intro": {
@@ -40,6 +36,11 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+	 "assets": {
+        "host01": [
+            {"file": "verify.py", "target": "/root"}
+        ]
     }
   },
   "files": [
