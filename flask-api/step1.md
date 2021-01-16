@@ -10,10 +10,7 @@ app = Flask(__name__)
 @app.route('/me', methods=['GET'])
 def about_me():
 	#Put your studentID and name in my_info variable
-    my_info = {
-				'id':'put your studentID',
-				'name':'put your name'
-				}
+    my_info = {'id':'', 'name':''}
 	return jsonify(my_info)
 
 #TODO-get_books
