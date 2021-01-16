@@ -29,7 +29,7 @@
       {
         "title": "Exercise: Update book",
         "text": "step5.md",
-		"verify": "step1-verify.sh"
+		"verify": "step5-verify.sh"
       }
     ],
     "intro": {
