@@ -8,18 +8,17 @@ new_book = {
 }
     
 client= app.test_client()
-#actual = client.get('/books/0').json
 
 h = {
         'Content-Type': 'application/json'
     }
 r = client.put('/books/0', data=json.dumps(new_book), headers=h)
-#print(r)
+
 result = client.get('/books/0').json
-#print(result)
+
 if result == new_book:
-    print("done")
+    exit(0) #done!
 else:    
-    print("not completed")
+    exit(1) #not completed
 
 
