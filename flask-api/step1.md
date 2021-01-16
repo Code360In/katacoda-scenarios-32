@@ -1,6 +1,9 @@
 #### **`hello_world.js`**
-``` js
-alert("Hello world!");
+```py
+def get_books():
+    print("get books")
+    return jsonify(books),200 	#200: HTTP response code
+
 ```
 
 
