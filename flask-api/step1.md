@@ -19,6 +19,8 @@ books = [{
     "rating": 9
     }
 ]
+
+#put your studentID and name in my_info
 @app.route('/me', methods=['GET'])
 def about_me():
     my_info = {'id':'put your studentID ','name':'put your name'}
@@ -48,10 +50,15 @@ Execute the flask app.
 
 `python app.py`{{execute}}
 
-Send a HTTP GET to localhost:5000/books to retrieve all books' data.
+Send HTTP GET requests to the following end points.
 
-`curl http://localhost:5000/books`{{execute}}
+* `curl http://localhost:5000/me`{{execute}}
+* `curl http://localhost:5000/books`{{execute}}
 
-Visit localhost:5000/books in browser to list all the books.
 
-https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books 
+Visit the end points in the browser localhost:5000/books 
+
+* https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/me
+* https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/books 
+
+
