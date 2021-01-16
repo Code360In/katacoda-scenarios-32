@@ -45,7 +45,9 @@ Execute the flask app.
 
 `python app.py`{{execute T1}}
 
-Send HTTP GET requests to the following end points.
+Open a second terminal.
+
+In terminal 2, send HTTP GET requests to the following end points.
 
 `curl http://localhost:5000/books`{{execute T2}}
 
