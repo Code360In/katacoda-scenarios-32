@@ -11,7 +11,7 @@
 		"verify": "step1-verify.sh"
       },
 	  {
-        "title": "Exercise: About me",
+        "title": "Get books",
         "text": "step1-ex.md"
       },
       {
