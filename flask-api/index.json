@@ -7,7 +7,8 @@
     "steps": [
       {
         "title": "Deploy a Python Flask REST API",
-        "text": "step1.md"
+        "text": "step1.md",
+		"verify": "step1-verify.sh"
       },
 	  {
         "title": "Get books",
@@ -23,8 +24,14 @@
       },
       {
         "title": "Delete book",
-        "text": "step4.md"
-      }
+        "text": "step4.md",
+		"verify": "step4-verify.sh"
+      },
+	   {
+        "title": "Exercise: Update book",
+        "text": "step5.md",
+		"verify": "step5-verify.sh"
+      },
     ],
     "intro": {
       "text": "intro.md"

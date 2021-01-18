@@ -52,6 +52,7 @@ Expected output of your python script:
 {'CustomerID': 1, 'Interest': 'tennis'}
 {'CustomerID': 2, 'Interest': 'travel'}
 {'CustomerID': 2, 'Interest': 'programming'}
+
 ```
 
 Check the database table using mysql client.
