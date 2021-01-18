@@ -16,16 +16,14 @@ if output1 == output2:
         f2 = open("myid", "r")   
         myname=f1.read().strip()
         myid=f2.read().strip()
-        print(myname)
-        print(myid)
         
         event_type='python-sql-step3-ex'
         
         url=f"https://a2pops3li6.execute-api.us-east-2.amazonaws.com/v1?type={event_type}&myid={myid}&name={myname}"
-        print(url)
+        
         r = requests.get(url) 
-        print(r)
-        print("done\n")
+        
+        print("done")
     except Exception as e:
         print(e)
 else:
