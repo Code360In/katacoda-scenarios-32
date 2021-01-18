@@ -50,6 +50,9 @@ Execute the flask app.
 >
 > https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/me 
 
+Click **Continue** below to check your script for correctness.
+
+
 
 
 

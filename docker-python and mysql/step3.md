@@ -59,6 +59,5 @@ Check the database table using mysql client.
 
 `docker exec -it mysql mysql -u root -p12345 -e "select * from Sales.INTEREST"`{{execute T1}}
 
-Click `Continue` to check your script for correctness.
-
+Click **Continue** below to check your script for correctness.
 

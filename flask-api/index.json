@@ -7,12 +7,16 @@
     "steps": [
       {
         "title": "Deploy a Python Flask REST API",
+        "text": "step1.md"		
+      },
+	  {
+        "title": "Exercise: Input your name",
         "text": "step1.md",
 		"verify": "step1-verify.sh"
       },
 	  {
         "title": "Get books",
-        "text": "step1-ex.md"
+        "text": "step1c.md"
       },
       {
         "title": "Get book by ID",

@@ -31,3 +31,4 @@ https://[[HOST_SUBDOMAIN]]-20081-[[KATACODA_HOST]].environments.katacoda.com/
 https://[[HOST_SUBDOMAIN]]-20082-[[KATACODA_HOST]].environments.katacoda.com/
 
 
+Click **Continue** below to check your script for correctness.
