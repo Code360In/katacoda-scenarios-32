@@ -13,7 +13,7 @@ then
 	diff actual.txt expected.txt> diff.txt
 
 	DIFF=`cat diff.txt`
-
+	DIFF=`ls`
 	echo $DIFF > diff2.txt
 	
 	if  [ $DIFF == "" ] 
