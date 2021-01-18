@@ -15,7 +15,7 @@ Try:
 `python demo.py`{{execute T1}}
 
 
-Example 1: Accessing Items
+**Example 1**: Accessing Items
 
 <pre class="file" data-filename="demo.py" data-target="replace">
 thisdict = {
@@ -33,7 +33,7 @@ Try:
 
 
 
-Example 2: Changing Values
+**Example 2**: Changing Values
 
 <pre class="file" data-filename="demo.py" data-target="replace">
 thisdict = {
@@ -42,7 +42,7 @@ thisdict = {
   "year": 1964
 }
 thisdict["year"] = 2018
-print(x)
+print(thisdict)
 </pre>
 
 Try:
@@ -50,7 +50,7 @@ Try:
 `python demo.py`{{execute T1}}
 
 
-Example 3: Looping through the keys and values in the Dictionary
+**Example 3**: Looping through the keys and values in the Dictionary
 
 <pre class="file" data-filename="demo.py" data-target="replace">
 thisdict =	{
