@@ -30,5 +30,11 @@ https://[[HOST_SUBDOMAIN]]-20081-[[KATACODA_HOST]].environments.katacoda.com/
 
 https://[[HOST_SUBDOMAIN]]-20082-[[KATACODA_HOST]].environments.katacoda.com/
 
+Execute the following script and input your student ID and name.
+
+`inputname.sh`{{execute}}
+
 
 Click **Continue** below to check your script for correctness.
+
+
