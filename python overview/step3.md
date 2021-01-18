@@ -1,5 +1,9 @@
 
-Create a python script airbnb.py as follows. The json.load() function takes a JSON object and convert to python dictionary.
+Open the JSON data: `airbnb.json`{{open}}
+
+
+Create a python script airbnb.py as follows. 
+The json.load() function takes a JSON object and convert to python dictionary.
 
 
 <pre class="file" data-filename="demo.py" data-target="replace">
