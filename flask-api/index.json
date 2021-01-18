@@ -54,7 +54,7 @@
   "environment": {
     "uilayout": "editor-terminal",
 	"exclusionPatterns": ["*verify*"],
-	"hideHiddenFiles": true,
+	"hideHiddenFiles": true
   },
   "backend": {
     "imageid": "python:3.8"
