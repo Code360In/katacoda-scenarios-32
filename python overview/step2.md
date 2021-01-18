@@ -1,65 +1,42 @@
 
-Define `app.py` as follows.
+### JSON to Python Dictionary
+Use json.loads convert from JSON to python dictionary.
 
-<pre class="file" data-filename="app.py" data-target="replace">
-import mysql.connector
+<pre class="file" data-filename="demo.py" data-target="replace">
+import json
 
-mydb = mysql.connector.connect(
-  host="localhost", 
-  port=33306, #default mysql server port is 3306
-  user="root",
-  password="12345"
-)
-print(mydb)
-mycursor = mydb.cursor(dictionary=True)
+# some JSON:
+x =  '{ "name":"John", "age":30, "city":"New York"}'
 
-#TODO-create-db
+# parse x:
+y = json.loads(x)
 
-#TODO-insert
-
-#TODO-select
-  
+# the result is a Python dictionary:
+print(y["age"])
 </pre>
 
+Try:
 
-Insert the following python code to create DB and tables.
+`python demo.py`{{execute T1}}
 
-<pre class="file" data-filename="app.py" data-target="insert" data-marker="#TODO-create-db">
-mycursor.execute('DROP DATABASE IF EXISTS Sales');
-mycursor.execute('CREATE DATABASE Sales');
-mycursor.execute('CREATE TABLE Sales.Customer (Personid int NOT NULL AUTO_INCREMENT, Name varchar(50),  Age int, PRIMARY KEY (Personid))');
+### Python Dictionary to JSON
+
+Use json.dumps() to convert python dictionary type to JSON.
+
+
+<pre class="file" data-filename="demo.py" data-target="replace">
+# a Python object (dict):
+x = {
+  "name": "John",
+  "age": 30,
+  "city": "New York"
+}
+
+# convert into JSON:
+y = json.dumps(x)
+
+# the result is a JSON string:
+print(y)
+
 </pre>
-
-Insert the following python code to insert sample data into the Customer table.
-
-<pre class="file" data-filename="app.py" data-target="insert" data-marker="#TODO-insert">
-sql = "INSERT INTO Sales.Customer (Name, Age) VALUES (%s, %s)"
-mycursor.execute(sql, ("Chan", 18))
-mycursor.execute(sql, ("Pansy", 33))
-mydb.commit()
-</pre>
-
-
-Insert the following python code to execute SELECT query and display the result in python.
-
-<pre class="file" data-filename="app.py" data-target="insert" data-marker="#TODO-select">
-mycursor.execute("select * from Sales.Customer")
-myresult = mycursor.fetchall()
-for x in myresult:
-  print(x)
-  print(f"PersonID:{x['Personid']}")
-  print(f"Age:{x['Age']}")
-</pre>
-
-
-Execute the python script.
-
-`python3 app.py`{{execute T1}}
-
-
-Verify the database table using  MySQL client.
-
-`docker exec -it mysql mysql -u root -p12345 -e "select * from Sales.Customer"`{{execute T1}}
-
-
 

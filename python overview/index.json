@@ -1,22 +1,21 @@
 {
-  "title": "MySQL and Python",
+  "title": "Python Overview",
   "description": "",
   "difficulty": "Beginner",
   "time": "20",
   "details": {
     "steps": [
       {
-        "title": "Preparation",
+        "title": "Python Basics",
         "text": "step1.md"
       },
       {
-        "title": "Connecting to MySQL Server in python script",
+        "title": "JSON Processing",
         "text": "step2.md"
       },
       {
         "title": "Exercise: INTEREST table",
-        "text": "step3.md",
-		"verify": "step3-verify.sh"
+        "text": "step3.md"
       }
     ],
     "intro": {
@@ -42,6 +41,6 @@
         "demo.py","airbnb.json"
     ],
   "backend": {
-	"imageid": "ubuntu:2004"
+    "imageid": "python:3.8"
   }
 }

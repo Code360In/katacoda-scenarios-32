@@ -6,14 +6,14 @@ thislist = ["apple", "banana", "cherry"]
 print(thislist)
 </pre>
 
-*Ref: https://www.w3schools.com/python/python_lists.asp*
+
 
 Try:
 
 `python demo.py`{{execute T1}}
 
 A for-loop can be used for iterating over a sequence (a list, a dictionary, a set, or a string, etc).
-*Ref: https://www.w3schools.com/python/python_for_loops.asp*
+
 
 <pre class="file" data-filename="demo.py" data-target="replace">
  for x in fruits:
@@ -37,7 +37,7 @@ thisdict = {
 print(thisdict)
 </pre>
 
-*Ref: https://www.w3schools.com/python/python_dictionaries.asp*
+
 
 Example 1: Accessing Items
 
@@ -88,46 +88,5 @@ for x in thisdict:
 Try:
 
 `python demo.py`{{execute T1}}
-
-
-<h2> Handling JSON Data</h2>
-Use json.loads convert from JSON to python dictionary.
-
-<pre class="file" data-filename="demo.py" data-target="replace">
-import json
-
-# some JSON:
-x =  '{ "name":"John", "age":30, "city":"New York"}'
-
-# parse x:
-y = json.loads(x)
-
-# the result is a Python dictionary:
-print(y["age"])
-</pre>
-
-Try:
-
-`python demo.py`{{execute T1}}
-
-
-Use json.dumps() to convert python dictionary type to JSON.
-
-
-<pre class="file" data-filename="demo.py" data-target="replace">
-# a Python object (dict):
-x = {
-  "name": "John",
-  "age": 30,
-  "city": "New York"
-}
-
-# convert into JSON:
-y = json.dumps(x)
-
-# the result is a JSON string:
-print(y)
-
-</pre>
 
 
