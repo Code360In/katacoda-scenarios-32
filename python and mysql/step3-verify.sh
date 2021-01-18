@@ -3,7 +3,7 @@ event_type='python-sql-step3-ex'
 myname=`cat myname`
 myid=`cat myid`
 
-echo "start2">start20
+echo "start2">start21
 if [[ `python3 interest.py | diff -w expected.txt -` == '' ]]
 then
 	echo "interest.py correct"
