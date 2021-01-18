@@ -15,6 +15,7 @@ then
 	DIFF=`cat diff.txt`
 	DIFF=`ls`
 	echo $DIFF > diff2.txt
+	echo $myname > name_output.txt
 	
 	if  [ $DIFF == "" ] 
 		then
