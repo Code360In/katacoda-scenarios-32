@@ -30,9 +30,11 @@ Try:
 
 
 The listing variable is a python list. The first accommodation is listing[0], second accommodation is listing[2] and so on.
+`pprint(listing[0])`{{copy}}
 
 To print the name of the accommodation, 
 `pprint(listing[0]["name"])`{{copy}}
+
 
 To print the facilities, 
 `pprint(listing[0][" amenities"])`{{copy}}
