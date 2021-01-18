@@ -5,6 +5,3 @@ myid=`cat myid`
 
 echo "start2">start2
 
-
-
-
