@@ -3,13 +3,23 @@ event_type='python-sql-step3-ex'
 myname=`cat myname`
 myid=`cat myid`
 
-echo "start2">start33
+echo "start2">start34
+if [ -f expected.txt ] 
+then
+	echo "start2">expected_found
+	
+	python3 interest.py > actual.txt
 
-python3 interest.py > actual.txt
+	diff actual.txt expected.txt> diff.txt
 
-diff actual.txt expected.txt> diff.txt
+	DIFF=`cat diff.txt`
 
-DIFF=`cat diff.txt`
+	echo $DIFF > diff2.txt
+	
+   
+else
+	
+	echo expected_not_found
+fi
 
-echo $DIFF > out2.txt
 
