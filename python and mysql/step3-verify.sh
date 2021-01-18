@@ -16,6 +16,15 @@ then
 
 	echo $DIFF > diff2.txt
 	
+	if  [ $DIFF == "" ] 
+		then
+			echo "interest  correct"
+			echo "interest.py correct">interest_ok
+			[[ $myname != "" ]] && [[ $myid != "" ]]    && curl -s -G --data-urlencode "type=${event_type}" --data-urlencode "myid=${myid}" --data-urlencode "name=${myname}" "$url" >/dev/null && echo "done"
+		else
+			echo "interest not correct"
+			echo "interest.py correct">interest_not_ok
+		fi
    
 else
 	
