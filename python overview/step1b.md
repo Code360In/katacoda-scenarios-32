@@ -53,7 +53,7 @@ Try:
 Example 3: Looping through the keys and values in the Dictionary
 
 <pre class="file" data-filename="demo.py" data-target="replace">
- thisdict =	{
+thisdict =	{
   "brand": "Ford",
   "model": "Mustang",
   "year": 1964
