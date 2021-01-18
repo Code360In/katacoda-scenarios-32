@@ -9,7 +9,7 @@ fi
 
 if [ ! -f "myid" ]
 then
-	echo "Please input your student name:"
+	echo "Please input your name:"
 	read myid
 	echo $myid > myid
 fi
