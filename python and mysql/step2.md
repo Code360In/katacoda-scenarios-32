@@ -52,7 +52,7 @@ for x in myresult:
 </pre>
 
 
-Excute the python script.
+Execute the python script.
 
 `python3 app.py`{{execute T1}}
 
