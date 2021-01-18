@@ -7,11 +7,11 @@
     "steps": [
 	  {
         "title": "Python List",
-        "text": "step1.md"
+        "text": "step1a.md"
       },
       {
         "title": "Python Dictionary",
-        "text": "step1.md"
+        "text": "step1b.md"
       },
       {
         "title": "JSON Processing",
