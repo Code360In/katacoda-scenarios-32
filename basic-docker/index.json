@@ -24,7 +24,6 @@
 	  {
         "title": "Step 5",
         "text": "step5.md",
-		"foreground": "inputname.sh",
 		"verify": "step5-verify.sh"
       } ,
 	  {
@@ -38,6 +37,11 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+	"assets": {
+        "host01": [
+            {"file": "inputname.sh", "target": "/usr/local/bin/", "chmod": "+x"}
+        ]
     }
   },
   "environment": {
