@@ -25,6 +25,7 @@ if output1 == output2:
         print(url)
         r = requests.get(url) 
         print(r)
+        print("\ndone\n")
     except Exception as e:
         print(e)
 else:
