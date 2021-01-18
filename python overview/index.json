@@ -14,7 +14,7 @@
         "text": "step2.md"
       },
       {
-        "title": "Exercise: INTEREST table",
+        "title": "Example: Airbnb JSON Data",
         "text": "step3.md"
       }
     ],
@@ -27,6 +27,7 @@
 	"assets": {
         "host01": [
 			{"file": "verify.py", "target": "/usr/local/bin/" },
+			{"file": "airbnb.json", "target": "/root" },
 			{"file": "input_name", "target": "/usr/local/bin/", "chmod": "+x"}
         ]
     }
