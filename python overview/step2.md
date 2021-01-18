@@ -25,6 +25,8 @@ Use json.dumps() to convert python dictionary type to JSON.
 
 
 <pre class="file" data-filename="demo.py" data-target="replace">
+import json
+
 # a Python object (dict):
 x = {
   "name": "John",
