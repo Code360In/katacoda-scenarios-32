@@ -1,5 +1,7 @@
 
-Open the JSON data: `airbnb.json`{{open}}
+Open the JSON data: 
+
+`airbnb.json`{{open}}
 
 
 Create a python script airbnb.py as follows. 

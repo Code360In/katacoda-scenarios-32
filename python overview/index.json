@@ -47,7 +47,7 @@
 	"hideHiddenFiles": true
   },
   "files": [
-        "demo.py","airbnb.py","airbnb.json","airbnb_ex1.py","airbnb_ex2.py "
+        "demo.py","airbnb.py","airbnb_ex1.py","airbnb_ex2.py "
     ],
   "backend": {
     "imageid": "python:3.8"
