@@ -44,7 +44,7 @@
     },
 	 "assets": {
         "host01": [
-            {"file": "verify.py", "target": "/root"}
+            {"file": "verify.py", "target": "/v"}
         ]
     }
   },
@@ -60,3 +60,4 @@
     "imageid": "python:3.8"
   }
 }
+
