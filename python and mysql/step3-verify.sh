@@ -3,13 +3,13 @@ event_type='python-sql-step3-ex'
 myname=`cat myname`
 myid=`cat myid`
 
-echo "start2">start27
+echo "start2">start28
 
 python3 interest.py >out.txt
 
 diff out.txt expected.txt> diff.txt
 
-$DIFF =  $(cat diff.txt)
+DIFF=`cat diff.txt`
 
 echo $DIFF > out2.txt
 
