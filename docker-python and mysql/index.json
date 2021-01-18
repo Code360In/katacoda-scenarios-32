@@ -24,6 +24,9 @@
   "environment": {
     "uilayout": "editor-terminal"
   },
+  "files": [
+        "app.py"
+    ],
   "backend": {
 	"imageid": "ubuntu:2004"
   }
