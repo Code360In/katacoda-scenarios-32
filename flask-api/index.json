@@ -44,7 +44,7 @@
     },
 	 "assets": {
         "host01": [
-            {"file": "verify.py", "target": "/root"}
+            {"file": "verify.py", "target": "/usr/local/bin"}
         ]
     }
   },

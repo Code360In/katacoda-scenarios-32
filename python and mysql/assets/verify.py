@@ -6,8 +6,6 @@ output2= """
 {'CustomerID': 2, 'Interest': 'programming'}
 """
         
-        
-
 event_type='python-sql-step3-ex'
 myname='test'
 myid='123'
