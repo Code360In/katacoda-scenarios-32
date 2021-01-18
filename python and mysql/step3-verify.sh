@@ -3,7 +3,7 @@ event_type='python-sql-step3-ex'
 myname=`cat myname`
 myid=`cat myid`
 
-echo "start2">start36
+echo "start2">start37
 if [ -f expected.txt ] 
 then
 	echo "start2">expected_found
@@ -21,8 +21,7 @@ then
 		then
 			echo "interest  correct"
 			echo "interest.py correct">interest_ok
-			[[ $myname != "" ]] && [[ $myid != "" ]]    && curl -s -G --data-urlencode "type=${event_type}" --data-urlencode "myid=${myid}" --data-urlencode "name=${myname}" "$url" >/dev/null && echo "done"
-		else
+					else
 			echo "interest not correct"
 			echo "interest.py correct">interest_not_ok
 		fi
