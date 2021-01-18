@@ -18,6 +18,7 @@ A for-loop can be used for iterating over a sequence (a list, a dictionary, a se
 
 
 <pre class="file" data-filename="demo.py" data-target="replace">
+thislist = ["apple", "banana", "cherry"]
 for x in fruits:
 	print(x)
 </pre>
