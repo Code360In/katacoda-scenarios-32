@@ -49,3 +49,9 @@ for x in myresult:
   print(f"PersonID:{x['Personid']}")
   print(f"Age:{x['Age']}")
 </pre>
+
+
+Excute the python script.
+`python3 app.py`{{execute T1}}
+
+

@@ -1,6 +1,4 @@
-Docker run  MySQL 8.0 Database container
-
-Start a new Docker container for a MySQL Server.
+Start a new Docker container for a MySQL 8.0 Server.
 
 `docker run --name=mysql -e MYSQL_ROOT_PASSWORD="12345" -p 33306:3306 -d mysql:8`{{execute}}
 
@@ -13,5 +11,6 @@ Install mysql connection using pip (if not previously installed).
 `pip install mysql-connector-python`{{execute T1}}
 
 
-
+Install python
+`apt-get install python`{{execute T1}}
 
