@@ -11,6 +11,6 @@ if [ ! -f "myid" ]
 then
 	echo "Please input your student name:"
 	read myid
-	echo $id > myid
+	echo $myid > myid
 fi
 
