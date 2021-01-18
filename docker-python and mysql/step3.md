@@ -10,7 +10,7 @@ mydb = mysql.connector.connect(
   user="root",
   password="12345"
 )
-print(mydb)
+
 mycursor = mydb.cursor(dictionary=True)
 mycursor.execute('DROP DATABASE IF EXISTS Sales');
 mycursor.execute('CREATE DATABASE IF NOT EXISTS Sales');
@@ -31,8 +31,31 @@ for x in myresult:
 
 Complete the code such that the script will create a table INTEREST under Sales database and insert the following sample data into the table. 
 
-
+```
++------------+-------------+
+| CustomerID | Interest    |
++------------+-------------+
+| 1          | badminton   |
+| 1          | tennis      |
+| 2          | travel      |
+| 2          | programming |
++------------+-------------+
+```
 
 Test your script:
+
 `python3 interest.py`{{execute T1}}
+
+Sample output:
+```json
+{'CustomerID': '1', 'Interest': 'badminton'}
+{'CustomerID': '1', 'Interest': 'tennis'}
+{'CustomerID': '2', 'Interest': 'travel'}
+{'CustomerID': '2', 'Interest': 'programming'}
+```
+
+Check the database table:
+
+`docker exec -it mysql mysql -u root -p12345 -e "select * from Sales.INTEREST"`{{execute T1}}
+
 
