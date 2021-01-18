@@ -1,7 +1,8 @@
 
 Put your studentID and name in `my_info` variable in `app.py`
 
-Open a second terminal.>
+Open a second terminal.
+
 In terminal 2, verify if the API response contain your student name and student ID :
 
 `curl http://localhost:5000/me`{{execute T2}}

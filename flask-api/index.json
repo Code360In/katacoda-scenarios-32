@@ -53,7 +53,7 @@
     ],
   "environment": {
     "uilayout": "editor-terminal",
-	"exclusionPatterns": ["*veriy.py"]
+	"exclusionPatterns": ["verify.py"]
   },
   "backend": {
     "imageid": "python:3.8"
