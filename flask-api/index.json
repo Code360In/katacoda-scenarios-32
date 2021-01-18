@@ -11,7 +11,7 @@
       },
 	  {
         "title": "Exercise: Input your name",
-        "text": "step1.md",
+        "text": "step1b.md",
 		"verify": "step1-verify.sh"
       },
 	  {
@@ -52,7 +52,8 @@
         "app.py","book.json"
     ],
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "editor-terminal",
+	"exclusionPatterns": ["*veriy.py"]
   },
   "backend": {
     "imageid": "python:3.8"
