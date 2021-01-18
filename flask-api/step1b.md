@@ -1,4 +1,3 @@
-Exercise:
 
 Put your studentID and name in `my_info` variable in `app.py`
 
