@@ -8,7 +8,7 @@ Create a python script airbnb.py as follows.
 The json.load() function takes a JSON object and convert to python dictionary.
 
 
-<pre class="file" data-filename="demo.py" data-target="replace">
+<pre class="file" data-filename="airbnb.py" data-target="replace">
 import json
 from pprint import pprint
 
@@ -26,7 +26,7 @@ pprint (listing)
 
 Try:
 
-`python demo.py`{{execute T1}}
+`python airbnb.py`{{execute T1}}
 
 
 The listing variable is a python list. The first accommodation is listing[0], second accommodation is listing[2] and so on.
