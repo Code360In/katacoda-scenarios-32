@@ -3,5 +3,5 @@ myid=`curl -s http://localhost:5000/me| jq  '.id' | tr -d '"'`
 url=https://a2pops3li6.execute-api.us-east-2.amazonaws.com/v1
 
 
-[[ $myname != "" ]] && [[ $myid != "" ]]   && python /usr/local/bin/verify.py && curl -s -G --data-urlencode "type=flask-step5-ex" --data-urlencode "myid=${myid}" --data-urlencode "name=${myname}" "$url" >/dev/null && echo "done"|| echo "not completed"
+[[ $myname != "" ]] && [[ $myid != "" ]]   && python .verify.py && curl -s -G --data-urlencode "type=flask-step5-ex" --data-urlencode "myid=${myid}" --data-urlencode "name=${myname}" "$url" >/dev/null && echo "done"|| echo "not completed"
 
