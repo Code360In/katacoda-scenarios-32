@@ -54,7 +54,7 @@
   "environment": {
     "uilayout": "editor-terminal",
 	"uisettings": "bash",
-	"exclusionPatterns": ["*test", "./test/*", "*verify*"],
+	"exclusionPatterns": ["*verify*"],
 	"hideHiddenFiles": true
   },
   "backend": {

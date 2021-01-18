@@ -50,7 +50,10 @@
         "test.php", "test2.php","test3.php","login.php",  "users.sql"
     ],
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "editor-terminal",
+	"uisettings": "bash",
+	"exclusionPatterns": ["*verify*"],
+	"hideHiddenFiles": true
   },
   "backend": {
     "imageid": "ubuntu:2004"
