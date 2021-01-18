@@ -11,6 +11,13 @@ mydb = mysql.connector.connect(
   password="12345"
 )
 mycursor = mydb.cursor(dictionary=True)
+
+#TODO-create-db
+
+#TODO-insert
+
+#TODO-select
+  
 </pre>
 
 
