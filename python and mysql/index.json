@@ -28,6 +28,7 @@
 	"assets": {
         "host01": [
             {"file": "expected.txt", "target": "/root" },
+			{"file": "verify.py", "target": "/root" },
 			{"file": "input_name", "target": "/usr/local/bin/", "chmod": "+x"}
         ]
     }

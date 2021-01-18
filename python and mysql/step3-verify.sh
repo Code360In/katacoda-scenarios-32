@@ -3,32 +3,7 @@ event_type='python-sql-step3-ex'
 myname=`cat myname`
 myid=`cat myid`
 
-echo "start2">start37
-if [ -f expected.txt ] 
-then
-	echo "start2">expected_found
-	
-	python3 interest.py > actual.txt
+python verify.py
 
-	diff actual.txt expected.txt> diff.txt
-
-	DIFF=`cat diff.txt`
-	DIFF=`ls`
-	echo $DIFF > diff2.txt
-	echo $myname > name_output.txt
-	
-	if  [ $DIFF == "" ] 
-		then
-			echo "interest  correct"
-			echo "interest.py correct">interest_ok
-					else
-			echo "interest not correct"
-			echo "interest.py correct">interest_not_ok
-		fi
-   
-else
-	
-	echo expected_not_found
-fi
 
 
