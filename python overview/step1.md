@@ -1,3 +1,5 @@
+### Python List
+
 A list is a collection which is ordered and changeable. In Python lists are written with square brackets.
 
 
@@ -24,7 +26,7 @@ Try:
 
 `python demo.py`{{execute T1}}
 
-
+### Python Dictionary
 
 A dictionary is a collection which is unordered, changeable and indexed. In Python dictionaries are written with curly brackets, and they have keys and values.
 
@@ -63,7 +65,7 @@ Try:
 Example 2: Changing Values
 
 <pre class="file" data-filename="demo.py" data-target="replace">
- thisdict = {
+thisdict = {
   "brand": "Ford",
   "model": "Mustang",
   "year": 1964
