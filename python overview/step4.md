@@ -1,6 +1,6 @@
-**Exercise 1:**:
+**Exercise 1:**
 
-Write a python script airbnb_ex1.py which read the airbnb.json and prints the name and the number of reviews in the first 5 accommodation.
+Write a python script `airbnb_ex1.py` which read the airbnb.json and prints the name and the number of reviews in the first 5 accommodation.
 
 Sample output:
 ```
@@ -28,7 +28,7 @@ number of reviews: 70
 
 **Exercise 2:**
 
-Write a python script airbnb_ex2.py which read the airbnb.json and print the accommodation’s names and whether they have “Microwave” oven and “Coffee maker”.
+Write a python script `airbnb_ex2.py` which read the airbnb.json and print the accommodation’s names and whether they have “Microwave” oven and “Coffee maker”.
 
 Sample output:
 
