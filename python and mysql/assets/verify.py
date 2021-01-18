@@ -1,14 +1,23 @@
 import os,requests
+output2= """ 
+{'CustomerID': 1, 'Interest': 'badminton'}
+{'CustomerID': 1, 'Interest': 'tennis'}
+{'CustomerID': 2, 'Interest': 'travel'}
+{'CustomerID': 2, 'Interest': 'programming'}
+"""
+        
+        
+
 event_type='python-sql-step3-ex'
 myname='test'
 myid='123'
 
 stream = os.popen('python3 interest.py')
-output1 = stream.read().strip()
+output1 = stream.read()
 
-output2 = open("expected.txt", "r").read().strip()   
+#output2 = open("expected.txt", "r").read().strip()   
 
-if output1 == output2:
+if output1.strip() == output2.strip():
     try:
         f1 = open("myname", "r")
         f2 = open("myid", "r")   
