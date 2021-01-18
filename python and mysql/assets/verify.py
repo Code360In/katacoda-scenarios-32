@@ -1,15 +1,13 @@
 import os,requests
-
 event_type='python-sql-step3-ex'
 myname='test'
 myid='123'
 
-
-
 stream = os.popen('python3 interest.py')
-stream2 = os.popen('cat expected.txt')
-output1 = stream.read()
-output2 = stream2.read()
+output1 = stream.read().strip()
+
+output2 = open("expected.txt", "r").read().strip()   
+
 if output1 == output2:
     try:
         f1 = open("myname", "r")
