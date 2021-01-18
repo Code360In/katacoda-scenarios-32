@@ -9,7 +9,7 @@ python3 interest.py >out.txt
 
 diff out.txt expected.txt> diff.txt
 
-$DIFF =  $(diff out.txt expected.txt)
+$DIFF =  $(cat diff.txt)
 
 if [ $DIFF == "" ] 
 then
