@@ -6,7 +6,7 @@ Start a new Docker container for a MySQL 8.0 Server.
 * -e MYSQL_ROOT_PASSWORD="12345" specifies initial root user password to be "12345"
 
 
-Install mysql connection using pip (if not previously installed).
+Install mysql connector  using pip (if not previously installed).
 
 `pip install mysql-connector-python`{{execute T1}}
 
