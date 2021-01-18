@@ -60,11 +60,9 @@ Check the database table using mysql client.
 `docker exec -it mysql mysql -u root -p12345 -e "select * from Sales.INTEREST"`{{execute T1}}
 
 
-Execute the following command and input your student ID and name.
-
-`input_name`{{execute}}
 
 
-Click **Continue** below to check your script for correctness and submit your result.
+Click **Continue** below to check your script for correctness.
+
 
 
