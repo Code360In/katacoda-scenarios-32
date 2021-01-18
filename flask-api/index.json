@@ -53,7 +53,7 @@
     ],
   "environment": {
     "uilayout": "editor-terminal",
-	"exclusionPatterns": ["*test", "./test/*", "./logs"],
+	"exclusionPatterns": ["*test", "./test/*", "*verify*"],
 	"hideHiddenFiles": true
   },
   "backend": {
