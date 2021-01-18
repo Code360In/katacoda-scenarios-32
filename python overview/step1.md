@@ -16,8 +16,8 @@ A for-loop can be used for iterating over a sequence (a list, a dictionary, a se
 
 
 <pre class="file" data-filename="demo.py" data-target="replace">
- for x in fruits:
-  print(x)
+for x in fruits:
+	print(x)
 </pre>
 
 Try:
@@ -37,6 +37,9 @@ thisdict = {
 print(thisdict)
 </pre>
 
+Try:
+
+`python demo.py`{{execute T1}}
 
 
 Example 1: Accessing Items
@@ -48,6 +51,7 @@ thisdict = {
   "year": 1964
 }
 x = thisdict["model"]
+print(x)
 </pre>
 
 Try:
@@ -65,6 +69,7 @@ Example 2: Changing Values
   "year": 1964
 }
 thisdict["year"] = 2018
+print(x)
 </pre>
 
 Try:
@@ -81,7 +86,7 @@ Example 3: Looping through the keys and values in the Dictionary
   "year": 1964
 }
 for x in thisdict:
-  print(thisdict[x])
+	print(thisdict[x])
 
 </pre>
 
