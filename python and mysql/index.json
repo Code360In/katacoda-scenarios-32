@@ -16,7 +16,7 @@
       {
         "title": "Exercise: Sales.INTEREST table",
         "text": "step3.md",
-		"verify": "step3-verify.md"
+		"verify": "step3-verify.sh"
       }
     ],
     "intro": {
