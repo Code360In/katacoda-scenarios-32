@@ -40,3 +40,9 @@ print(y)
 
 </pre>
 
+Try:
+
+`python demo.py`{{execute T1}}
+
+
+
