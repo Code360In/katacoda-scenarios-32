@@ -10,7 +10,3 @@ Install mysql connection using pip (if not previously installed).
 
 `pip install mysql-connector-python`{{execute T1}}
 
-
-Install python
-`apt-get install python`{{execute T1}}
-

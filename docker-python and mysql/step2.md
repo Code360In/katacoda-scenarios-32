@@ -10,6 +10,7 @@ mydb = mysql.connector.connect(
   user="root",
   password="12345"
 )
+print(mydb)
 mycursor = mydb.cursor(dictionary=True)
 
 #TODO-create-db
