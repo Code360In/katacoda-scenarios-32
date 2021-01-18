@@ -5,8 +5,12 @@
   "time": "20",
   "details": {
     "steps": [
+	  {
+        "title": "Python List",
+        "text": "step1.md"
+      },
       {
-        "title": "Python Basics",
+        "title": "Python Dictionary",
         "text": "step1.md"
       },
       {
