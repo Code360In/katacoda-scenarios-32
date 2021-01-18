@@ -16,7 +16,13 @@
       {
         "title": "Example: Airbnb JSON Data",
         "text": "step3.md"
+      },
+	  {
+        "title": "References",
+        "text": "step3.md"
       }
+	  
+
     ],
     "intro": {
       "text": "intro.md"
