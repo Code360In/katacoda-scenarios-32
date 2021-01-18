@@ -53,7 +53,7 @@
     ],
   "environment": {
     "uilayout": "editor-terminal",
-	"exclusionPatterns": ["verify.py"],
+	"exclusionPatterns": ["*verify*"],
 	"hideHiddenFiles": true,
   },
   "backend": {
