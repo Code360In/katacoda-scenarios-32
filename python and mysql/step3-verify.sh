@@ -3,7 +3,7 @@ event_type='python-sql-step3-ex'
 myname=`cat myname`
 myid=`cat myid`
 
-echo "start2">start23
+echo "start2">start24
 
 python3 interest.py >out.txt
 

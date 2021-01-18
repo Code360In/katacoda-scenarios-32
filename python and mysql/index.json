@@ -28,7 +28,7 @@
 	"assets": {
         "host01": [
             {"file": "expected.txt", "target": "/root" },
-			{"file": "step3-verify.sh", "target": "/root" },
+			{"file": "assets/step3-verify.sh", "target": "/root" },
 			{"file": "input_name", "target": "/usr/local/bin/", "chmod": "+x"}
         ]
     }
