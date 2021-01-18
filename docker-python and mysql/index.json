@@ -12,6 +12,10 @@
       {
         "title": "Connecting to MySQL Server in python script",
         "text": "step2.md"
+      },
+      {
+        "title": "Exercise",
+        "text": "step3.md"
       }
     ],
     "intro": {
@@ -25,7 +29,7 @@
     "uilayout": "editor-terminal"
   },
   "files": [
-        "app.py"
+        "app.py","interest.py"
     ],
   "backend": {
 	"imageid": "ubuntu:2004"

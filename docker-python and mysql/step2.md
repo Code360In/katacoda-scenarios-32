@@ -57,3 +57,9 @@ Excute the python script.
 `python3 app.py`{{execute T1}}
 
 
+Verify the database table using  MySQL client.
+
+`docker exec -it mysql mysql -u root -p12345 -e "select * from Sales.Customer"`{{execute T1}}
+
+
+

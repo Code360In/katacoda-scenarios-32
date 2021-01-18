@@ -10,3 +10,6 @@ Install mysql connection using pip (if not previously installed).
 
 `pip install mysql-connector-python`{{execute T1}}
 
+
+Verify that you can connect to MySQL Server.
+`docker exec -it mysql mysql -u root -p12345 -e "SELECT VERSION()"`{{execute T1}}
