@@ -19,8 +19,8 @@ output1 = stream.read()
 
 if output1.strip() == output2.strip():
     try:
-        f1 = open("myname", "r")
-        f2 = open("myid", "r")   
+        f1 = open(".myname", "r")
+        f2 = open(".myid", "r")   
         myname=f1.read().strip()
         myid=f2.read().strip()
         
