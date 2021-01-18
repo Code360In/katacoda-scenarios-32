@@ -40,7 +40,7 @@
     },
 	"assets": {
         "host01": [
-            {"file": "inputname.sh", "target": "/usr/local/bin/", "chmod": "+x"}
+            {"file": "input_name", "target": "/usr/local/bin/", "chmod": "+x"}
         ]
     }
   },
