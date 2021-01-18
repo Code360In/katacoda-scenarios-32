@@ -8,7 +8,7 @@ echo "start2">start24
 python3 interest.py >out.txt
 
 DIFF=$(diff out.txt expected.txt) 
-if [ "$DIFF" == "" ] 
+if [ $DIFF == "" ] 
 then
     echo "interest  correct"
 	echo "interest.py correct">interest_ok
