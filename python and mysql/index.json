@@ -33,7 +33,10 @@
     }
   },
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "editor-terminal",
+	"uisettings": "bash",
+	"exclusionPatterns": ["*verify*"],
+	"hideHiddenFiles": true
   },
   "files": [
         "app.py","interest.py"
