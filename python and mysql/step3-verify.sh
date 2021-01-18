@@ -12,7 +12,8 @@ diff out.txt expected.txt> diff.txt
 $DIFF =  $(cat diff.txt)
 
 echo $DIFF > out2.txt
-if [ $DIFF == "" ] 
+
+if [ -f expected.txt ] && [ $DIFF == "" ] 
 then
     echo "interest  correct"
 	echo "interest.py correct">interest_ok
