@@ -1,70 +1,95 @@
 
-Define `interest.py` as follows.
-
-<pre class="file" data-filename="interest.py" data-target="replace">
-import mysql.connector
-
-mydb = mysql.connector.connect(
-  host="localhost", 
-  port=33306, #default mysql server port is 3306
-  user="root",
-  password="12345"
-)
-
-mycursor = mydb.cursor(dictionary=True)
-mycursor.execute('DROP DATABASE IF EXISTS Sales');
-mycursor.execute('CREATE DATABASE IF NOT EXISTS Sales');
-
-#create Sales.INTEREST table
+Create a python script airbnb.py as follows. The json.load() function takes a JSON object and convert to python dictionary.
 
 
-#insert data into Sales.INTEREST table
+<pre class="file" data-filename="demo.py" data-target="replace">
+import json
+from pprint import pprint
 
+# read file
+with open('airbnb.json', 'r',encoding="utf8") as myfile:
+    data=myfile.read()
 
-#Select from Sales.INTEREST table and output
-mycursor.execute("select * from Sales.INTEREST")
-myresult = mycursor.fetchall()
-for x in myresult:
-    print(x)
-  
+# parse file
+listing = json.loads(data)
+
+#print the json object
+pprint (listing)
 </pre>
 
-Complete the code such that the script will create a table INTEREST under Sales database and insert the following sample data into the table. 
+
+
+The listing variable is a python list. The first accommodation is listing[0], second accommodation is listing[2] and so on.
+
+To print the name of the accommodation, 
+`pprint(listing[0]["name"])`{{copy}}
+
+To print the facilities, 
+`pprint(listing[0][" amenities"])`{{copy}}
+
+
+
+
+
+Exercise 1:
+Write a python script airbnb_ex1.py which read the airbnb.json and prints the name and the number of reviews in the first 5 accommodation.
+
+Sample output:
+```
+name: Ribeira Charming Duplex
+number of reviews: 51
+
+name: Horto flat with small garden
+number of reviews: 0
+
+name: Ocean View Waikiki Marina w/prkg
+number of reviews: 96
+
+name: Private Room in Bushwick
+number of reviews: 1
+
+name: Apt Linda Vista Lagoa - Rio
+number of reviews: 0
+
+name: New York City - Upper West Side Apt
+number of reviews: 70
 
 ```
-+------------+-------------+
-| CustomerID | Interest    |
-+------------+-------------+
-| 1          | badminton   |
-| 1          | tennis      |
-| 2          | travel      |
-| 2          | programming |
-+------------+-------------+
-```
 
-Test your script:
 
-`python3 interest.py`{{execute T1}}
 
-Expected output of your python script:
-```json
-{'CustomerID': 1, 'Interest': 'badminton'}
-{'CustomerID': 1, 'Interest': 'tennis'}
-{'CustomerID': 2, 'Interest': 'travel'}
-{'CustomerID': 2, 'Interest': 'programming'}
+Exercise 2
+Write a python script airbnb_ex2.py which read the airbnb.json and print the accommodation’s names and whether they have “Microwave” oven and “Coffee maker”.
+
+Sample output:
 
 ```
+Ribeira Charming Duplex
+Microwave: yes
+Coffee maker: yes
 
-Check the database table using mysql client.
+Horto flat with small garden
+Microwave: no
+Coffee maker: no
 
-`docker exec -it mysql mysql -u root -p12345 -e "select * from Sales.INTEREST"`{{execute T1}}
+Ocean View Waikiki Marina w/prkg
+Microwave: yes
+Coffee maker: yes
 
+Private Room in Bushwick
+Microwave: no
+Coffee maker: no
 
-Execute the following command and input your student ID and name.
+Apt Linda Vista Lagoa - Rio
+Microwave: no
+Coffee maker: no
 
-`input_name`{{execute}}
+New York City - Upper West Side Apt
+Microwave: no
+Coffee maker: no
 
-Click **Continue** below to check your script for correctness.
+```
+
 
 
 
