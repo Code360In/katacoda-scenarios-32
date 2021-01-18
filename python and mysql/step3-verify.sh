@@ -3,11 +3,13 @@ event_type='python-sql-step3-ex'
 myname=`cat myname`
 myid=`cat myid`
 
-echo "start2">start24
+echo "start2">start25
 
 python3 interest.py >out.txt
 
 DIFF=$(diff out.txt expected.txt) 
+echo $DIFF>diff
+
 if [ $DIFF == "" ] 
 then
     echo "interest  correct"
