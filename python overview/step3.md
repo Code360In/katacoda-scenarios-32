@@ -24,6 +24,10 @@ pprint (listing)
 </pre>
 
 
+Try:
+
+`python demo.py`{{execute T1}}
+
 
 The listing variable is a python list. The first accommodation is listing[0], second accommodation is listing[2] and so on.
 
