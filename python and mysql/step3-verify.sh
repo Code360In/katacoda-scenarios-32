@@ -3,7 +3,7 @@ event_type='python-sql-step3-ex'
 myname=`cat myname`
 myid=`cat myid`
 
-python verify.py
+python3 verify.py
 
 
 
