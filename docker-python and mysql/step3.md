@@ -46,15 +46,15 @@ Test your script:
 
 `python3 interest.py`{{execute T1}}
 
-Sample output:
+Expected output of your python script:
 ```json
-{'CustomerID': '1', 'Interest': 'badminton'}
-{'CustomerID': '1', 'Interest': 'tennis'}
-{'CustomerID': '2', 'Interest': 'travel'}
-{'CustomerID': '2', 'Interest': 'programming'}
+{'CustomerID': 1, 'Interest': 'badminton'}
+{'CustomerID': 1, 'Interest': 'tennis'}
+{'CustomerID': 2, 'Interest': 'travel'}
+{'CustomerID': 2, 'Interest': 'programming'}
 ```
 
-Check the database table:
+Check the database table using mysql client.
 
 `docker exec -it mysql mysql -u root -p12345 -e "select * from Sales.INTEREST"`{{execute T1}}
 

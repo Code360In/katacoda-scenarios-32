@@ -23,6 +23,11 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+	"assets": {
+        "host01": [
+            {"file": "output.txt", "target": "/root" }
+        ]
     }
   },
   "environment": {
