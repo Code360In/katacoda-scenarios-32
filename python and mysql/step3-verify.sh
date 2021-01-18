@@ -8,7 +8,8 @@ echo "start2">start25
 python3 interest.py >out.txt
 
 diff out.txt expected.txt> diff.txt
-#echo $DIFF>diff
+
+$DIFF =  $(diff out.txt expected.txt)
 
 if [ $DIFF == "" ] 
 then
