@@ -6,7 +6,7 @@ import mysql.connector
 
 mydb = mysql.connector.connect(
   host="localhost", 
-  port=33306, #default mysql server port is 3306
+  port=3306, #default mysql server port is 3306
   user="root",
   password="12345"
 )
