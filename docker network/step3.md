@@ -37,7 +37,7 @@ In Terminal T1, check that app.py exists at /.
 
 Execute app.py inside the python app container:
 
-`python /app.py`{{execute T1}
+`python /app.py`{{execute T1}}
 
 Exit the pythonapp container.
 `exit`{{execute}}
