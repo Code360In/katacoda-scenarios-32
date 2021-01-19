@@ -5,7 +5,7 @@ Define `app.py` as follows.
 import mysql.connector
 
 mydb = mysql.connector.connect(
-  host="localhost", 
+  host="mysql",#the mysql server hostname
   port=3306, #default mysql server port is 3306
   user="root",
   password="12345"
@@ -13,25 +13,29 @@ mydb = mysql.connector.connect(
 print(mydb)
 </pre>
 
+Note that the hostname of MySQL Server is "mysql". The docker network maps this to the internal IP address of the MySQL Server (with the container name "mysql").
+
+
 Download and run a python docker container.
 
-`docker run --name pythonapp -it python:slim /bin/bash`{{execute T1}}
+`docker run --net my-network --name pythonapp -it python:slim /bin/bash`{{execute T1}}
 
-Install Python MySQL connection inside the pythoner container.
+Install Python MySQL connection inside the python app container.
 
 `pip install mysql-connector-python`{{execute T1}}
 
 Open a second terminal (T2). 
 
-To copy app.py from host machine to the pythonapp container, Execute in T2 
+To copy app.py from host machine to the python app container, execute in T2 
 
 `docker cp app.py pythonapp:/`{{execute T2}}
 
-
 In T1, check that app.py exists at /.
-`ls /`{{execute}
 
-Execute the python script inside python app container.
+`ls /`{{execute}}
+
+Execute app.py inside the python app container:
+
 `python /app.py`{{execute T1}
 
 Exit the pythonapp container.
