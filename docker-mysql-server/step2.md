@@ -17,7 +17,7 @@ Try the following commands inside mysql client
 
 You may also modify the password of the root user in MySQL Server 8.
 
-<pre>ALTER USER 'root'@'localhost' IDENTIFIED BY &lt;your password></pre>
+`ALTER USER 'root'@'localhost' IDENTIFIED BY &lt;your password>`
 
 
 Type exit to exit mysql shell.
