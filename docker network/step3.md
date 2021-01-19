@@ -10,7 +10,12 @@ mydb = mysql.connector.connect(
   user="root",
   password="12345"
 )
-print(mydb)
+
+cur = mydb.cursor()
+cur.execute("SELECT VERSION()")
+data = cur.fetchone()
+print (f"Database version : {data} ")
+mydb.close()
 </pre>
 
 The python script connnects to the  MySQL Server "mysql". The docker network maps this to the internal IP address of the MySQL Server (with the container name "mysql").
