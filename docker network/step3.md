@@ -13,7 +13,7 @@ mydb = mysql.connector.connect(
 print(mydb)
 </pre>
 
-Note that the hostname of MySQL Server is "mysql". The docker network maps this to the internal IP address of the MySQL Server (with the container name "mysql").
+The python script connnects to the  MySQL Server "mysql". The docker network maps this to the internal IP address of the MySQL Server (with the container name "mysql").
 
 
 Download and run a python docker container.
@@ -30,7 +30,8 @@ To copy app.py from host machine to the python app container, execute in T2
 
 `docker cp app.py pythonapp:/`{{execute T2}}
 
-In T1, check that app.py exists at /.
+In Terminal T1, check that app.py exists at /.
+
 
 `ls /`{{execute}}
 
