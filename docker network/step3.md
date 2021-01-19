@@ -13,15 +13,19 @@ mydb = mysql.connector.connect(
 print(mydb)
 </pre>
 
+Download and run a python docker container.
+
 `docker run --name pythonapp -it python:slim /bin/bash`{{execute T1}}
+
+Install Python MySQL connection inside the pythoner container.
 
 `pip install mysql-connector-python`{{execute T1}}
 
 Open a second terminal (T2). 
 
-Execute in T2:
+To copy app.py from host machine to the pythonapp container, Execute in T2 
 
-`docker cp app.py pythonapp:/`{{execute}}
+`docker cp app.py pythonapp:/`{{execute T2}}
 
 
 In T1, check that app.py exists at /.
