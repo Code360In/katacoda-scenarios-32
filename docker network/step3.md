@@ -38,7 +38,7 @@ To copy app.py from host machine to the python app container, execute in T2
 In Terminal T1, check that app.py exists at /.
 
 
-`ls /`{{execute}}
+`ls /`{{execute T1}}
 
 Execute app.py inside the python app container:
 
