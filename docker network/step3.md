@@ -46,5 +46,5 @@ Execute app.py inside the python app container:
 
 Exit the python app container.
 
-`exit`{{execute}}
+`exit`{{execute T1}}
 
