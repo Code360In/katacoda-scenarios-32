@@ -33,7 +33,7 @@ Exploring the tables in the sakila DB.
 > * Which actors have the last name 'Johansson'?
 > * How many distinct actors last names are there?
 > * Which actor's last names are not repeated?
-> * What is that average running time of all the films?
+> * What is the average running time of all the films?
 > * What is the average running time of films by category?
 
 
