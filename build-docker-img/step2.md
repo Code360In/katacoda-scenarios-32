@@ -1,19 +1,59 @@
-Run the image as a docker container. Note that the -p switch exposes port 80 externally in the host and map to port 8080 inside the container.
+Define the following python flask application app.py:
 
-`docker run --name app -p 80:8080 mywebapp`{{execute}}
+<pre class="file" data-filename="app.py" data-target="replace">
+import os
+import socket
+from flask import Flask,request,jsonify
+app = Flask(__name__)
+
+@app.route("/")
+def main():
+    return "Welcome!"
+
+@app.route('/about')
+def hello():
+    return 'I am '+socket.gethostname()
+
+#TODO-add
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080, debug=True, use_reloader=True)
+
+</pre>
 
 
-Open a second terminal and verify that the flask app can be accessed at localhost at port 80.
+Create a file named "DockerFile" as follows:
 
-`curl localhost:80/`{{execute T2}}
+<pre class="file" data-filename="Dockerfile" data-target="replace">
+# Use an official Python runtime as a parent image
+FROM python:slim
 
-`curl localhost:80/about`{{execute T2}}
- 
-Test the application in browser at:
+# Set the working directory to /app
+WORKDIR /app
 
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
+# Copy the current directory contents into the container at /app
+COPY . /app
 
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/about
+# Install any needed packages specified in requirements.txt
+RUN pip install -r requirements.txt
+
+# Run app.py when the container launches
+CMD ["python", "app.py"]
+</pre>
+
+RUN vs. CMD
+* **RUN** lets you execute commands inside  your Docker image. The command executs once at build time and get written into your Docker image as a new layer.
+
+* **CMD** lets you define a default command to run when your container starts. E.g. start your web application’s app server when the image is run (only one CMD command in the DockerFile).
 
 
+Define the file "requirements.txt" as follows.
+<pre class="file" data-filename="requirements.txt" data-target="replace">
+Flask
+</pre>
 
+
+Wait until the above updates are saved. 
+
+Build docker image:
+`docker build -t mywebapp .`{{execute}}

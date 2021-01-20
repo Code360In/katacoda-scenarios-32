@@ -1,29 +1,19 @@
-Insert the following code after hello() in "app.py" to define a REST API endpoint for adding two numbers.
+Run the image as a docker container. Note that the -p switch exposes port 80 externally in the host and map to port 8080 inside the container.
 
-<pre class="file" data-filename="app.py" data-target="insert" data-marker="#TODO-add">
-
-@app.route('/add', methods=['GET'])
-def add():
-    a = int(request.args['op1'])
-    b = int(request.args['op2'])
-    return jsonify({"operand 1": a, "operand 2": b, "sum":a+b}) #return JSON object
-	
-</pre>
-
-Wait until the above updates are saved. 
-
-In the second terminal, execute:
-`docker cp app.py app:/app`{{execute T2}}
+`docker run --name app -p 80:8080 mywebapp`{{execute}}
 
 
-Test the application in browser at 
+Open a second terminal and verify that the flask app can be accessed at localhost at port 80.
 
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/add?op1=3&op2=5
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/add?op1=100&op2=200
+`curl localhost:80/`{{execute T2}}
 
-Stop the python flask server with Ctrl+C.
+`curl localhost:80/about`{{execute T2}}
+ 
+Test the application in browser at:
 
-Stop and remove the app's docker container
-`docker rm -f app`{{execute}}
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
+
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/about
+
 
 

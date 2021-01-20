@@ -1,6 +1,7 @@
 **Learning Objectives**:
 
-* How to build a Docker image for a python application
+* Overview of DockerFile
+* Building a Docker image for a python application
 
 <br/><br/>
 
