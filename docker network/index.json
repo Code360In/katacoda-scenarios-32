@@ -14,7 +14,7 @@
         "text": "step2.md"
       },
       {
-        "title": "Execute Python app inside container",
+        "title": "Connecting to mysql container from the python container",
         "text": "step3.md"
       }
     ],
