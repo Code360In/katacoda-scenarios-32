@@ -41,10 +41,6 @@ RUN pip install -r requirements.txt
 CMD ["python", "app.py"]
 </pre>
 
-RUN vs. CMD
-* **RUN** lets you execute commands inside  your Docker image. The command executs once at build time and get written into your Docker image as a new layer.
-
-* **CMD** lets you define a default command to run when your container starts. E.g. start your web application’s app server when the image is run (only one CMD command in the DockerFile).
 
 
 Define the file "requirements.txt" as follows.
