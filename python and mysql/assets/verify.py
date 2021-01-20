@@ -30,6 +30,11 @@ if output1.strip() == output2.strip():
         
         print("done")
     except Exception as e:
+        f = open("error.log", "w")
+        f.write("Name/ID not found")
+        f.close()
         print(e)
 else:
-    print("different")
+    f = open("error.log", "w")
+    f.write("The script interest.py is not yet completed")
+    f.close()
