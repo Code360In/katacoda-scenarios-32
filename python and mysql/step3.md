@@ -44,7 +44,7 @@ Complete the code such that the script will create a table INTEREST under Sales 
 
 Test your script:
 
-`python3 interest.py`{{execute T1}}
+`python3 interest.py`{{execute T2}}
 
 Expected output of your python script:
 ```json
@@ -57,12 +57,12 @@ Expected output of your python script:
 
 Check the database table using mysql client.
 
-`docker exec -it mysql mysql -u root -p12345 -e "select * from Sales.INTEREST"`{{execute T1}}
+`docker exec -it mysql mysql -u root -p12345 -e "select * from Sales.INTEREST"`{{execute T2}}
 
 
 Execute the following command and input your student ID and name.
 
-`input_name`{{execute}}
+`input_name`{{execute T2}}
 
 Click **Continue** below to check your script for correctness.
 

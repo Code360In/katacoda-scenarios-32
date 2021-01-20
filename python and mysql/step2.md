@@ -54,12 +54,12 @@ for x in myresult:
 
 Execute the python script.
 
-`python3 app.py`{{execute T1}}
+`python3 app.py`{{execute T2}}
 
 
 Verify the database table using  MySQL client.
 
-`docker exec -it mysql mysql -u root -p12345 -e "select * from Sales.Customer"`{{execute T1}}
+`docker exec -it mysql mysql -u root -p12345 -e "select * from Sales.Customer"`{{execute T2}}
 
 
 
