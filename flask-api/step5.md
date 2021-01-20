@@ -1,7 +1,6 @@
 
 Modify the API to support updating to a book.
-Clients may send a HTTP PUT request to the endpoint to update a book. 
-The updated book data in JSON should be sent in the body of the HTTP request.
+Clients may send a HTTP PUT request to the endpoint `/books/<book_id>` to update a book (where <book_id> is the ID of the book to be updated. The updated book data in JSON should be sent in the body of the HTTP request.
 
 
 In terminal 2, execute the following command to update the book information.
