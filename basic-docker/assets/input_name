@@ -2,11 +2,11 @@
 
 
 echo "Please input your student ID:"
-read myname
-echo $myname > myid
+read myid
+echo $myid > myid
 
 
 echo "Please input your name:"
-read myid
-echo $myid > myname
+read myname
+echo $myname > myname
 
