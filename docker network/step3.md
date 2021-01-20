@@ -18,33 +18,35 @@ print (f"Database version : {data} ")
 mydb.close()
 </pre>
 
- The docker network maps the host "mysq" to the internal IP address of the MySQL Server (with the container name "mysql").
+The python script connects to the  MySQL Server "mysql". The docker network maps this to the internal IP address of the MySQL Server (with the container name "mysql").
 
 
-Download and run a python docker container.
+Open a terminal T2.
+
+In T2, Start docker container.
 
 `docker run --net my-network --name pythonapp -it python:slim /bin/bash`{{execute T1}}
 
-Install Python MySQL connection inside the python app container.
+Install Python MySQL connection inside the container.
 
 `pip install mysql-connector-python`{{execute T1}}
 
-Open a second terminal (T2). 
+Open a third terminal (T3). 
 
-To copy app.py from host machine to the python app container, execute in T2 
+To copy app.py from host machine to the python app container, execute in T3
 
-`docker cp app.py pythonapp:/`{{execute T2}}
+`docker cp app.py pythonapp:/`{{execute T3}}
 
-In Terminal T1, check that app.py exists at /.
+In Terminal T2, check that app.py exists at /.
 
 
-`ls /`{{execute T1}}
+`ls /`{{execute T2}}
 
 Execute app.py inside the python app container:
 
-`python /app.py`{{execute T1}}
+`python /app.py`{{execute T2}}
 
 Exit the python app container.
 
-`exit`{{execute T1}}
+`exit`{{execute T2}}
 

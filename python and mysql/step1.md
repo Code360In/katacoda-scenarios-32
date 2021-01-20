@@ -14,6 +14,7 @@ In T2, install mysql connector  using pip.
 
 
 
-Verify that you can connect to MySQL Server (You may need to wait for the MySQL Server to be initialized).
+Verify that you can connect to MySQL Server 
+(You may need to wait for the MySQL Server to be initialized).
 
 `docker exec -it mysql mysql -u root -p12345 -e "SELECT VERSION()"`{{execute T2}}
