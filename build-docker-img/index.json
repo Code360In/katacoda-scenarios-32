@@ -10,6 +10,10 @@
         "text": "step1.md"
       },
 	  {
+        "title": "CMD vs. ENTRYPOINT",
+        "text": "step1b.md"
+      },
+	  {
         "title": "Building a docker image for a python flask app",
         "text": "step2.md"
       },

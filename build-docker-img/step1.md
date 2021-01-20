@@ -33,8 +33,9 @@ Run the docker image:
 
 `docker run myimage`{{execute}}
 
-If a command is provided after the image name, the specified command will be executed instead. E.g. the following command will execute 'ls' instead of the "echo" command.
+If a command is provided after the image name, the specified command will be executed instead. E.g. the following command will execute 'ls -l' instead of the "echo" command.
 
-`docker run myimage ls`
+`docker run myimage ls -l`{{execute}}
 
+Observe that a folder "testing" is created under the / folder.
 
