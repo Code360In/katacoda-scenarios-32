@@ -6,16 +6,20 @@
   "details": {
     "steps": [
       {
-        "title": "Building the docker image ",
+        "title": "Overview of DockerFile",
         "text": "step1.md"
       },
-      {
-        "title": "Running the python flask app docker image",
+	  {
+        "title": "Building a docker image for a python flask app",
         "text": "step2.md"
       },
       {
-        "title": "Update the application code",
+        "title": "Running the python flask app docker image",
         "text": "step3.md"
+      },
+      {
+        "title": "Update the application code",
+        "text": "step4.md"
       }
     ],
     "intro": {

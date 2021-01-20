@@ -8,8 +8,8 @@ FROM debian:latest
 # Create a folder 
 RUN mkdir testing
 
-# Run the command Echo "hello" when the container is launched
-CMD ["Echo", "Hello"]
+# Run the command echo "hello" when the container is launched
+CMD ["echo", "Hello"]
 </pre>
 
 RUN vs. CMD
@@ -21,4 +21,20 @@ RUN vs. CMD
 Wait until the above updates are saved. 
 
 Build the docker image:
+
 `docker build -t myimage .`{{execute}}
+
+
+Check that the image is created:
+`docker image ls`{{execute}}
+
+
+Run the docker image:
+
+`docker run myimage`{{execute}}
+
+If a command is provided after the image name, the specified command will be executed instead. E.g. the following command will execute 'ls' instead of the "echo" command.
+
+`docker run myimage ls`
+
+
