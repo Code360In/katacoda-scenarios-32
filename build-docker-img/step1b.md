@@ -20,14 +20,6 @@ Build the docker image:
 
 The following command will execute `echo hello` in the container.
 
-> **Exercise**: Visit https://hub.docker.com/_/debian. 
-> 
-> Click the *latest* debian tag and study the docker file.
-
-
-> 
-
-
 `docker run myimage`{{execute}}
 
 If arguments are provided after the image name, the specified argument will be fed to the ENTRYPOINT instead. The following command will execute `echo Docker is fun` in the container.
@@ -36,3 +28,7 @@ If arguments are provided after the image name, the specified argument will be f
 
 
 
+> **Exercise**: Visit https://hub.docker.com/_/debian. 
+> 
+> Click the *latest* tag and study the docker file of the latest debian image.
+> 
