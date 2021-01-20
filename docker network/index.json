@@ -27,7 +27,10 @@
   },
   
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "editor-terminal",
+	"uisettings": "bash",
+	"exclusionPatterns": ["*verify*","*expect*"],
+	"hideHiddenFiles": true
   },
   "backend": {
     "imageid": "ubuntu:2004"
