@@ -1,4 +1,4 @@
-Create a file named "DockerFile" as follows:
+Define the following  "DockerFile".
 
 <pre class="file" data-filename="Dockerfile" data-target="replace">
 # Use the latest debian linux image as a parent image
@@ -19,6 +19,14 @@ Build the docker image:
 
 
 The following command will execute `echo hello` in the container.
+
+> **Exercise**: Visit https://hub.docker.com/_/debian. 
+> 
+> Click the *latest* debian tag and study the docker file.
+
+
+> 
+
 
 `docker run myimage`{{execute}}
 

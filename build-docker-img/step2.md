@@ -22,7 +22,7 @@ if __name__ == "__main__":
 </pre>
 
 
-Create a file named "DockerFile" as follows:
+The CMD specifies arguments that will be fed to the ENTRYPOINT.
 
 <pre class="file" data-filename="Dockerfile" data-target="replace">
 # Use an official Python runtime as a parent image
