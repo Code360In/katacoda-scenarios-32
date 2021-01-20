@@ -25,11 +25,11 @@ Open a terminal T2.
 
 In T2, Start docker container.
 
-`docker run --net my-network --name pythonapp -it python:slim /bin/bash`{{execute T1}}
+`docker run --net my-network --name pythonapp -it python:slim /bin/bash`{{execute T2}}
 
 Install Python MySQL connection inside the container.
 
-`pip install mysql-connector-python`{{execute T1}}
+`pip install mysql-connector-python`{{execute T2}}
 
 Open a third terminal (T3). 
 
