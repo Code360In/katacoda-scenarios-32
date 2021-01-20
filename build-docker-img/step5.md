@@ -1,4 +1,11 @@
 
+> **Exercise**: 
+> Visit https://hub.docker.com/_/debian. 
+> 
+> Click the *latest* tag and study the docker file of the latest debian image.
+> 
+
+
 
 > **Exercise**: 
 > Visit https://hub.docker.com/_/mysql 
