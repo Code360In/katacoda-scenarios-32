@@ -18,7 +18,7 @@ print (f"Database version : {data} ")
 mydb.close()
 </pre>
 
-The python script connnects to the  MySQL Server "mysql". The docker network maps this to the internal IP address of the MySQL Server (with the container name "mysql").
+ The docker network maps the host "mysq" to the internal IP address of the MySQL Server (with the container name "mysql").
 
 
 Download and run a python docker container.
