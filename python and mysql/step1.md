@@ -6,8 +6,7 @@ Start a new Docker container for a MySQL 8.0 Server.
 * -e MYSQL_ROOT_PASSWORD="12345" specifies initial root user password to be "12345"
 
 
-The log should show the message `MySQL init process done. Ready for start up.`
-when the initialization is completed.
+The log should show the message `MySQL init process done. Ready for start up.` when the initialization is completed.
 
 Open a second terminal (T2).
 
