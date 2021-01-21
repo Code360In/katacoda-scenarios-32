@@ -1,7 +1,7 @@
 **Learning Objectives**:
 
-*  Overview of Python
-*  JSON Processing
+*  Overview of Python List and Dictionary Structure
+*  JSON Processing in Python
 
 
 <br/><br/>
