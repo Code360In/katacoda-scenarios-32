@@ -84,7 +84,7 @@ car =	{
   "model": "Mustang",
   "year": 1964
 }
-print (keys())
+print (car.keys())
 
 </pre>
 
@@ -102,12 +102,17 @@ car =	{
   "year": 1964
 }
 
-if "year" in keys:
-	print("yes")
+if "year" in car.keys():
+    print("yes")
 else:
-	print("no")
+    print("no")
+
 
 
 </pre>
+
+Try:
+
+`python demo.py`{{execute T1}}
 
 
