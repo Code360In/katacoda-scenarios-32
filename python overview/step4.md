@@ -65,3 +65,4 @@ Coffee maker: no
 **References**
 
 * https://www.w3schools.com/python
+* https://scrimba.com/learn/python
