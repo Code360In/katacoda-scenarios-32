@@ -1,4 +1,5 @@
-A dictionary is a collection which is unordered, changeable and indexed. In Python dictionaries are written with curly brackets, and they have keys and values.
+A dictionary is a collection which is unordered, changeable and indexed. 
+In Python dictionaries are written with curly brackets, and they have keys and values.
 
 <pre class="file" data-filename="demo.py" data-target="replace">
 car = {
@@ -16,6 +17,8 @@ Try:
 
 ## Accessing Items
 
+You may access an item from a list using the key. 
+
 <pre class="file" data-filename="demo.py" data-target="replace">
 car = {
   "brand": "Ford",
@@ -32,7 +35,7 @@ Try:
 
 
 
-## Changing Values
+**Example:** Changing Values
 
 <pre class="file" data-filename="demo.py" data-target="replace">
 car = {
@@ -51,6 +54,8 @@ Try:
 
 
 ## Looping through the keys and values in the Dictionary
+
+You can loop through a dictionary by using a `for` loop. 
 
 <pre class="file" data-filename="demo.py" data-target="replace">
 car =	{
@@ -86,5 +91,23 @@ print (keys())
 Try:
 
 `python demo.py`{{execute T1}}
+
+
+**Example:** Check if a key exists in a dictionary
+
+<pre class="file" data-filename="demo.py" data-target="replace">
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+if "year" in keys:
+	print("yes")
+else:
+	print("no")
+
+
+</pre>
 
 
