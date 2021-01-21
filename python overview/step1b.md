@@ -58,14 +58,14 @@ Try:
 You can loop through a dictionary by using a `for` loop. 
 
 <pre class="file" data-filename="demo.py" data-target="replace">
-car =	{
+car =    {
   "brand": "Ford",
   "model": "Mustang",
   "year": 1964
 }
 for x in car:
-	print("key: "+x)
-	print("value:"+car[x])
+    print("key:"+x)
+    print("value:"+ str(car[x]))
 
 </pre>
 
@@ -106,9 +106,6 @@ if "year" in car.keys():
     print("yes")
 else:
     print("no")
-
-
-
 </pre>
 
 Try:
