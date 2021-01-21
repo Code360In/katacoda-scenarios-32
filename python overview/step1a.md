@@ -1,6 +1,21 @@
 
 
-A list is a collection which is ordered and changeable. In Python lists are written with square brackets.
+A list is a collection which is ordered and changeable. 
+In Python lists are written with square brackets. You may access the items  by referring to the index number:
+
+<pre class="file" data-filename="demo.py" data-target="replace">
+fruits = ["apple", "banana", "cherry"]
+print(fruits[0])
+print(fruits[1])
+print(fruits[2])
+</pre>
+
+
+Try:
+
+`python demo.py`{{execute T1}}
+
+To add an item to the end of the list, use the append() method:
 
 <pre class="file" data-filename="demo.py" data-target="replace">
 fruits = [] 	#define an empty list
@@ -13,8 +28,6 @@ print(fruits)
 Try:
 
 `python demo.py`{{execute T1}}
-
-
 
 
 
