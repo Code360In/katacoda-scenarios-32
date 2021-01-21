@@ -15,7 +15,7 @@ Try:
 `python demo.py`{{execute T1}}
 
 
-## Accessing Items
+# Accessing Items
 
 You may access an item from a list using the key. 
 
@@ -53,7 +53,7 @@ Try:
 
 
 
-## Looping through the keys and values in the Dictionary
+# Looping through the keys and values in the Dictionary
 
 You can loop through a dictionary by using a `for` loop. 
 
@@ -74,7 +74,7 @@ Try:
 `python demo.py`{{execute T1}}
 
 
-## Dictionary methods
+# Dictionary methods
 
 The `keys()` returns a list containing the dictionary's keys
 
