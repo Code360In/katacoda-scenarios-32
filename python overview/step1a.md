@@ -30,7 +30,6 @@ Try:
 `python demo.py`{{execute T1}}
 
 
-
 A for-loop can be used for iterating over a sequence (a list, a dictionary, a set, or a string, etc).
 
 
