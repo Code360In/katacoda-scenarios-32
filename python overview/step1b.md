@@ -33,8 +33,6 @@ Try:
 
 `python demo.py`{{execute T1}}
 
-
-
 **Example:** Changing Values
 
 <pre class="file" data-filename="demo.py" data-target="replace">
