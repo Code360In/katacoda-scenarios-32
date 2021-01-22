@@ -15,7 +15,7 @@ def get_books():
                 result.append(i)
     else:
         result=books
-    return jsonify(result),200     #200: HTTP response code
+    return jsonify(result),200     
 ```{{copy}}
 
 

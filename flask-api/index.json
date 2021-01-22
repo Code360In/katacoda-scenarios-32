@@ -18,6 +18,10 @@
         "title": "Get books",
         "text": "step1c.md"
       },
+	  {
+        "title": "Get books with minimum rating",
+        "text": "step1d.md"
+      },
       {
         "title": "Get book by ID",
         "text": "step2.md"
