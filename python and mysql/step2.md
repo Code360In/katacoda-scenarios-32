@@ -1,5 +1,5 @@
 
-Define `app.py` as follows.
+Define `app.py` as follows in the host machine.
 
 <pre class="file" data-filename="app.py" data-target="replace">
 import mysql.connector
