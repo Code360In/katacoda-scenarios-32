@@ -1,6 +1,6 @@
 
 Suppose we want to allow the client to specify a minimum rating for the returned books.
-E.g. /books?min_rating=8 should return books with minimum rating of 8 
+E.g. `HTTP GET /books?min_rating=8` will return books with minimum rating of 8.
 
 
 Modify the `get_books()` function in `app.py` as follows.
