@@ -15,7 +15,7 @@ Execute:
 
 `cd example-voting-app/`{{execute}}
 
-`example-voting-app/docker-compose up`{{execute}}
+`docker-compose up`{{execute}}
 
 
 
