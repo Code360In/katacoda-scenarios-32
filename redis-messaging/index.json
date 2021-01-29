@@ -6,16 +6,21 @@
   "details": {
     "steps": [
       {
-        "title": "Message Queue",
+        "title": "Preparation",
         "text": "step1.md"
       },
       {
-        "title": "Publish and Subscribe",
+        "title": "Message Queue",
         "text": "step2.md"
       },
       {
-        "title": "Cleaning up",
+        "title": "Publish and Subscribe",
         "text": "step3.md"
+      },
+	  
+      {
+        "title": "Cleaning Up",
+        "text": "step4.md"
       }
     ],
     "intro": {

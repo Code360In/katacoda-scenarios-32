@@ -1,21 +1,4 @@
-``{{execute}}
+In T1, stop the redis container
 
-``{{execute}}
+`docker rm -f redis`{{execute}}
 
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
