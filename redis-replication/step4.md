@@ -29,7 +29,7 @@ In terminal T2, stop the Redis master DB server.
 
 Observe the log from the Redis sentinel server.
 
-Check the replication status of `redis2` and `redis3` servers to see if any of them is promoted to master.
+Check the replication status of `redis2` and `redis3` servers to check if any of them is promoted to master.
 
 `docker exec -it redis2 redis-cli info replication`{{execute T2}}
 
@@ -37,7 +37,7 @@ Check the replication status of `redis2` and `redis3` servers to see if any of t
 
 > **Exercise**: 
 >
-> Define a key in the new Redis master and verify if the key is presence in the other slave server
+> Define a key in the new Redis master and verify if the data is reokucated to the other slave server
 >
 >
 
