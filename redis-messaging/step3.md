@@ -69,11 +69,13 @@ Meanwhile, you may examine the channels and number of subscribers in the `queue1
 
 `PUBSUB NUMSUB channel1`{{execute T1}}
 
+Stop the sender/receiver scripts with Ctrl+C (or Ctrl+Break).
+
 
 > **Question:**:
 >
 > What is the difference between a messaging queue and publish-subscribe channel?
 >
 
-Stop the sender/receiver scripts with Ctrl+C (or Ctrl+Break).
+
 
