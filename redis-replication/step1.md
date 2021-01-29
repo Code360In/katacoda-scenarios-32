@@ -80,13 +80,37 @@ In T2, Check the log of the redis slaves.
 `docker logs redis3'{{execute T2}}
 
 
-``{{execute}}
+We will setup a Redis Sentinel Server to monitor the status of the Redis Master Server. One of the slaves will be promoted to master when the originla master is down.
 
-``{{execute}}
+In terminal T1, start another redis container `sentinel` and launch a bash shell in the container.
 
-``{{execute}}
+`docker run --network my-network --name sentinel -it redis bash `{{execute}}
 
-``{{execute}}
+Inside the container's bash shell, create the sentinel config file.
+
+```cat <<EOT >sentinel.conf
+sentinel monitor mymaster redis1 6379 1
+sentinel down-after-milliseconds mymaster 5000
+sentinel failover-timeout mymaster 5000
+EOT
+```{{execute T1}}
+
+Launch the redis-server with `--sentinel` option.
+
+`redis-server sentinel.conf --sentinel`{{execute T1}}
+
+In terminal T2, stop the Redis master DB server. 
+
+`docker stop `{{execute T1}}
+
+Observe the log from the Redis sentinel server.
+
+Check the replication status of `redis2` and `redis3` servers.
+
+`docker exec -it redis2 redis-cli info replication`{{execute T2}}
+
+`docker exec -it redis3 redis-cli info replication`{{execute T2}}
+
 
 ``{{execute}}
 
