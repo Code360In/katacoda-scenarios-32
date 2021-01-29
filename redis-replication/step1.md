@@ -45,13 +45,17 @@ In T2, connect to the Redis slave DB `redis2` and check if the key is present.
 
 `docker exec -it redis2 redis-cli`{{execute T2}}
 
-`keys *"`{{execute T2}}
+`keys *`{{execute T2}}
 
-`keys *"`{{execute T2}}
 
 What happens if you try to create a key in the slave DB?
 
 `set message2 "This is redis2"`{{execute T2}}
+
+Exit the redis-cli.
+
+`exit`{execute T2}}
+
 
 Repeat the above steps for the Redis slave DB `redis3`.
 
@@ -60,11 +64,15 @@ In T1, simulate the scenario where the master Redis server `redis1` is down by s
 
 `docker stop redis1`{{execute T1}}
 
-In T2, Check the log of the redis slaves.
+In T2, Check the log and status of the redis slaves.
 
-`docker logs redis2'{{execute T2}}
+`docker logs redis2`{{execute T2}}
 
-`docker logs redis3'{{execute T2}}
+`docker exec -it redis2 redis-cli info replication`{{execute T2}}
+
+
+
+
 
 Without the Redis master , we can only read from DB but not write to the DB.
 
@@ -75,9 +83,9 @@ In T1, restart the Redis master.
 
 In T2, Check the log of the redis slaves.
 
-`docker logs redis2'{{execute T2}}
+`docker logs redis2`{{execute T2}}
 
-`docker logs redis3'{{execute T2}}
+`docker logs redis3`{{execute T2}}
 
 
 We will setup a Redis Sentinel Server to monitor the status of the Redis Master Server. One of the slaves will be promoted to master when the originla master is down.
@@ -95,26 +103,33 @@ sentinel failover-timeout mymaster 5000
 EOT
 ```{{execute T1}}
 
+Check the created config file.
+
+`cat sentinel.conf`{execute T1}
+
 Launch the redis-server with `--sentinel` option.
 
 `redis-server sentinel.conf --sentinel`{{execute T1}}
 
 In terminal T2, stop the Redis master DB server. 
 
-`docker stop `{{execute T1}}
+`docker stop redis1``{{execute T2}}
 
 Observe the log from the Redis sentinel server.
 
-Check the replication status of `redis2` and `redis3` servers.
+Check the replication status of `redis2` and `redis3` servers to see if any of them is promoted to master.
 
 `docker exec -it redis2 redis-cli info replication`{{execute T2}}
 
 `docker exec -it redis3 redis-cli info replication`{{execute T2}}
 
-> Exercise: Define a key in the new Redis master and verify if the key is presence in the other slave server
+> *Exercise*: 
+>
+> Define a key in the new Redis master and verify if the key is presence in the other slave server
 .
 
-Simulate the scenario that `redis1` is now up again. Check the replication status of the three redis DB servers.
+Suppose now the Redis server `redis1` is now up again. 
+Check the replication status of the three redis DB servers.
 
 `docker exec -it redis1 redis-cli info replication`{{execute T2}}
 
@@ -123,9 +138,7 @@ Simulate the scenario that `redis1` is now up again. Check the replication statu
 `docker exec -it redis3 redis-cli info replication`{{execute T2}}
 
 
+In T2, clean up the containers.
 
-``{{execute}}
+`docker rm -f redis1 redis2 redis3 sentinel`{{execute}}
 
-``{{execute}}
-
-``{{execute}}
