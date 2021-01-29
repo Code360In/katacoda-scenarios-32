@@ -9,7 +9,6 @@
         "title": "Preparation",
         "text": "step1.md"
       },
-	  
       {
         "title": "Master-Slave Replication",
         "text": "step2.md"
@@ -18,12 +17,11 @@
         "title": "What if master Redis server is down?",
         "text": "step3.md"
       },
-        "title": "Redis Sentinel Server",
       {
+        "title": "Setting up Redis Sentinel Server",
         "text": "step4.md"
       },
       {
-        "title": "Cleaning up",
         "title": "Cleaning up",
         "text": "step5.md"
       }
