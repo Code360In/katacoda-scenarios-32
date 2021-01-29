@@ -4,5 +4,5 @@ Start a redi server in docker and run in background.
 
 Execute redis-cli in the container which connects to the Redis server at localhost port default port 6379.
 
-`docker exec -it redis bash`{{execute}}
+`docker exec -it redis redis-cli`{{execute}}
 
