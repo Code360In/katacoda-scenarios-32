@@ -14,14 +14,18 @@ Launch our second Redis slave DB server `redis3` with connection to `my-network`
 
 `docker run -d --network my-network --name redis3 -it redis redis-server --slaveof redis1 6379`{{execute T1}}
 
+Check that the three Redis DB Server containers are running.
+
+`docker ps`{{execute T1}}
+
 
 Check the replication status of the three servers.
 
 `docker exec -it redis1 redis-cli info replication`{{execute T1}}
 
-`docker exec -it redis2 redis-cli info replication`{{execute T2}}
+`docker exec -it redis2 redis-cli info replication`{{execute T1}}
 
-`docker exec -it redis3 redis-cli info replication`{{execute T3}}
+`docker exec -it redis3 redis-cli info replication`{{execute T1}}
 
 
 In terminal 1, connect to Redis master and define a key.
@@ -60,7 +64,7 @@ In T2, Check the log of the redis slaves.
 
 `docker logs redis2'{{execute T2}}
 
-`docker logs redis2'{{execute T2}}
+`docker logs redis3'{{execute T2}}
 
 Without the Redis master , we can only read from DB but not write to the DB.
 
@@ -73,7 +77,7 @@ In T2, Check the log of the redis slaves.
 
 `docker logs redis2'{{execute T2}}
 
-`docker logs redis2'{{execute T2}}
+`docker logs redis3'{{execute T2}}
 
 
 ``{{execute}}
