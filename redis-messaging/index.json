@@ -26,7 +26,7 @@
     }
   },
   "files": [
-         "queue_publisher.py","queue_processor.py","pubsub_publisher.py","pubsub_processor.py"
+         "queue_sender.py","queue_receiver.py","pubsub_sender.py","pubsub_receiver.py"
     ],
   "environment": {
     "uilayout": "editor-terminal",
