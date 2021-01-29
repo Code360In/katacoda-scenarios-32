@@ -4,7 +4,7 @@ In T1, simulate the scenario where the master Redis server `redis1` is down by s
 
 `docker stop redis1`{{execute T1}}
 
-In T2, Check the log and status of the redis slaves.
+In T2, Check the log and status of the Redis slaves.
 
 `docker logs redis2`{{execute T2}}
 
@@ -19,7 +19,7 @@ In T1, restart the Redis master.
 `docker start redis1`{{execute T1}}
 
 
-In T2, Check the log of the redis slaves.
+In T2, Check the log of the Redis slaves.
 
 `docker logs redis2`{{execute T2}}
 

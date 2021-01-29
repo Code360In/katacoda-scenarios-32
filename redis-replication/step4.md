@@ -1,8 +1,8 @@
 
 
-We will setup a Redis Sentinel Server to monitor the status of the Redis Master Server. One of the slaves will be promoted to master when the originla master is down.
+We will setup a Redis Sentinel Server to monitor the status of the Redis Master Server. One of the slaves will be promoted to master when the original master is down.
 
-In terminal T1, start another redis container `sentinel` and launch a bash shell in the container.
+In terminal T1, start another Redis container `sentinel` and launch a bash shell in the container.
 
 `docker run --network my-network --name sentinel -it redis bash `{{execute}}
 
@@ -37,7 +37,7 @@ Check the replication status of `redis2` and `redis3` servers to check if any of
 
 > **Exercise**: 
 >
-> Define a key in the new Redis master and verify if the data is reokucated to the other slave server
+> Define a key in the new Redis master and verify if the data is replicated to the other slave server.
 >
 >
 

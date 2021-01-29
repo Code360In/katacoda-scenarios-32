@@ -25,7 +25,7 @@ We can define multiple key value pairs for a hash in one command.
 
 > Exercise:
 >
-> 1) To facilicate enumerating all players ID, define a set which consists of all the  player IDs.
+> 1) To facilitate enumerating all players IDs, define a set which consists of all the player IDs.
 >
 > 2) How can we support efficient lookup of player's record by her his/name?
 >
