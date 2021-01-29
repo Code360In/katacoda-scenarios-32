@@ -32,7 +32,7 @@ In terminal 1, connect to Redis master and define a key.
 
 `docker exec -it redis1 redis-cli`{{execute T1}}
 
-`set message "This is a message from master"`{{execute T1}}
+`set message1 "This is a redis1"`{{execute T1}}
 
 Exit the redis-cli.
 
@@ -51,7 +51,7 @@ In T2, connect to the Redis slave DB `redis2` and check if the key is present.
 
 What happens if you try to create a key in the slave DB?
 
-`set message "This is a message from slave"`{{execute T2}}
+`set message2 "This is redis2"`{{execute T2}}
 
 Repeat the above steps for the Redis slave DB `redis3`.
 
@@ -110,6 +110,18 @@ Check the replication status of `redis2` and `redis3` servers.
 `docker exec -it redis2 redis-cli info replication`{{execute T2}}
 
 `docker exec -it redis3 redis-cli info replication`{{execute T2}}
+
+> Exercise: Define a key in the new Redis master and verify if the key is presence in the other slave server
+.
+
+Simulate the scenario that `redis1` is now up again. Check the replication status of the three redis DB servers.
+
+`docker exec -it redis1 redis-cli info replication`{{execute T2}}
+
+`docker exec -it redis2 redis-cli info replication`{{execute T2}}
+
+`docker exec -it redis3 redis-cli info replication`{{execute T2}}
+
 
 
 ``{{execute}}
