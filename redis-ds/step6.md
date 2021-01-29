@@ -8,7 +8,6 @@ ZADD score 90 user2
 ZADD score 85 user3
 ```{{execute}}
 
-
 Fetch the items according to its sorted position
 
 `ZRANGE score 0 1`{{execute}}
@@ -31,3 +30,10 @@ To retrieve the score and rank for a certain member,
 `ZSCORE user2`{{execute}}
 
 `ZRANK user2`{{execute}}
+
+
+Check the following article to learn how sorted set can be used to represent time-series data.
+
+https://redislabs.com/redis-best-practices/time-series/sorted-set-time-series/
+
+
