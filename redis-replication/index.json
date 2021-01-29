@@ -1,0 +1,47 @@
+{
+  "title": "Oracle 18C Express Edition",
+  "description": "",
+  "difficulty": "Beginner",
+  "time": "50",
+  "details": {
+    "steps": [
+      {
+        "title": "Preparation",
+        "text": "step1.md"
+      },
+	  {
+        "title": "Connecting to Oracle database",
+        "text": "step1b.md"
+      },
+      {
+        "title": "Unlock HR account",
+        "text": "step2.md"
+      },
+      {
+        "title": "Creating Pluggable Database",
+        "text": "step3.md"
+      },
+      {
+        "title": "Users and Authorization",
+        "text": "step4.md"
+      },
+      {
+        "title": "Exercise: Users and Authorization",
+        "text": "step5.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}
