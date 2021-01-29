@@ -13,6 +13,10 @@ To test if a give key exists or not:
 
 `exists test`{{execute}}
 
+To view all keys,
+
+`KEYS *`
+
 Redis String allows numbers to be stored. Use the `INCR` command to atomically increment an integer stored at a given key.
 
 `SET counter 1`{{execute}}

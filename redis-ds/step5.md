@@ -1,16 +1,30 @@
-``{{execute}}
+A set is an unordered collection of strings which does not allowing repeated members.
 
-``{{execute}}
+Try:
 
-``{{execute}}
+Add members to sets.
 
-``{{execute}}
+`SADD comics book1 book2 book3`{{execute}}
 
-``{{execute}}
+`SADD love book3 book4`{{execute}}
 
-``{{execute}}
+Check the elements in the sets.
 
-``{{execute}}
+`SMEMBERS love`{{execute}}
+
+`SMEMBERS comics`{{execute}}
+
+Check if an element exists in a SET.
+
+`SISMEMBER love book3`{{execute}}
+
+`SISMEMBER love book1`{{execute}}
+
+SET union and intersection.
+
+`SINTER comics love`{{execute}}
+
+`SUNION comics love`{{execute}}
 
 ``{{execute}}
 
