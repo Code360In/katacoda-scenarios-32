@@ -1,7 +1,7 @@
 **Learning Objectives**:
 
-* Messaging using a queue in Redis
-* Publish Subscribe in Redis
+* Message queue in Redis
+* Publish-Subscribe in Redis
 
 <br/><br/>
 
