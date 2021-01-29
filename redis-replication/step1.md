@@ -36,7 +36,7 @@ In terminal 1, connect to Redis master and define a key.
 
 Exit the redis-cli.
 
-`exit`
+`exit`{{execute T1}}
 
 
 Open another terminal (T2).
