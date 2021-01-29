@@ -10,7 +10,7 @@ r.set('test', 'It is working!!!')
 for i in range(1000):
     print(f"Generate order {i}")
     r.rpush('queue1',f"order {i}")
-    time.sleep(1)
+    time.sleep(0.2)
 </pre>
 
 Define the receiver script `queue_receiver.py` as follows.
