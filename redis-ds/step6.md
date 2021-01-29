@@ -1,21 +1,33 @@
-``{{execute}}
+Redis Sorted Sets are non-repeating collections of String with scores for each members
 
-``{{execute}}
+Add three items to the sorted set with their score.
 
-``{{execute}}
+```
+ZADD score 50 user1
+ZADD score 90 user2
+ZADD score 85 user3
+```{{execute}}
 
-``{{execute}}
 
-``{{execute}}
+Fetch the items according to its sorted position
 
-``{{execute}}
+`ZRANGE score 0 1`{{execute}}
 
-``{{execute}}
+`ZRANGE score 0 2`{{execute}}
 
-``{{execute}}
+`ZRANGE score 0 -1`{{execute}}
 
-``{{execute}}
+Fetch the items with scores according to its sorted position
 
-``{{execute}}
+`ZRANGEBYSCORE score 0 -``{{execute}}
 
-``{{execute}}
+
+To fetch the scores in reversed direction, 
+
+`ZREVRANGE score 0 1`{{execute}}
+
+To retrieve the score and rank for a certain member,
+
+`ZSCORE user2`{{execute}}
+
+`ZRANK user2`{{execute}}
