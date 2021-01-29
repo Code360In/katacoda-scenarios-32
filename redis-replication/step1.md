@@ -17,11 +17,11 @@ Launch our second Redis slave DB server `redis3` with connection to `my-network`
 
 Check the replication status of the three servers.
 
-`docker exec -it redis1 redis-cli replication`{{execute T1}}
+`docker exec -it redis1 redis-cli info replication`{{execute T1}}
 
-`docker exec -it redis2 redis-cli replication`{{execute T2}}
+`docker exec -it redis2 redis-cli info replication`{{execute T2}}
 
-`docker exec -it redis3 redis-cli replication`{{execute T3}}
+`docker exec -it redis3 redis-cli info replication`{{execute T3}}
 
 
 In terminal 1, connect to Redis master and define a key.
@@ -29,6 +29,11 @@ In terminal 1, connect to Redis master and define a key.
 `docker exec -it redis1 redis-cli`{{execute T1}}
 
 `set message "This is a message from master"`{{execute T1}}
+
+Exit the redis-cli.
+
+`exit`
+
 
 Open another terminal (T2).
 
@@ -44,8 +49,19 @@ What happens if you try to create a key in the slave DB?
 
 `set message "This is a message from slave"`{{execute T2}}
 
-
 Repeat the above steps for the Redis slave DB `redis3`.
+
+
+In T1, simulate the scenario where the master Redis server `redis1` is down by stopping the container.
+
+`docker exec -it redis2 redis-cli`{{execute T1}}
+
+In T2, Check the log of the redis slaves.
+
+`docker logs redis2'{{execute T2}}
+
+`docker logs redis2'{{execute T3}}
+
 
 
 ``{{execute}}
