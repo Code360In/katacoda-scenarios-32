@@ -1,21 +1,12 @@
-``{{execute}}
+The `EXPIRE` command sets a timeout on key after n seconds
+The `TTL` command Returns the remaining time to live of a key that has a timeout
 
-``{{execute}}
 
-``{{execute}}
+Examples:
 
-``{{execute}}
+`SET mykey "Hello"`{{execute}}
 
-``{{execute}}
+`EXPIRE mykey 10`{{execute}}
 
-``{{execute}}
+`TTL mykey`{{execute}}
 
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}

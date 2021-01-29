@@ -1,21 +1,22 @@
-``{{execute}}
+A Redis list is an ordered sequence of strings. 
 
-``{{execute}}
+`LPUSH tutorials redis `{{execute}}
 
-``{{execute}}
+`LPUSH tutorials mongodb `{{execute}}
 
-``{{execute}}
+`RPUSH tutorials mysql `{{execute}}
 
-``{{execute}}
+`RPUSH tutorials oracle `{{execute}}
 
-``{{execute}}
+`GET tutorials`{{execute}}
 
-``{{execute}}
+LRANGE gives a subset of the list given the starting and ending index. The value -1 means the last element, -2 means the second last, etc.
 
-``{{execute}}
+`LRANGE tutorials 0 2 `{{execute}}
 
-``{{execute}}
+`LRANGE tutorials 2 -1 `{{execute}}
 
-``{{execute}}
 
-``{{execute}}
+Use LLEN to obtain the current length of the list.
+`LLEN tutorials`{{execute}}
+
