@@ -67,7 +67,7 @@ Meanwhile, you may examine the channels and number of subscribers in the `queue1
 
 `PUBSUB CHANNELS`{{execute T1}}
 
-`PUBSUB NUMSUB queue1`{{execute T1}}
+`PUBSUB NUMSUB channel1`{{execute T1}}
 
 
 > **Question:**:
