@@ -2,11 +2,13 @@ Redis Sorted Sets are non-repeating collections of String with scores for each m
 
 Add three items to the sorted set with their score.
 
-```
-ZADD score 50 user1
-ZADD score 90 user2
-ZADD score 85 user3
-```{{execute}}
+`ZADD score 50 user1`{{execute}}
+
+`ZADD score 90 user2`{{execute}}
+
+`ZADD score 85 user3`{{execute}}
+
+
 
 Fetch the items according to its sorted position
 
@@ -16,12 +18,18 @@ Fetch the items according to its sorted position
 
 `ZRANGE score 0 -1`{{execute}}
 
-Fetch the items with scores according to its sorted position
+To returns all the elements in the sorted set at key with a score between min and max
 
-`ZRANGEBYSCORE score 0 -``{{execute}}
+`ZRANGEBYSCORE score 80 100`{{execute}}
+
+`ZRANGEBYSCORE score -inf +inf`{{execute}}
+
+To show elements with scores,
+
+`ZRANGEBYSCORE score 80 100 WITHSCORES`{{execute}}
 
 
-To fetch the scores in reversed direction, 
+To fetch the elements in reversed direction, 
 
 `ZREVRANGE score 0 1`{{execute}}
 

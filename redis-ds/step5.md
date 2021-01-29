@@ -1,8 +1,8 @@
 A set is an unordered collection of strings which does not allowing repeated members.
 
-Try:
 
-Add members to sets.
+
+To add members to sets,
 
 `SADD comics book1 book2 book3`{{execute}}
 
@@ -26,10 +26,4 @@ SET union and intersection.
 
 `SUNION comics love`{{execute}}
 
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
+`
