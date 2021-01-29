@@ -11,19 +11,20 @@
       },
 	  
       {
-        "title": "Unlock HR account",
+        "title": "Master-Slave Replication",
         "text": "step2.md"
       },
       {
-        "title": "Creating Pluggable Database",
+        "title": "What if master Redis server is down?",
         "text": "step3.md"
       },
+        "title": "Redis Sentinel Server",
       {
-        "title": "Users and Authorization",
         "text": "step4.md"
       },
       {
-        "title": "Exercise: Users and Authorization",
+        "title": "Cleaning up",
+        "title": "Cleaning up",
         "text": "step5.md"
       }
     ],

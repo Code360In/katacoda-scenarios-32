@@ -1,21 +1,31 @@
-``{{execute}}
 
-``{{execute}}
+In terminal 1, connect to Redis master and define a key.
 
-``{{execute}}
+`docker exec -it redis1 redis-cli`{{execute T1}}
 
-``{{execute}}
+`set message1 "This is a redis1"`{{execute T1}}
 
-``{{execute}}
+Exit the redis-cli.
 
-``{{execute}}
+`exit`{{execute T1}}
 
-``{{execute}}
 
-``{{execute}}
+Open another terminal (T2).
 
-``{{execute}}
+In T2, connect to the Redis slave DB `redis2` and check if the key is present.
 
-``{{execute}}
+`docker exec -it redis2 redis-cli`{{execute T2}}
 
-``{{execute}}
+`keys *`{{execute T2}}
+
+
+What happens if you try to create a key in the slave DB?
+
+`set message2 "This is redis2"`{{execute T2}}
+
+Exit the redis-cli.
+
+`exit`{execute T2}}
+
+
+Repeat the above steps for the Redis slave DB `redis3`.

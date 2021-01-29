@@ -1,21 +1,5 @@
-``{{execute}}
 
-``{{execute}}
+In T2, clean up the containers.
 
-``{{execute}}
+`docker rm -f redis1 redis2 redis3 sentinel`{{execute}}
 
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}
-
-``{{execute}}

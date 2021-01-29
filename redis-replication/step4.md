@@ -1,21 +1,50 @@
-``{{execute}}
 
-``{{execute}}
 
-``{{execute}}
+We will setup a Redis Sentinel Server to monitor the status of the Redis Master Server. One of the slaves will be promoted to master when the originla master is down.
 
-``{{execute}}
+In terminal T1, start another redis container `sentinel` and launch a bash shell in the container.
 
-``{{execute}}
+`docker run --network my-network --name sentinel -it redis bash `{{execute}}
 
-``{{execute}}
+Inside the container's bash shell, create the sentinel config file.
 
-``{{execute}}
+```cat <<EOT >sentinel.conf
+sentinel monitor mymaster redis1 6379 1
+sentinel down-after-milliseconds mymaster 5000
+sentinel failover-timeout mymaster 5000
+EOT
+```{{execute T1}}
 
-``{{execute}}
+Check the created config file.
 
-``{{execute}}
+`cat sentinel.conf`{execute T1}
 
-``{{execute}}
+Launch the redis-server with `--sentinel` option.
 
-``{{execute}}
+`redis-server sentinel.conf --sentinel`{{execute T1}}
+
+In terminal T2, stop the Redis master DB server. 
+
+`docker stop redis1``{{execute T2}}
+
+Observe the log from the Redis sentinel server.
+
+Check the replication status of `redis2` and `redis3` servers to see if any of them is promoted to master.
+
+`docker exec -it redis2 redis-cli info replication`{{execute T2}}
+
+`docker exec -it redis3 redis-cli info replication`{{execute T2}}
+
+> *Exercise*: 
+>
+> Define a key in the new Redis master and verify if the key is presence in the other slave server
+.
+
+Suppose now the Redis server `redis1` is now up again. 
+Check the replication status of the three redis DB servers.
+
+`docker exec -it redis1 redis-cli info replication`{{execute T2}}
+
+`docker exec -it redis2 redis-cli info replication`{{execute T2}}
+
+`docker exec -it redis3 redis-cli info replication`{{execute T2}}

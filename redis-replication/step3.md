@@ -1,21 +1,28 @@
-``{{execute}}
 
-``{{execute}}
 
-``{{execute}}
+In T1, simulate the scenario where the master Redis server `redis1` is down by stopping the container.
 
-``{{execute}}
+`docker stop redis1`{{execute T1}}
 
-``{{execute}}
+In T2, Check the log and status of the redis slaves.
 
-``{{execute}}
+`docker logs redis2`{{execute T2}}
 
-``{{execute}}
+`docker exec -it redis2 redis-cli info replication`{{execute T2}}
 
-``{{execute}}
 
-``{{execute}}
 
-``{{execute}}
 
-``{{execute}}
+
+Without the Redis master , we can only read from DB but not write to the DB.
+
+In T1, restart the Redis master.
+
+`docker start redis1`{{execute T1}}
+
+
+In T2, Check the log of the redis slaves.
+
+`docker logs redis2`{{execute T2}}
+
+`docker logs redis3`{{execute T2}}
