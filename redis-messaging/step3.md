@@ -34,7 +34,7 @@ for item in pubsub.listen():
     if item['type']=='message':
         data =item['data'].decode("utf-8") 
         print(f"processing: {data}")
-        time.sleep(3)
+        time.sleep(2)
         print(f"done: {data}")
   
 </pre>
