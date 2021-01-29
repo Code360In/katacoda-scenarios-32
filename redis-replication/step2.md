@@ -19,13 +19,13 @@ In T2, connect to the Redis slave DB `redis2` and check if the key is present.
 `keys *`{{execute T2}}
 
 
-What happens if you try to create a key in the slave DB?
+What happens if you create a key in the slave DB?
 
 `set message2 "This is redis2"`{{execute T2}}
 
 Exit the redis-cli.
 
-`exit`{execute T2}}
+`exit`{{execute T2}}
 
 
 Repeat the above steps for the Redis slave DB `redis3`.

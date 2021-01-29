@@ -12,8 +12,6 @@ In T2, Check the log and status of the redis slaves.
 
 
 
-
-
 Without the Redis master , we can only read from DB but not write to the DB.
 
 In T1, restart the Redis master.

@@ -17,7 +17,7 @@ EOT
 
 Check the created config file.
 
-`cat sentinel.conf`{execute T1}
+`cat sentinel.conf`{{execute T1}}
 
 Launch the redis-server with `--sentinel` option.
 
@@ -25,7 +25,7 @@ Launch the redis-server with `--sentinel` option.
 
 In terminal T2, stop the Redis master DB server. 
 
-`docker stop redis1``{{execute T2}}
+`docker stop redis1`{{execute T2}}
 
 Observe the log from the Redis sentinel server.
 
@@ -35,10 +35,12 @@ Check the replication status of `redis2` and `redis3` servers to see if any of t
 
 `docker exec -it redis3 redis-cli info replication`{{execute T2}}
 
-> *Exercise*: 
+> **Exercise**: 
 >
 > Define a key in the new Redis master and verify if the key is presence in the other slave server
-.
+>
+>
+
 
 Suppose now the Redis server `redis1` is now up again. 
 Check the replication status of the three redis DB servers.

@@ -1,6 +1,6 @@
 **Learning Objectives**:
 
-* Build a Redis cluster with 1 master and 2 slaves
+* Master slave replication in Redis
 * Setup Redis Sentinel Server for database server monitoring and automatic failover
 
 
