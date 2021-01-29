@@ -24,14 +24,13 @@ r.set('test', 'It is working!!!')
 
 while True:
     result = r.lpop('queue1')
-    print(result)
+
     if result is not None:
         s = result.decode("utf-8") 
         print(f"Processing: {s}")
         time.sleep(1)
         print("Done!")
-    else:
-        break
+
 </pre>
 
 
