@@ -1,4 +1,4 @@
-Redis Sorted Sets are non-repeating collections of String with scores for each members
+Redis Sorted Sets are non-repeating collections of String with scores for each members.
 
 Add three items to the sorted set with their score.
 
