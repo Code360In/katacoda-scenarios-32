@@ -1,18 +1,15 @@
 {
-  "title": "Oracle 18C Express Edition",
+  "title": "Redis Replication",
   "description": "",
   "difficulty": "Beginner",
-  "time": "50",
+  "time": "20",
   "details": {
     "steps": [
       {
         "title": "Preparation",
         "text": "step1.md"
       },
-	  {
-        "title": "Connecting to Oracle database",
-        "text": "step1b.md"
-      },
+	  
       {
         "title": "Unlock HR account",
         "text": "step2.md"
@@ -39,7 +36,7 @@
   },
   
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "terminal-terminal"
   },
   "backend": {
     "imageid": "ubuntu:2004"
