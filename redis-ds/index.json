@@ -6,35 +6,35 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Preparation",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Redis String",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "EXPIRE and TTL",
         "text": "step3.md"
       },
       {
-        "title": "Step 4",
+        "title": "Redis List",
         "text": "step4.md"
       },
       {
-        "title": "Step 5",
+        "title": "Redis Set",
         "text": "step5.md"
       },
       {
-        "title": "Step 6",
+        "title": "Redis Sorted Set",
         "text": "step6.md"
       },
       {
-        "title": "Step 7",
+        "title": "Redis Hash",
         "text": "step7.md"
       },
       {
-        "title": "Step 8",
+        "title": "Cleaning Up",
         "text": "step8.md"
       }
     ],

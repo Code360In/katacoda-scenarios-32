@@ -1,6 +1,6 @@
 **Learning Objectives**:
 
-* Redis Basic Data Types
+* Introduce the  Basic Data Types in Redis
 
 
 

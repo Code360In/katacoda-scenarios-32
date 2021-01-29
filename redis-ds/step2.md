@@ -1,5 +1,3 @@
-Redis Strings
-
 Use `SET` command to store a value "Bobby" at key "myname" and `GET` command to retrieve the value of a key.
 
 `SET myname "Bobby"`{{execute}}
