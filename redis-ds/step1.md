@@ -1,4 +1,4 @@
-Start a redi server in docker and run in background.
+Start a Redis server in docker and run in background.
 
 `docker run --name redis -d redis redis-server`{{execute}}
 
