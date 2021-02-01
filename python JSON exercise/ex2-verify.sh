@@ -1,3 +1,3 @@
-cp tests/test_ex.py /root
+cp tests/ex_test.py /root
 pytest  -k test_ex2 >test.log && echo "done"
-rm /test/test_ex.py
+rm /tests/ex_test.py
