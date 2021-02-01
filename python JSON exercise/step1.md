@@ -28,6 +28,6 @@ pprint(orders)
 
 Execute the python script.
 
-`python demo.py`{{execute T1}}
+`python ex0.py`{{execute T1}}
 
 

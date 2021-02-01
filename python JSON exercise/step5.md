@@ -1,68 +1,42 @@
-**Exercise 1:**
+Define `ex4.py`.
 
-Write a python script `airbnb_ex1.py` which read the airbnb.json and prints the name and the number of reviews in the first 5 accommodation.
+<pre class="file" data-filename="ex4.py" data-target="replace">
+import json
+from pprint import pprint 
 
-Sample output:
-```
-name: Ribeira Charming Duplex
-number of reviews: 51
+f = open("orders.json", mode="r", encoding="utf-8")
+f2 = open("products.json", mode="r", encoding="utf-8")
 
-name: Horto flat with small garden
-number of reviews: 0
+orders = json.loads(f.read())
+products = json.loads(f2.read())
 
-name: Ocean View Waikiki Marina w/prkg
-number of reviews: 96
-
-name: Private Room in Bushwick
-number of reviews: 1
-
-name: Apt Linda Vista Lagoa - Rio
-number of reviews: 0
-
-name: New York City - Upper West Side Apt
-number of reviews: 70
-
-```
-
-
-
-**Exercise 2:**
-
-Write a python script `airbnb_ex2.py` which read the airbnb.json and print the accommodation’s names and whether they have “Microwave” oven and “Coffee maker”.
-
-Sample output:
-
-```
-Ribeira Charming Duplex
-Microwave: yes
-Coffee maker: yes
-
-Horto flat with small garden
-Microwave: no
-Coffee maker: no
-
-Ocean View Waikiki Marina w/prkg
-Microwave: yes
-Coffee maker: yes
-
-Private Room in Bushwick
-Microwave: no
-Coffee maker: no
-
-Apt Linda Vista Lagoa - Rio
-Microwave: no
-Coffee maker: no
-
-New York City - Upper West Side Apt
-Microwave: no
-Coffee maker: no
-
-```
+#For the given order, print the order ID, userID, date, and total amount of the order
+#return total_amount of the given order
+def f4(order_id):
+    #convert the list to dictionary for easy retrival of product price given ID
+    catalog={}
+    for i in products:
+        product_id=i['id']
+        catalog[product_id]={}
+        catalog[product_id]["price"]=float(i['price'])
+        catalog[product_id]["title"]=i['title']
+    
+    total_amount=0
+    for i in orders: #search for the given order ID
+        if i['id']==order_id:
+            for j in i['products']: #for each products in the order
+                prod_id=j['productId']
+                quantity=j['quantity']
+                price=catalog[prod_id]['price']
+                                    
+                total_amount +=price*quantity
+            print(f"Order ID:{i['id']}, User:{i['userId']}, Date:{i['date']}, Total Amount:{total_amount}")
+    return total_amount
+print(f4(1))
+print(f4(3))
+</pre>
 
 
+Execute the python script.
 
-
-**References**
-
-* https://www.w3schools.com/python
-* https://scrimba.com/learn/python
+`python ex4.py`{{execute T1}}

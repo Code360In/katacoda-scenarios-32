@@ -1,50 +1,24 @@
 
-### JSON to Python Dictionary
-Use json.loads convert from JSON to python dictionary.
+Define `ex1.py`.
 
-<pre class="file" data-filename="demo.py" data-target="replace">
+<pre class="file" data-filename="ex1.py" data-target="replace">
 import json
+from pprint import pprint 
 
-# some JSON:
-x =  '{ "name":"John", "age":30, "city":"New York"}'
+f = open("orders.json", mode="r", encoding="utf-8")
+f2 = open("products.json", mode="r", encoding="utf-8")
 
-# parse x:
-y = json.loads(x)
+orders = json.loads(f.read())
+products = json.loads(f2.read())
 
-# the result is a Python dictionary:
-print(y["age"])
+#print first three products's name
+def f1():
+    for i in products[0:3]:
+        print(i['title'])
+f1()
 </pre>
 
-Try:
 
-`python demo.py`{{execute T1}}
+Execute the python script.
 
-### Python Dictionary to JSON
-
-Use json.dumps() to convert python dictionary type to JSON.
-
-
-<pre class="file" data-filename="demo.py" data-target="replace">
-import json
-
-# a Python object (dict):
-x = {
-  "name": "John",
-  "age": 30,
-  "city": "New York"
-}
-
-# convert into JSON:
-y = json.dumps(x)
-
-# the result is a JSON string:
-print(y)
-
-</pre>
-
-Try:
-
-`python demo.py`{{execute T1}}
-
-
-
+`python ex1.py`{{execute T1}}

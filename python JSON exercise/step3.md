@@ -1,47 +1,28 @@
+Define `ex2.py`.
 
-Open the JSON data: 
-
-`airbnb.json`{{open}}
-
-
-Create a python script `airbnb.py` as follows. 
-The json.load() function takes a JSON object and convert to python dictionary.
-
-
-<pre class="file" data-filename="airbnb.py" data-target="replace">
+<pre class="file" data-filename="ex3.py" data-target="replace">
 import json
-from pprint import pprint
+from pprint import pprint 
 
-# read file
-with open('airbnb.json', 'r',encoding="utf8") as myfile:
-    data=myfile.read()
+f = open("orders.json", mode="r", encoding="utf-8")
+f2 = open("products.json", mode="r", encoding="utf-8")
 
-# parse file
-listing = json.loads(data)
+orders = json.loads(f.read())
+products = json.loads(f2.read())
 
-#print the json object
-pprint (listing)
+#print the name and price of products with price higher than p
+#the function should return the number of products 
+def f2(p):
+    count=0
+    for i in products:
+        if i['price']>p:
+            print(f"{i['title']}:${i['price']}")     
+            count +=1
+    return count
+print(f2(100))
 </pre>
 
 
-Try:
+Execute the python script.
 
-`python airbnb.py`{{execute T1}}
-
-
-The listing variable is a python list. The first accommodation is listing[0], second accommodation is listing[2] and so on.
-
-`pprint(listing[0])`{{copy}}
-
-To print the name of the accommodation, 
-
-`pprint(listing[0]["name"])`{{copy}}
-
-
-To print the facilities, 
-
-`pprint(listing[0][" amenities"])`{{copy}}
-
-
-
-
+`python ex2.py`{{execute T1}}

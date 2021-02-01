@@ -1,68 +1,29 @@
-**Exercise 1:**
+Define `ex3.py`.
 
-Write a python script `airbnb_ex1.py` which read the airbnb.json and prints the name and the number of reviews in the first 5 accommodation.
+<pre class="file" data-filename="ex3.py" data-target="replace">
+import json
+from pprint import pprint 
 
-Sample output:
-```
-name: Ribeira Charming Duplex
-number of reviews: 51
+f = open("orders.json", mode="r", encoding="utf-8")
+f2 = open("products.json", mode="r", encoding="utf-8")
 
-name: Horto flat with small garden
-number of reviews: 0
+orders = json.loads(f.read())
+products = json.loads(f2.read())
 
-name: Ocean View Waikiki Marina w/prkg
-number of reviews: 96
+#return the total quantity purchased for the given product_id in different orders
+def f3(product_id):
+    total_quantity=0
+    for i in orders:
+        for j in i['products']:
+            if j['productId']==product_id:
+                total_quantity+= j['quantity']
+    return total_quantity
+print(f3(101))
+print(f3(103))
 
-name: Private Room in Bushwick
-number of reviews: 1
-
-name: Apt Linda Vista Lagoa - Rio
-number of reviews: 0
-
-name: New York City - Upper West Side Apt
-number of reviews: 70
-
-```
-
+</pre>
 
 
-**Exercise 2:**
+Execute the python script.
 
-Write a python script `airbnb_ex2.py` which read the airbnb.json and print the accommodation’s names and whether they have “Microwave” oven and “Coffee maker”.
-
-Sample output:
-
-```
-Ribeira Charming Duplex
-Microwave: yes
-Coffee maker: yes
-
-Horto flat with small garden
-Microwave: no
-Coffee maker: no
-
-Ocean View Waikiki Marina w/prkg
-Microwave: yes
-Coffee maker: yes
-
-Private Room in Bushwick
-Microwave: no
-Coffee maker: no
-
-Apt Linda Vista Lagoa - Rio
-Microwave: no
-Coffee maker: no
-
-New York City - Upper West Side Apt
-Microwave: no
-Coffee maker: no
-
-```
-
-
-
-
-**References**
-
-* https://www.w3schools.com/python
-* https://scrimba.com/learn/python
+`python ex3.py`{{execute T1}}
