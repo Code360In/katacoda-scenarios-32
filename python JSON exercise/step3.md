@@ -1,6 +1,6 @@
 Define `ex2.py`.
 
-<pre class="file" data-filename="ex3.py" data-target="replace">
+<pre class="file" data-filename="ex2.py" data-target="replace">
 import json
 from pprint import pprint 
 
