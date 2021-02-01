@@ -11,19 +11,23 @@
       },
 	  {
         "title": "Exercise 1",
-        "text": "step1.md"
+        "text": "step2.md"
       },
 	  {
         "title": "Exercise 2",
-        "text": "step2.md"
+        "text": "step3.md"
       },
 	  {
         "title": "Exercise 3",
-        "text": "step2.md"
+        "text": "step4.md"
       },
 	  {
         "title": "Exercise 4",
-        "text": "step2.md"
+        "text": "step5.md"
+      },
+	  {
+        "title": "Submission",
+        "text": "step6.md"
       }
     ],
     "intro": {
