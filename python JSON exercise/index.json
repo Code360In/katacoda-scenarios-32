@@ -38,7 +38,6 @@
     },
 	"assets": {
         "host01": [
-			{"file": "verify.py", "target": "/usr/local/bin/" },
 			{"file": "products.json", "target": "/root" },
 			{"file": "orders.json", "target": "/root" },
 			{"file": "users.json", "target": "/root" },
