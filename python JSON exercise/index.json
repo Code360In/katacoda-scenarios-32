@@ -6,24 +6,8 @@
   "details": {
     "steps": [
 	  {
-        "title": "Python List",
+        "title": "Exercise",
         "text": "step1a.md"
-      },
-      {
-        "title": "Python Dictionary",
-        "text": "step1b.md"
-      },
-      {
-        "title": "JSON Processing",
-        "text": "step2.md"
-      },
-      {
-        "title": "Example: Airbnb JSON Data",
-        "text": "step3.md"
-      },
-	  {
-        "title": "Exercises",
-        "text": "step4.md"
       }
     ],
     "intro": {
