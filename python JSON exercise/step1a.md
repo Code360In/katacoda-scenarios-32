@@ -1,5 +1,7 @@
 
-Open the JSON data: 
+Open the following files:
+
+`ex.py`{{open}}
 
 `products.json`{{open}}
 
