@@ -31,4 +31,5 @@ def f4(order_id):
     return total_amount
 print(f4(1))
 print(f4(3))
+print(f4(6))
 

@@ -8,7 +8,7 @@ orders = json.loads(f.read())
 products = json.loads(f2.read())
 
 #print the name and price of products with price higher than p
-#the function should return the number of products 
+#the function should return the number of products  with price higher than p
 def f2(p):
     count=0
     for i in products:
@@ -16,4 +16,6 @@ def f2(p):
             print(f"{i['title']}:${i['price']}")     
             count +=1
     return count
+print(f2(500))
 print(f2(100))
+print(f2(800))

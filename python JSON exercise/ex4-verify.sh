@@ -5,12 +5,12 @@ myid=`cat myid`
 
 if [[ $myname == "" ]] || [[ $myid == "" ]]
 then
-	echo "Please input your name and ID">test.log && exit 0
+	echo "Error: Please input your name and ID">test_ex4.log && exit 0
 fi
 
 
 cp /tests/ex_test.py /root
 
-pytest  -k test_ex4 >test.log && echo "done" && curl -s -G --data-urlencode "type=${event_type}" --data-urlencode "myid=${myid}" --data-urlencode "name=${myname}" "$url" >/dev/null
+pytest  -k test_ex4 >test_ex4.log && echo "done" && curl -s -G --data-urlencode "type=${event_type}" --data-urlencode "myid=${myid}" --data-urlencode "name=${myname}" "$url" >/dev/null
 
 rm /root/ex_test.py
