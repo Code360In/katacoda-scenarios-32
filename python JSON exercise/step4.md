@@ -26,7 +26,5 @@ Execute the python script.
 
 `python ex3.py`{{execute T1}}
 
->
+
 > Click **Continue** below to check your script for correctness.
->
->
