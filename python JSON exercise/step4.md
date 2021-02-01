@@ -1,4 +1,5 @@
-Define `ex3.py`.
+Define `ex3.py` as follows. Complete the function `f2()` such that it will return the total quantity purchased for the given product_id.
+
 
 <pre class="file" data-filename="ex3.py" data-target="replace">
 import json
@@ -20,7 +21,6 @@ print(f3(103))
 
 </pre>
 
-Complete the function `f2()` such that it will return the total quantity purchased for the given product_id.
 
 Execute the python script.
 

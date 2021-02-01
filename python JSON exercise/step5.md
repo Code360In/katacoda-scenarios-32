@@ -1,8 +1,8 @@
 Define `ex4.py` as follows. Complete the function `f4()` such that it will
 
-* print the order ID, userID, date, and total amount of the order for the given order,
+* print the order ID, userID, date, and total amount of the given order (specified by order_id)
 
-* return the number of products with price higher than p
+* return the total amount of the given order
 
 <pre class="file" data-filename="ex4.py" data-target="replace">
 import json

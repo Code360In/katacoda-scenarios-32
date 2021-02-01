@@ -1,4 +1,8 @@
-Define `ex2.py` as follows. Complete the function `f1()` such that it prints the first three products's name in `products.json`.
+Define `ex2.py` as follows. Complete the function `f2()` such that it will
+
+* print the name and price of products with price higher than p
+* return the number of products with price higher than p
+
 
 <pre class="file" data-filename="ex2.py" data-target="replace">
 import json
@@ -16,13 +20,9 @@ def f2(p):
 	#todo
 	
     return count
-print(f2(100))
+print(f2(500))
 </pre>
 
-Complete the function `f2()` such that it will
-
-* print the name and price of products with price higher than p
-* return the number of products with price higher than p
 
 Execute the python script.
 
@@ -30,12 +30,14 @@ Execute the python script.
 
 
 - - -
-
+>
 > Execute the following command and input your student ID and name.
 > 
 > `input_name`{{execute T1}}
 >
 > Click **Continue** below to check your script for correctness.
+>
+>
 
 
 
