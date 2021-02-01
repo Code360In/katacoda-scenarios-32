@@ -6,7 +6,7 @@ myid=`cat myid`
 
 if [[ $myname == "" ]] || [[ $myid == "" ]]
 then
-	exit 0
+	echo "Please input your name and ID">test.log && exit 0
 fi
 
 
