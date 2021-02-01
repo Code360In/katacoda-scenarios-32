@@ -28,3 +28,12 @@ Complete the function `f2()` such that it will
 Execute the python script.
 
 `python ex2.py`{{execute T1}}
+
+
+Execute the following command and input your student ID and name.
+
+`input_name`{{execute T2}}
+
+Click **Continue** below to check your script for correctness.
+
+
