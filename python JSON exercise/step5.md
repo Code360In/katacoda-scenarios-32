@@ -20,8 +20,9 @@ def f4(order_id):
 	#todo
 			
     return total_amount
-print(f4(1))
-print(f4(3))
+
+print(f4(1)) #print total amount of order with order_id=1
+print(f4(3)) #print total amount of order with order_id=3
 </pre>
 
 
