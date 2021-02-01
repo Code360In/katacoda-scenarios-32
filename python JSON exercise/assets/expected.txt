@@ -1,4 +1,0 @@
-{'CustomerID': 1, 'Interest': 'badminton'}
-{'CustomerID': 1, 'Interest': 'tennis'}
-{'CustomerID': 2, 'Interest': 'travel'}
-{'CustomerID': 2, 'Interest': 'programming'}
