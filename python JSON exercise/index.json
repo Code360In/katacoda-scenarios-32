@@ -16,17 +16,17 @@
 	  {
         "title": "Exercise 2",
         "text": "step3.md",
-		"verify": "ex2-verify.sh",
+		"verify": "ex2-verify.sh"
       },
 	  {
         "title": "Exercise 3",
         "text": "step4.md",
-		"verify": "ex3-verify.sh",
+		"verify": "ex3-verify.sh"
       },
 	  {
         "title": "Exercise 4",
         "text": "step5.md",
-		"verify": "ex4-verify.sh",
+		"verify": "ex4-verify.sh"
       }
     ],
     "intro": {
