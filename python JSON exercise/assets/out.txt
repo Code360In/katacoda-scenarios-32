@@ -1,0 +1,11 @@
+============================= test session starts =============================
+platform win32 -- Python 3.8.5, pytest-6.2.2, py-1.10.0, pluggy-0.13.1 -- c:\users\cswclui\appdata\local\programs\python\python38\python.exe
+cachedir: .pytest_cache
+rootdir: D:\katacoda\demo\python JSON exercise\assets
+collecting ... collected 3 items
+
+ex_test.py::test_ex2 PASSED                                              [ 33%]
+ex_test.py::test_ex3 PASSED                                              [ 66%]
+ex_test.py::test_ex4 PASSED                                              [100%]
+
+============================== 3 passed in 0.03s ==============================

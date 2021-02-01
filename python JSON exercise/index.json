@@ -6,8 +6,24 @@
   "details": {
     "steps": [
 	  {
-        "title": "Exercise",
-        "text": "step1a.md"
+        "title": "Overview",
+        "text": "step1.md"
+      },
+	  {
+        "title": "Exercise 1",
+        "text": "step1.md"
+      },
+	  {
+        "title": "Exercise 2",
+        "text": "step2.md"
+      },
+	  {
+        "title": "Exercise 3",
+        "text": "step2.md"
+      },
+	  {
+        "title": "Exercise 4",
+        "text": "step2.md"
       }
     ],
     "intro": {
@@ -19,10 +35,10 @@
 	"assets": {
         "host01": [
 			{"file": "verify.py", "target": "/usr/local/bin/" },
-			{"file": "ex.py", "target": "/root" },
 			{"file": "products.json", "target": "/root" },
 			{"file": "orders.json", "target": "/root" },
 			{"file": "users.json", "target": "/root" },
+			{"file": "ex_test.py", "target": "/root" },
 			{"file": "input_name", "target": "/usr/local/bin/", "chmod": "+x"}
         ]
     }
@@ -34,7 +50,7 @@
 	"hideHiddenFiles": true
   },
   "files": [
-        
+        "ex0.py","ex1.py","ex2.py","ex3.py","ex4.py"
     ],
   "backend": {
     "imageid": "python:3.8"
