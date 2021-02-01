@@ -14,6 +14,7 @@ def f2(p):
     count=0
     
 	#todo
+	
     return count
 print(f2(100))
 </pre>
@@ -30,10 +31,11 @@ Execute the python script.
 
 - - -
 
-Execute the following command and input your student ID and name.
+> Execute the following command and input your student ID and name.
+> 
+> `input_name`{{execute T1}}
+>
+> Click **Continue** below to check your script for correctness.
 
-`input_name`{{execute T1}}
-
-Click **Continue** below to check your script for correctness.
 
 
