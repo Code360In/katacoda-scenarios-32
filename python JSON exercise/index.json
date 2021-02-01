@@ -50,7 +50,7 @@
 	"hideHiddenFiles": true
   },
   "files": [
-        "ex.py","products.json","users.json","orders.json "
+        "ex.py"
     ],
   "backend": {
     "imageid": "python:3.8"
