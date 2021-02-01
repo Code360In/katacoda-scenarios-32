@@ -19,7 +19,8 @@ def f2(p):
 	#todo
 	
     return count
-print(f2(500))
+	
+print(f2(500)) #print the number of products with price higher than 500.
 </pre>
 
 

@@ -16,8 +16,10 @@ def f3(product_id):
     #todo
 	
     return total_quantity
-print(f3(101))
-print(f3(103))
+	
+print(f3(101)) #print the total quantity purchased for product 101
+
+print(f3(103)) #print the total quantity purchased for product 103
 
 </pre>
 
