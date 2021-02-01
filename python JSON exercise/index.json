@@ -36,8 +36,9 @@
         "host01": [
 			{"file": "verify.py", "target": "/usr/local/bin/" },
 			{"file": "ex.py", "target": "/root" },
-			{"file": "products.py", "target": "/root" },
-			{"file": "orders.py", "target": "/root" },
+			{"file": "products.json", "target": "/root" },
+			{"file": "orders.json", "target": "/root" },
+			{"file": "users.json", "target": "/root" },
 			{"file": "input_name", "target": "/usr/local/bin/", "chmod": "+x"}
         ]
     }
@@ -49,7 +50,7 @@
 	"hideHiddenFiles": true
   },
   "files": [
-        "ex.py","products.py","users.py","orders.py "
+        "ex.py","products.json","users.json","orders.json "
     ],
   "backend": {
     "imageid": "python:3.8"
