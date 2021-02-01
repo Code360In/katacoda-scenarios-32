@@ -30,9 +30,11 @@ Execute the python script.
 `python ex2.py`{{execute T1}}
 
 
+
+<br/>
 Execute the following command and input your student ID and name.
 
-`input_name`{{execute T2}}
+`input_name`{{execute T1}}
 
 Click **Continue** below to check your script for correctness.
 
