@@ -40,7 +40,7 @@ To print the name of the accommodation,
 
 To print the facilities, 
 
-`pprint(listing[0][" amenities"])`{{copy}}
+`pprint(listing[0]["amenities"])`{{copy}}
 
 
 
