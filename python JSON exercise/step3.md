@@ -1,4 +1,4 @@
-Define `ex2.py`.
+Define `ex2.py` as follows. Complete the function `f1()` such that it prints the first three products's name in `products.json`.
 
 <pre class="file" data-filename="ex2.py" data-target="replace">
 import json
@@ -12,10 +12,8 @@ products = json.loads(f2.read())
 
 def f2(p):
     count=0
-    for i in products:
-        if i['price']>p:
-            print(f"{i['title']}:${i['price']}")     
-            count +=1
+    
+	#todo
     return count
 print(f2(100))
 </pre>
@@ -30,8 +28,8 @@ Execute the python script.
 `python ex2.py`{{execute T1}}
 
 
+- - -
 
-<br/>
 Execute the following command and input your student ID and name.
 
 `input_name`{{execute T1}}

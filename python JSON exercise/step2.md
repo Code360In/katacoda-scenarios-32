@@ -1,4 +1,4 @@
-Define `ex1.py`.
+Define `ex1.py` as follows. Complete the function `f1()` such that it prints the first three products's name in `products.json`.
 
 <pre class="file" data-filename="ex1.py" data-target="replace">
 import json
@@ -11,12 +11,13 @@ orders = json.loads(f.read())
 products = json.loads(f2.read())
 
 def f1():
-    for i in products[0:3]:
-        print(i['title'])
+
+	#todo
+	
 f1()
 </pre>
 
-Complete the function `f1()` such that it prints the first three products's name in `products.json`.
+
 
 Execute the python script:
 
