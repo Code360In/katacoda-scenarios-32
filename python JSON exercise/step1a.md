@@ -1,14 +1,14 @@
 
-Open the following files:
-
-`ex.py`{{open}}
+Examine the structure of the following JSON data files:
 
 `products.json`{{open}}
 
+`orders.json`{{open}}
 
 
 
+Modify the python script ex.py to complete the following tasks:
+Open `ex.py`{{open}}.
 
-Create a python script ex.py.
 
-`python ex.py`{{execute}
+`python ex.py`{{execute}}
