@@ -1,4 +1,4 @@
-Define `ex3.py` as follows. Complete the function `f2()` such that it will return the total quantity purchased for the given product_id.
+Define `ex3.py` as follows. Complete the function `f3()` such that it will return the total quantity purchased for the given product_id.
 
 
 <pre class="file" data-filename="ex3.py" data-target="replace">

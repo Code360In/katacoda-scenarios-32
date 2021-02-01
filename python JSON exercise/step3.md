@@ -3,7 +3,6 @@ Define `ex2.py` as follows. Complete the function `f2()` such that it will
 * print the name and price of products with price higher than p
 * return the number of products with price higher than p
 
-
 <pre class="file" data-filename="ex2.py" data-target="replace">
 import json
 from pprint import pprint 
