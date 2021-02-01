@@ -13,6 +13,8 @@ products = json.loads(f2.read())
 #For the given order, print the order ID, userID, date, and total amount of the order
 #return total_amount of the given order
 def f4(order_id):
+	#todo
+	
     #convert the list to dictionary for easy retrival of product price given ID
     catalog={}
     for i in products:
@@ -22,6 +24,7 @@ def f4(order_id):
         catalog[product_id]["title"]=i['title']
     
     total_amount=0
+	
     for i in orders: #search for the given order ID
         if i['id']==order_id:
             for j in i['products']: #for each products in the order
@@ -31,10 +34,17 @@ def f4(order_id):
                                     
                 total_amount +=price*quantity
             print(f"Order ID:{i['id']}, User:{i['userId']}, Date:{i['date']}, Total Amount:{total_amount}")
+			
     return total_amount
 print(f4(1))
 print(f4(3))
 </pre>
+
+Complete the function `f4()` such that it will
+
+* print the order ID, userID, date, and total amount of the order for the given order,
+
+* return the number of products with price higher than p
 
 
 Execute the python script.

@@ -10,8 +10,6 @@ f2 = open("products.json", mode="r", encoding="utf-8")
 orders = json.loads(f.read())
 products = json.loads(f2.read())
 
-#print the name and price of products with price higher than p
-#the function should return the number of products 
 def f2(p):
     count=0
     for i in products:
@@ -22,6 +20,10 @@ def f2(p):
 print(f2(100))
 </pre>
 
+Complete the function `f2()` such that it will
+
+* print the name and price of products with price higher than p
+* return the number of products with price higher than p
 
 Execute the python script.
 
