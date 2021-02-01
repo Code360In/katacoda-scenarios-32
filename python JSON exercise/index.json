@@ -1,0 +1,57 @@
+{
+  "title": "Python JSON Exercise",
+  "description": "",
+  "difficulty": "Beginner",
+  "time": "20",
+  "details": {
+    "steps": [
+	  {
+        "title": "Python List",
+        "text": "step1a.md"
+      },
+      {
+        "title": "Python Dictionary",
+        "text": "step1b.md"
+      },
+      {
+        "title": "JSON Processing",
+        "text": "step2.md"
+      },
+      {
+        "title": "Example: Airbnb JSON Data",
+        "text": "step3.md"
+      },
+	  {
+        "title": "Exercises",
+        "text": "step4.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+	"assets": {
+        "host01": [
+			{"file": "verify.py", "target": "/usr/local/bin/" },
+			{"file": "ex.py", "target": "/root" },
+			{"file": "products.py", "target": "/root" },
+			{"file": "orders.py", "target": "/root" },
+			{"file": "input_name", "target": "/usr/local/bin/", "chmod": "+x"}
+        ]
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal",
+	"uisettings": "bash",
+	"exclusionPatterns": ["*verify*","*expect*"],
+	"hideHiddenFiles": true
+  },
+  "files": [
+        "ex.py","products.py","users.py","orders.py "
+    ],
+  "backend": {
+    "imageid": "python:3.8"
+  }
+}
