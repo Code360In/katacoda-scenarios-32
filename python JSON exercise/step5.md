@@ -13,7 +13,7 @@ f2 = open("products.json", mode="r", encoding="utf-8")
 orders = json.loads(f.read())
 products = json.loads(f2.read())
 
-#return total_amount of the given order
+
 def f4(order_id):
     total_amount=0
 	
@@ -21,9 +21,9 @@ def f4(order_id):
 			
     return total_amount
 
-print(f4(1)) #print total amount of order with order 1
+print(f4(1)) #print total amount for order ID=1
 
-print(f4(3)) #print total amount of order with order 3
+print(f4(3)) #print total amount for order ID=3
 </pre>
 
 
