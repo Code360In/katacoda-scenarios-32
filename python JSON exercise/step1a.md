@@ -10,3 +10,5 @@ Open the following files:
 
 
 Create a python script ex.py.
+
+`python ex.py`{{execute}

@@ -3,10 +3,16 @@ from pprint import pprint
 
 f = open("orders.json", mode="r", encoding="utf-8")
 f2 = open("products.json", mode="r", encoding="utf-8")
-f3 = open("users.json", mode="r", encoding="utf-8")
+
+
 orders = json.loads(f.read())
 product_list = json.loads(f2.read())
 user_list = json.loads(f3.read())
+
+
+print(orders)
+print(product_list)
+print(user_list)
 
 #convert the product list to python dictionary
 catalog={}
