@@ -34,7 +34,7 @@
 	"hideHiddenFiles": true
   },
   "files": [
-        "ex.py"
+        
     ],
   "backend": {
     "imageid": "python:3.8"
