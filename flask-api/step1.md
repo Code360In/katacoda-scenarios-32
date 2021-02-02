@@ -2,7 +2,7 @@ Define `app.py` as follows.
 
 <pre class="file" data-filename="app.py" data-target="replace">
 from flask import Flask, request,jsonify
-import requests,json
+import json
 
 #initialize flask app object
 app = Flask(__name__)
