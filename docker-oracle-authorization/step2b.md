@@ -1,4 +1,23 @@
 
+
+Switch to terminal 1. 
+As `SYSTEM` user, grant `micky` the "create session" permission.
+
+`grant create session to mickey ;`{{execute T1}}
+
+
+Show the granted system privileges by querying the DBA_SYS_PRIVS view.
+
+`select * from DBA_SYS_PRIVS where GRANTEE = 'MICKEY';`{{execute T1}}
+
+
+Describe the DBA_SYS_PRIVS table to understand  more about the attributes:
+
+`describe DBA_SYS_PRIVS`{{execute T1}}
+
+> Visit https://docs.oracle.com/en/database/oracle/oracle-database/19/refrn/DBA_SYS_PRIVS.html to understand  the different columns of DBA_SYS_PRIVS.
+
+
 In terminal 2, login as mickey again. The login should be successful.
 
 `sqlplus mickey/mickey`{{execute T2}}

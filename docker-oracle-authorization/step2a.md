@@ -1,3 +1,21 @@
+Launch a shell in the Oracle18C XE container. 
+
+`docker exec -it oracle-xe bash`{{execute}}
+
+Check that you are logged in as `Oracle` user.
+
+Connect to the database with sqlplus as sys user. 
+
+`sqlplus / as  sysdba`{{execute}}
+
+Check the current logged in user.
+`show user;`
+
+Exit the sqlplus environment.
+
+`exit`{{execute}}
+
+
 SQLPlus in Linux environment does not support using up/down arrows for accessing the previous/next command. The rlwrap utility provides a command history and editing of keyboard input for any other command. Start sqlplus with the rlwrap utility.
 
 Insider the oracle docker container's bash shell, 
@@ -33,22 +51,6 @@ ORA-01045: user MICKEY lacks CREATE SESSION privilege; logon denied
 Press Ctrl+C to break out of the login program.
 
 
-Switch to terminal 1. 
-As `SYSTEM` user, grant `micky` the "create session" permission.
-
-`grant create session to mickey ;`{{execute T1}}
-
-
-Show the granted system privileges by querying the DBA_SYS_PRIVS view.
-
-`select * from DBA_SYS_PRIVS where GRANTEE = 'MICKEY';`{{execute T1}}
-
-
-Describe the DBA_SYS_PRIVS table to understand  more about the attributes:
-
-`describe DBA_SYS_PRIVS`{{execute T1}}
-
-Visit https://docs.oracle.com/en/database/oracle/oracle-database/19/refrn/DBA_SYS_PRIVS.html to understand  the different columns of DBA_SYS_PRIVS.
 
 
 

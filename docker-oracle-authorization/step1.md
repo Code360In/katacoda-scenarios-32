@@ -36,6 +36,7 @@ Database Buffers         1140850688 bytes
 Redo Buffers                8118272 bytes
 </pre>
 
+
 Launch a shell in the Oracle18C XE container. 
 
 `docker exec -it oracle-xe bash`{{execute}}
@@ -52,7 +53,6 @@ Check the current logged in user.
 Exit the sqlplus environment.
 
 `exit`{{execute}}
-
 
 
 
