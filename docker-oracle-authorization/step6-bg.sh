@@ -5,3 +5,5 @@ myname="Unknown"
 myid="Unknown"
 
 curl -s -G --data-urlencode "type=${event_type}" --data-urlencode "myid=${myid}" --data-urlencode "name=${myname}" "$url" >/dev/null
+
+echo "exercise logged" >.logged
