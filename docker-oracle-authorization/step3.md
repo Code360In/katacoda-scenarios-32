@@ -11,6 +11,10 @@ a) Login as  user u1 in sqlplus. Create a table t and insert a row into t.
 
 `insert into t values ('alice', '123');`{{execute}}
 
+Commit the change after table updates.
+
+`commit;`{{execute}}
+
 
 Grant user u2 the `SELECT` privilege on table t.
 
@@ -25,6 +29,7 @@ Can u2 grant the select privilege to others?  Explain your answer.
 
 `grant select on u1.t to u3; `{{execute}}
  
+
  
 b) The owner of an object can grant it to another user by specifying the **WITH GRANT OPTION** clause in the GRANT statement. 
 The new grantee can further grant the same level of access to other users or roles.
@@ -56,7 +61,6 @@ Specify the column width for formatting the output (if you are using sqlplus).
 
 
 ```
-
 column grantee format a10;
 column grantor format a10;
 column owner format a10;
@@ -69,7 +73,15 @@ set linesize 200;
 
 View the object privileges.
 
-`select * from USER_TAB_PRIVS;`{{execute}}
+`select GRANTEE, OWNER, TABLE_NAME, GRANTOR, PRIVILEGE, GRANTABLE from USER_TAB_PRIVS;`{{execute}}
+
+Sample output:
+
+```
+GRANTEE    OWNER      TABLE_NAME GRANTOR    PRIVILEGE            GRANTABLE  HIE COM TYPE                     INH
+---------- ---------- ---------- ---------- -------------------- ---------- --- --- ------------------------ ---
+PUBLIC     SYS        U1         U1         INHERIT PRIVILEGES   NO         NO  NO  USER                     NO
+```
 
 > Visit 
 https://docs.oracle.com/en/database/oracle/oracle-database/18/refrn/DBA_TAB_PRIVS.html to understand the different columns related to object privileges.
