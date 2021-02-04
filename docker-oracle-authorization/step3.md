@@ -134,6 +134,8 @@ U3         U1         T          U2         SELECT               NO
 
 > **Checking and submission:**
 >
+> Open a new terminal. 
+>
 > Execute the following command and input your student ID and name.
 > 
 > `input_name`{{execute}}
