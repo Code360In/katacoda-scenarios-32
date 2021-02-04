@@ -27,7 +27,8 @@
       },
       {
         "title": "Exercise",
-        "text": "step6.md"
+        "text": "step6.md",
+		"background": "step6-bg.sh",
       },
       {
         "title": "Authorization Revocation",
@@ -43,7 +44,6 @@
     },
 	"assets": {
         "host01": [
-
 			{"file": "input_name", "target": "/usr/local/bin/", "chmod": "+x"}
         ]
     }
