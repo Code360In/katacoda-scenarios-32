@@ -1,8 +1,7 @@
-Connect to the database with sqlplus as *system* user. 
+Connect to the Oracle database container as *system* user and perform the following tasks
 
-As system user, 
-* create 3 three local users u1, u2 and u3 in SALESPDB in sqlplus. 
-* Grant the create session privilege to the 3 users. 
+* create  three local users u1, u2 and u3 in SALESPDB in sqlplus. 
+* Grant the create session privilege to the three users. 
 * Grant create table privilege to u1 and grant u1 1MB quota on USERS tablespace.
 
 
@@ -25,7 +24,8 @@ Can u2 grant the select privilege to others?  Explain your answer.
 `grant select on u1.t to u3; `{{execute}}
  
  
-b) The owner of an object can grant it to another user by specifying the **WITH GRANT OPTION** clause in the GRANT statement. The new grantee can then grant the same level of access to other users or roles.
+b) The owner of an object can grant it to another user by specifying the **WITH GRANT OPTION** clause in the GRANT statement. 
+The new grantee can further grant the same level of access to other users or roles.
 
 As user u1, grant u2 the SELECT privilege WITH GRANT option.
 
