@@ -4,7 +4,7 @@
 
 Connect to the Oracle database container as `system` user.
 
-`sqlplus system/12345`{{execute}}
+`rlwrap sqlplus system/12345`{{execute}}
 
 Perform the following tasks
 
