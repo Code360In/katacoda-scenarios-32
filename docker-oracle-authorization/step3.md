@@ -51,8 +51,7 @@ Can u2 grant the select privilege to others?   Why?
  
 
  
-b) The owner of an object can grant it to another user by specifying the **WITH GRANT OPTION** clause in the GRANT statement. 
-The new grantee can further grant the same level of access to other users or roles.
+b) The owner of an object can grant the associated object privilege to another user by specifying the **WITH GRANT OPTION** clause in the GRANT statement. The new grantee can then further grant the same level of access to other users or roles.
 
 As user u1, grant u2 the `SELECT` privilege `WITH GRANT` option.
 
@@ -61,9 +60,9 @@ As user u1, grant u2 the `SELECT` privilege `WITH GRANT` option.
 `grant select on t to u2 with grant option;`{{execute}}
 
 
-Review the object privilege of the granted object privileges.
+Now, we will review the object privilege of the granted object privileges.
 
-Specify the column width for formatting the output (if you are using sqlplus).
+First, we specify the column width for formatting the output (if you are using sqlplus).
 
 ```
 column grantee format a10;
@@ -75,7 +74,7 @@ column privilege format a20;
 set linesize 200;
 ```{{execute}}
 
-View the object privileges.
+View the object privileges associated with the create table.
 
 `select GRANTEE, OWNER, TABLE_NAME, GRANTOR, PRIVILEGE, GRANTABLE,type from USER_TAB_PRIVS where type='TABLE';`{{execute}}
 
