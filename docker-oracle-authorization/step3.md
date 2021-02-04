@@ -21,7 +21,7 @@ In terminal 2, login as mickey again. The login should be successful.
 
 `sqlplus mickey/mickey`{{execute T2}}
 
-You may ignore the warning related `pupbld.sql`.
+You may ignore the warning related to `PRODUCT_USER_PROFILE` and `pupbld.sql`.
 
 ```
 Error accessing PRODUCT_USER_PROFILE
