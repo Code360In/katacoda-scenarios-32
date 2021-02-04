@@ -5,7 +5,7 @@ Connect to the Oracle database container as *system* user and perform the follow
 * Grant create table privilege to u1 and grant u1 1MB quota on APP_DATA tablespace.
 
 
-a) As user u1, create a table t and insert a row into t.
+a) Login as  user u1 in sqlplus. Create a table t and insert a row into t.
 
 `create table t (username varchar(10), pass varchar(10));`{{execute}}
 
@@ -14,8 +14,9 @@ a) As user u1, create a table t and insert a row into t.
 
 Grant user u2 the `SELECT` privilege on table t.
 
-
 Login as user u2 and execute the following query to view the data.
+
+`conn u2/u2`{{execute}}
 
 `select * from u1.t;`{{execute}}
 
@@ -30,12 +31,14 @@ The new grantee can further grant the same level of access to other users or rol
 
 As user u1, grant u2 the `SELECT` privilege `WITH GRANT` option.
 
+`conn u1/u1`{{execute}}
+
 `grant select on t to u2 with grant option;`{{execute}}
 
 
 Review the object privilege of the granted object privileges.
 
-Specify  the column width for formatting the output if you are using sqlplus.
+Specify the column width for formatting the output (if you are using sqlplus).
 
 `column grantee format a20;`{{execute}}
 
@@ -47,18 +50,34 @@ Specify  the column width for formatting the output if you are using sqlplus.
 
 `column grantable format a20;`{{execute}}
 
+`column privilege format a20;`{{execute}}
+
+`set linesize 200;`{{execute}}
+
+
+```
+column grantee format a10;
+column grantor format a10;
+column owner format a10;
+column table_name format a10;
+column grantable format a10;
+column privilege format a10;
+set linesize 200;
+
+```{execute}}}
 
 View the object privileges.
 
 `select * from USER_TAB_PRIVS;`{{execute}}
 
+> Visit 
+https://docs.oracle.com/en/database/oracle/oracle-database/18/refrn/DBA_TAB_PRIVS.html to understand the different columns related to object privileges.
 
 
 As user u2, grant the SELECT privilege on u1.t to u3.
 
 
 As user u3, verify that that the user can select on the table u1.t.
-
 
 `select * from u1.t;`{{execute}}
 
