@@ -5,17 +5,26 @@ Connect to the Oracle database container as *system* user and perform the follow
 * Grant create table privilege to u1 and grant u1 1MB quota on APP_DATA tablespace.
 
 
-a) Login as  user u1 in sqlplus. Create a table t and insert a row into t.
+a) Login as  user `u1` in sqlplus. 
+
+First, check that you are logged in as `u1`.
+
+`show user`{{execute}}.
+
+Sample output: `USER is "U1"`
+
+Create a table t and insert a row into t.
 
 `create table t (username varchar(10), pass varchar(10));`{{execute}}
 
 `insert into t values ('alice', '123');`{{execute}}
 
-Commit the change after table updates.
+Commit the updates.
 
 `commit;`{{execute}}
 
-Select from the created table.
+
+Check that you can view the data from the created table.
 
 `select * from t;`{{execute}}
 
@@ -29,14 +38,14 @@ alice      123
 
 Grant user u2 the `SELECT` privilege on table t.
 
-Login as user u2 and execute the following query to view the data.
+Login as user `u2` and verify that `u2` can view the table t in u1 schema.
 
 `conn u2/u2`{{execute}}
 
 `select * from u1.t;`{{execute}}
 
 
-Can u2 grant the select privilege to others?  Explain your answer.
+Can u2 grant the select privilege to others?   Why?
 
 `grant select on u1.t to u3; `{{execute}}
  
@@ -116,6 +125,23 @@ U3         U1         T          U2         SELECT               NO
 > Click **Continue** below to check if the tasks have been completed successfully.
 >
 >
+
+c) As u1, revoke the SELECT privilege from U2.
+
+`conn u1/u1`{{execute}}
+
+`revoke select on u1.t from u2;`{{execute}}
+
+Review the object privileges of the various users after the revocation
+
+`select GRANTEE, OWNER, TABLE_NAME, GRANTOR, PRIVILEGE, GRANTABLE,type from USER_TAB_PRIVS where type='TABLE';`{{execute}}
+
+Exit the sqlplus environment.
+`exit`{{execute}}
+
+
+Exit the docker container shell.
+`exit`{{execute}}
 
 
 
