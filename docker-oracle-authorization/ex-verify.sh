@@ -15,25 +15,16 @@ fi
 
 cat <<EOF >.script.sql
 SET HEADING OFF;
-select GRANTEE, GRANTOR, PRIVILEGE,GRANTABLE from USER_TAB_PRIVS where TABLE_NAME='T';
+select GRANTEE, GRANTOR, PRIVILEGE,GRANTABLE from DBA_TAB_PRIVS where TABLE_NAME='T';
 exit;
 EOF
 
 docker cp .script.sql oracle-xe:/opt/oracle/product/18c/dbhomeXE
 
-docker exec -it --user oracle  oracle-xe bash -c  "/opt/oracle/product/18c/dbhomeXE/bin/sqlplus -S u2/u2 @.script.sql | xargs ">exec_result.txt
+docker exec -it --user oracle  oracle-xe /opt/oracle/product/18c/dbhomeXE/bin/sqlplus -S / as sysdba @.script.sql |  tr -d '[:space:]' >out2.txt
 
 
-result=`docker exec -it --user oracle  oracle-xe bash -c  "/opt/oracle/product/18c/dbhomeXE/bin/sqlplus -S u2/u2 @.script.sql | xargs "`
-
-#remove last strange char from sqlplus
-result=`echo $result|sed 's/.$//'` 
-
-
-echo $result >.output.txt
-
-
-if [ "$result" != 'U2 U1 SELECT YES U3 U2 SELECT NO' ]
+if [ `cat out2.txt` != "U2U1SELECTYESU3U2SELECTNO" ] && echo 1
 then
 	echo "Error: The tasks are not completed.">test_ex.log  && exit 1
 else
