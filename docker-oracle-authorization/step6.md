@@ -117,7 +117,7 @@ U2         U1         T          SYS        SELECT       YES
 The 'YES' in GRANTABLE column indicates the grantee can further grant the permission to other users.
 
 > Visit 
-https://docs.oracle.com/en/database/oracle/oracle-database/18/refrn/DBA_TAB_PRIVS.html to understand the different columns related to object privileges.
+https://docs.oracle.com/en/database/oracle/oracle-database/19/refrn/DBA_TAB_PRIVS.html#GUID-4AC57A96-FF55-4788-9301-AFED23AE3934 to understand the different columns related to object privileges.
 
 #### Task 4
 

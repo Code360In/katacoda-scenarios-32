@@ -7,7 +7,7 @@ In T1, as system user, show the system privilege associated with the "RESOURCE" 
 
 `select * from dba_sys_privs where grantee='RESOURCE';`{{execute T1}}
 
-Sample out:
+Sample output:
 
 ```
 GRANTEE  PRIVILEGE                                ADM COM INH
@@ -21,6 +21,9 @@ RESOURCE CREATE PROCEDURE                         NO  NO  NO
 RESOURCE CREATE SEQUENCE                          NO  NO  NO
 RESOURCE CREATE TRIGGER                           NO  NO  NO
 ```
+
+> Visit https://docs.oracle.com/en/database/oracle/oracle-database/19/refrn/DBA_ROLE_PRIVS.html to understand  the different columns of DBA_SYS_PRIVS.
+
 
 Grant the `Resource` role to Mickey.
 
