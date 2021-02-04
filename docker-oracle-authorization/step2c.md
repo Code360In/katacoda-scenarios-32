@@ -1,31 +1,36 @@
 
-We need to ensure our new user has disk space allocated in the system to actually create or modify tables and data. To grant `mickey` 1Mb of quota on the `APP_DATA` tablespace,
 
-`ALTER USER mickey quota 1M on APP_DATA;`{{execute T1}}
-
-You may also grant unlimited quota to mickey as follows.
-
-`grant unlimited tablespace to mickey;`{{execute T1}}
+We can either grant `Mickey` the `Create Table` system privilege or through the `RESOURCE` role.
 
 
-Logout from Mickey’s session and login again to refresh the permission.
+In T1, as system user, show the system privilege associated with the "RESOURCE" role.
 
-`exit`{{execute T2}}
+`select * from dba_sys_privs where grantee='RESOURCE';`{{execute T1}}
 
-`sqlplus mickey/mickey`{{execute T2}}
+Sample out:
+
+```
+GRANTEE  PRIVILEGE                                ADM COM INH
+-------- ---------------------------------------- --- --- ---
+RESOURCE CREATE TABLE                             NO  NO  NO
+RESOURCE CREATE TYPE                              NO  NO  NO
+RESOURCE CREATE OPERATOR                          NO  NO  NO
+RESOURCE CREATE INDEXTYPE                         NO  NO  NO
+RESOURCE CREATE CLUSTER                           NO  NO  NO
+RESOURCE CREATE PROCEDURE                         NO  NO  NO
+RESOURCE CREATE SEQUENCE                          NO  NO  NO
+RESOURCE CREATE TRIGGER                           NO  NO  NO
+```
+
+Grant the `Resource` role to Mickey.
+
+`grant RESOURCE to mickey;`{{execute T1}}
 
 
-As Mickey, try to create a "customers" table again, insert data and select from it.
+Verify that the role is granted successfully to mickey (we first set the width of the columns for formatting the output with the `column` command). 
 
-`CREATE TABLE customers(customer_id NUMBER, name VARCHAR2(30) NOT NULL);`{{execute}}
+`column GRANTEE form A20`{{execute T1}}
 
-`INSERT into CUSTOMERS (CUSTOMER_ID,NAME) values (177,'United Continental Holdings'); `{{execute}}
+`column GRANTED_ROLE form A20`{{execute T1}}
 
-`SELECT * FROM CUSTOMERS;`{{execute}}
-
-Exit the sqlplus environment.
-`exit`{{execute}}
-
-Exit the docker container shell.
-`exit`{{execute}}
-
+`SELECT * FROM DBA_ROLE_PRIVS WHERE GRANTEE = 'MICKEY';`{{execute T1}}
