@@ -68,14 +68,14 @@ set linesize 200;
 
 View the object privileges.
 
-`select GRANTEE, OWNER, TABLE_NAME, GRANTOR, PRIVILEGE, GRANTABLE from USER_TAB_PRIVS;`{{execute}}
+`select GRANTEE, OWNER, TABLE_NAME, GRANTOR, PRIVILEGE, GRANTABLE,type from USER_TAB_PRIVS where type='TABLE';`{{execute}}
 
 Sample output:
 
 ```
-GRANTEE    OWNER      TABLE_NAME GRANTOR    PRIVILEGE            GRANTABLE
----------- ---------- ---------- ---------- -------------------- ----------
-U2         U1         T          U1         SELECT               YES
+GRANTEE    OWNER      TABLE_NAME GRANTOR    PRIVILEGE            GRANTABLE  TYPE
+---------- ---------- ---------- ---------- -------------------- ---------- ------------------------
+U2         U1         T          U1         SELECT               NO        TABLE
 ```
 
 > Visit 
@@ -90,21 +90,19 @@ As user u3, verify that that the user `u2` can select from the table `u1.t`.
 `select * from u1.t;`{{execute}}
 
 
-c) As u1, revoke the SELECT privilege from U2.
+View the object privileges.
 
-`revoke select on u1.t from u2`{{execute}}
+`select GRANTEE, OWNER, TABLE_NAME, GRANTOR, PRIVILEGE, GRANTABLE,type from USER_TAB_PRIVS where type='TABLE';`{{execute}}
 
-Review the object privileges of the various users after the revocation
+Sample output:
 
-`select * from USER_TAB_PRIVS;`{{execute}}
+```
+GRANTEE    OWNER      TABLE_NAME GRANTOR    PRIVILEGE            GRANTABLE
+---------- ---------- ---------- ---------- -------------------- ----------
+U2         U1         T          U1         SELECT               YES
+U3         U1         T          U2         SELECT               NO
+```
 
-
-Exit the sqlplus environment.
-`exit`{{execute}}
-
-
-Exit the docker container shell.
-`exit`{{execute}}
 
 
 - - -
@@ -118,4 +116,6 @@ Exit the docker container shell.
 > Click **Continue** below to check if the tasks have been completed successfully.
 >
 >
+
+
 
