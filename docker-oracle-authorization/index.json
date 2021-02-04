@@ -1,0 +1,35 @@
+{
+  "title": "Oracle 18C Express Edition",
+  "description": "",
+  "difficulty": "Beginner",
+  "time": "50",
+  "details": {
+    "steps": [
+      {
+        "title": "Preparation",
+        "text": "step1.md"
+      },
+	  {
+        "title": "Users and Privileges in Oracle",
+        "text": "step1b.md"
+      },
+      {
+        "title": "Exercise",
+        "text": "step2.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}
