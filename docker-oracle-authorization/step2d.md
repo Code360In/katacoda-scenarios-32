@@ -26,8 +26,10 @@ As Mickey, try to create a "customers" table again, insert data and select from 
 `SELECT * FROM CUSTOMERS;`{{execute}}
 
 Exit the sqlplus environment.
+
 `exit`{{execute}}
 
 Exit the docker container shell.
+
 `exit`{{execute}}
 

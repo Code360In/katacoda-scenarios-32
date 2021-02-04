@@ -34,6 +34,7 @@ Show the current logged in user:
 `show user`{{execute T2}}
 
 Sample output:
+
 ```
 USER is "MICKEY"
 ```

@@ -3,7 +3,7 @@
 SQLPlus in Linux environment does not support using up/down arrows for accessing the previous/next command. The rlwrap utility provides a command history and editing of keyboard input for any other command. Start sqlplus with the rlwrap utility.
 
 Insider the oracle docker container's bash shell, 
-connect to Oracle and login as **system uesr** with the rlwrap utility.
+connect to Oracle and login as **system user** with the rlwrap utility.
 
 `rlwrap sqlplus system/12345`{{execute T1}}
 

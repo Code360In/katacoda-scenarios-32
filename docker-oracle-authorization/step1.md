@@ -48,7 +48,8 @@ Connect to the database with sqlplus as sys user.
 `sqlplus / as  sysdba`{{execute}}
 
 Check the current logged in user.
-`show user;`
+
+`show user;`{{execute}}
 
 Exit the sqlplus environment.
 
