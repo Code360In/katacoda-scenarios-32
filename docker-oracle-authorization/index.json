@@ -1,5 +1,5 @@
 {
-  "title": "Oracle 18C Express Edition",
+  "title": "Oracle Authorization",
   "description": "",
   "difficulty": "Beginner",
   "time": "50",
@@ -11,11 +11,11 @@
       },
 	  {
         "title": "Users and Privileges in Oracle",
-        "text": "step1b.md"
+        "text": "step2.md"
       },
       {
         "title": "Exercise",
-        "text": "step2.md"
+        "text": "step3.md"
       }
     ],
     "intro": {
