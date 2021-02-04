@@ -1,3 +1,5 @@
+###Task 1
+
 Connect to the Oracle database container as `system` user and perform the following tasks
 
 * create  three local users u1, u2 and u3 (with password u1, u2, u3 respectively) in sqlplus. 
@@ -5,7 +7,8 @@ Connect to the Oracle database container as `system` user and perform the follow
 * Grant create table privilege to u1 and grant u1 1MB quota on APP_DATA tablespace.
 
 
-a) Login as  user `u1` in sqlplus. 
+###Task 2
+Login as  user `u1` in sqlplus. 
 
 `conn u1/u1`{{execute}}.
 
@@ -65,9 +68,9 @@ U2         U1         T          U1         SELECT               NO        TABLE
 
 The 'No' in GRANTABLE column indicates the grantee can further grant the permission to other users.
  
-
+###Task 3
  
-b) The owner of an object can grant the associated object privilege to another user by specifying the **WITH GRANT OPTION** clause in the GRANT statement. The new grantee can then further grant the same level of access to other users or roles.
+The owner of an object can grant the associated object privilege to another user by specifying the **WITH GRANT OPTION** clause in the GRANT statement. The new grantee can then further grant the same level of access to other users or roles.
 
 As user u1, grant u2 the `SELECT` privilege `WITH GRANT` option.
 
@@ -107,7 +110,7 @@ The 'YES' in GRANTABLE column indicates the grantee can further grant the permis
 > Visit 
 https://docs.oracle.com/en/database/oracle/oracle-database/18/refrn/DBA_TAB_PRIVS.html to understand the different columns related to object privileges.
 
-
+###Task 4
 As user u2, grant the SELECT privilege on u1.t to u3.
 
 
