@@ -15,6 +15,17 @@ Commit the change after table updates.
 
 `commit;`{{execute}}
 
+Select from the created table.
+
+`select * from t;`{{execute}}
+
+Sample output:
+
+```
+USERNAME   PASS
+---------- ----------
+alice      123
+```
 
 Grant user u2 the `SELECT` privilege on table t.
 
