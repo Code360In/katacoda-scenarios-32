@@ -10,9 +10,17 @@
         "text": "step1.md"
       },
 	  {
-        "title": "Users and Privileges in Oracle",
-        "text": "step2.md"
+        "title": "Users and Privileges in Oracle (I)",
+        "text": "step2a.md"
       },
+	  {
+        "title": "Users and Privileges in Oracle (II)",
+        "text": "step2b.md"
+      },
+	  {
+        "title": "Users and Privileges in Oracle (III)",
+        "text": "step2c.md"
+      }
       {
         "title": "Exercise",
         "text": "step3.md"
