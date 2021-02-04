@@ -56,6 +56,7 @@ Specify the column width for formatting the output (if you are using sqlplus).
 
 
 ```
+
 column grantee format a10;
 column grantor format a10;
 column owner format a10;
@@ -64,7 +65,7 @@ column grantable format a10;
 column privilege format a10;
 set linesize 200;
 
-```{execute}}}
+```{{execute}}
 
 View the object privileges.
 
