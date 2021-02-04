@@ -21,6 +21,14 @@ In terminal 2, login as mickey again. The login should be successful.
 
 `sqlplus mickey/mickey`{{execute T2}}
 
+You may ignore the warning related `pupbld.sql`.
+
+```
+Error accessing PRODUCT_USER_PROFILE
+Warning:  Product user profile information not loaded!
+You may need to run PUPBLD.SQL as SYSTEM
+```
+
 Show the current logged in user:
 
 `show user`{{execute T2}}
