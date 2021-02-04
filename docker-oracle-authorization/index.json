@@ -28,7 +28,7 @@
       {
         "title": "Exercise",
         "text": "step6.md",
-		"background": "step6-bg.sh",
+		"background": "step6-bg.sh"
       },
       {
         "title": "Authorization Revocation",
