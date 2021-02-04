@@ -16,8 +16,10 @@ EOF
 
 docker cp .script.sql oracle-xe:/opt/oracle/product/18c/dbhomeXE
 
-docker exec -it --user oracle  oracle-xe bash -c  "/opt/oracle/product/18c/dbhomeXE/bin/sqlplus -S system/12345 @.script.sql | xargs " >.output.txt
-result=`cat .output.txt`
+result=`docker exec -it --user oracle  oracle-xe bash -c  "/opt/oracle/product/18c/dbhomeXE/bin/sqlplus -S system/12345 @.script.sql | xargs "`
+
+echo $result2 >.output.txt
+
 
 if [ "$result" != 'U2 U1 SELECT YES U3 U2 SELECT NO' ]
 then
