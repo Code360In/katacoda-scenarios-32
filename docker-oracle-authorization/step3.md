@@ -92,14 +92,14 @@ set linesize 200;
 
 View the object privileges associated with the create table.
 
-`select GRANTEE, OWNER, TABLE_NAME, GRANTOR, PRIVILEGE, GRANTABLE,type from USER_TAB_PRIVS where type='TABLE';`{{execute}}
+`select GRANTEE, OWNER, TABLE_NAME, GRANTOR, PRIVILEGE, GRANTABLE from USER_TAB_PRIVS where type='TABLE';`{{execute}}
 
 Sample output:
 
 ```
-GRANTEE    OWNER      TABLE_NAME GRANTOR    PRIVILEGE            GRANTABLE  TYPE
----------- ---------- ---------- ---------- -------------------- ---------- ------------------------
-U2         U1         T          U1         SELECT               YES        TABLE
+GRANTEE    OWNER      TABLE_NAME GRANTOR    PRIVILEGE            GRANTABLE  
+---------- ---------- ---------- ---------- -------------------- ---------- 
+U2         U1         T          U1         SELECT               YES        
 ```
 
 The 'YES' in GRANTABLE column indicates the grantee can further grant the permission to other users.
@@ -118,7 +118,7 @@ As user u3, verify that that the user `u2` can select from the table `u1.t`.
 
 View the object privileges.
 
-`select GRANTEE, OWNER, TABLE_NAME, GRANTOR, PRIVILEGE, GRANTABLE,type from USER_TAB_PRIVS where type='TABLE';`{{execute}}
+`select GRANTEE, OWNER, TABLE_NAME, GRANTOR, PRIVILEGE, GRANTABLE from USER_TAB_PRIVS where type='TABLE';`{{execute}}
 
 Sample output:
 
