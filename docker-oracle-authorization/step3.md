@@ -85,7 +85,7 @@ Sample output:
 ```
 GRANTEE    OWNER      TABLE_NAME GRANTOR    PRIVILEGE    GRANTABLE
 ---------- ---------- ---------- ---------- ------------ ----------
-U2         SYS        T          SYS        SELECT       NO
+U2         U1        T          SYS        SELECT       NO
 ```
 
 The 'No' in GRANTABLE column indicates the grantee can further grant the permission to other users.
@@ -112,7 +112,7 @@ Sample output:
 ```
 GRANTEE    OWNER      TABLE_NAME GRANTOR    PRIVILEGE    GRANTABLE
 ---------- ---------- ---------- ---------- ------------ ----------
-U2         SYS        T          SYS        SELECT       YES  
+U2         U1         T          SYS        SELECT       YES  
 ```
 
 The 'YES' in GRANTABLE column indicates the grantee can further grant the permission to other users.
@@ -144,9 +144,10 @@ U3         U1         T          U2         SELECT               NO
 ```
 
 
+
 - - -
 
-#### Checking and submission:**
+#### Checking and submission
 
 
 > Open a new terminal. 
