@@ -10,13 +10,13 @@ fi
 
 cat <<EOF >.script.sql
 SET HEADING OFF;
-select GRANTEE, GRANTOR, PRIVILEGE,GRANTABLE from DBA_TAB_PRIVS where TABLE_NAME='T';
+select GRANTEE, GRANTOR, PRIVILEGE,GRANTABLE from USER_TAB_PRIVS where TABLE_NAME='T';
 exit;
 EOF
 
 docker cp .script.sql oracle-xe:/opt/oracle/product/18c/dbhomeXE
 
-result=`docker exec -it --user oracle  oracle-xe bash -c  "/opt/oracle/product/18c/dbhomeXE/bin/sqlplus -S system/12345 @.script.sql | xargs "`
+result=`docker exec -it --user oracle  oracle-xe bash -c  "/opt/oracle/product/18c/dbhomeXE/bin/sqlplus -S u2/u2 @.script.sql | xargs "`
 
 #remove last strange char from sqlplus
 result=`echo $result|sed 's/.$//'` 

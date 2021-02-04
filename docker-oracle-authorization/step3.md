@@ -1,5 +1,4 @@
 
-
 #### Task 1
 
 Connect to the Oracle database container as `system` user.
@@ -142,7 +141,6 @@ GRANTEE    OWNER      TABLE_NAME GRANTOR    PRIVILEGE            GRANTABLE
 U2         U1         T          U1         SELECT               YES
 U3         U1         T          U2         SELECT               NO
 ```
-
 
 
 - - -
