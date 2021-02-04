@@ -1,4 +1,4 @@
-Connect to the Oracle database container as *system* user and perform the following tasks
+Connect to the Oracle database container as `system` user and perform the following tasks
 
 * create  three local users u1, u2 and u3 (with password u1, u2, u3 respectively) in sqlplus. 
 * Grant the create session privilege to the three users. 
@@ -7,7 +7,9 @@ Connect to the Oracle database container as *system* user and perform the follow
 
 a) Login as  user `u1` in sqlplus. 
 
-First, check that you are logged in as `u1`.
+`conn u1/u1`{{execute}}.
+
+First, check that you are logged in as `u1` in sqlplus.
 
 `show user`{{execute}}.
 
@@ -112,7 +114,6 @@ U3         U1         T          U2         SELECT               NO
 ```
 
 
-
 - - -
 
 > **Checking and submission:**
@@ -124,23 +125,5 @@ U3         U1         T          U2         SELECT               NO
 > Click **Continue** below to check if the tasks have been completed successfully.
 >
 >
-
-c) As u1, revoke the SELECT privilege from U2.
-
-`conn u1/u1`{{execute}}
-
-`revoke select on u1.t from u2;`{{execute}}
-
-Review the object privileges of the various users after the revocation
-
-`select GRANTEE, OWNER, TABLE_NAME, GRANTOR, PRIVILEGE, GRANTABLE,type from USER_TAB_PRIVS where type='TABLE';`{{execute}}
-
-Exit the sqlplus environment.
-`exit`{{execute}}
-
-
-Exit the docker container shell.
-`exit`{{execute}}
-
 
 
