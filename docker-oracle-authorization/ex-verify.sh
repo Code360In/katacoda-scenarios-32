@@ -19,12 +19,12 @@ select GRANTEE, GRANTOR, PRIVILEGE,GRANTABLE from DBA_TAB_PRIVS where TABLE_NAME
 exit;
 EOF
 
-docker cp .script.sql oracle-xe:/opt/oracle/product/18c/dbhomeXE
+docker cp .script.sql oracle-xe:/
 
-docker exec -it --user oracle  oracle-xe /opt/oracle/product/18c/dbhomeXE/bin/sqlplus -S / as sysdba @.script.sql |  tr -d '[:space:]' >out2.txt
+docker exec -it --user oracle  oracle-xe /opt/oracle/product/18c/dbhomeXE/bin/sqlplus -S / as sysdba @/.script.sql |  tr -d '[:space:]' >out2.txt
 
 
-if [ `cat out2.txt` != "U2U1SELECTYESU3U2SELECTNO" ] && echo 1
+if [ `cat out2.txt` != "U2U1SELECTYESU3U2SELECTNO" ] 
 then
 	echo "Error: The tasks are not completed.">test_ex.log  && exit 1
 else
