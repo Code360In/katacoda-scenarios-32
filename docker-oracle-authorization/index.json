@@ -27,8 +27,7 @@
       },
       {
         "title": "Exercise",
-        "text": "step3.md",
-		"verify": "ex-verify.sh"
+        "text": "step3.md"
       },
       {
         "title": "Authorization Revocation",
