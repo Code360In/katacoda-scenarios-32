@@ -77,9 +77,8 @@ column grantor format a10;
 column owner format a10;
 column table_name format a10;
 column grantable format a10;
-column privilege format a10;
+column privilege format a20;
 set linesize 200;
-
 ```{{execute}}
 
 View the object privileges.
@@ -89,9 +88,9 @@ View the object privileges.
 Sample output:
 
 ```
-GRANTEE    OWNER      TABLE_NAME GRANTOR    PRIVILEGE            GRANTABLE  HIE COM TYPE                     INH
----------- ---------- ---------- ---------- -------------------- ---------- --- --- ------------------------ ---
-PUBLIC     SYS        U1         U1         INHERIT PRIVILEGES   NO         NO  NO  USER                     NO
+GRANTEE    OWNER      TABLE_NAME GRANTOR    PRIVILEGE            GRANTABLE
+---------- ---------- ---------- ---------- -------------------- ----------
+U2         U1         T          U1         SELECT               YES
 ```
 
 > Visit 
@@ -129,7 +128,7 @@ Exit the docker container shell.
 >
 > Execute the following command and input your student ID and name.
 > 
-> `input_name`{{execute T1}}
+> `input_name`{{execute}}
 >
 > Click **Continue** below to check if the tasks have been completed successfully.
 >
