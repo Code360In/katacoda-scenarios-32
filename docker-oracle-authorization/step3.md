@@ -61,7 +61,7 @@ Can u2 grant the select privilege to others?
 
 `grant select on u1.t to u3; `{{execute}}
 
-View the object privileges associated with the create table.
+View the object privileges associated with the table `t`.
 
 First, we specify the column width for formatting the output (if you are using sqlplus).
 
@@ -76,7 +76,7 @@ set linesize 200;
 ```{{execute}}
 
 
-Then, we view the object privileges.
+Then, we may view the object privileges.
 
 `select GRANTEE, OWNER, TABLE_NAME, GRANTOR, PRIVILEGE, GRANTABLE from USER_TAB_PRIVS where type='TABLE';`{{execute}}
 
