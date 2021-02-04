@@ -27,19 +27,30 @@
       },
       {
         "title": "Exercise",
-        "text": "step3.md"
+        "text": "step3.md",
+		"verify": "ex-verify.sh"
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+	  "courseData": "background.sh"
     },
     "finish": {
       "text": "finish.md"
+    },
+	"assets": {
+        "host01": [
+			{"file": "ex_test.py", "target": "/.tests" },
+			{"file": "input_name", "target": "/usr/local/bin/", "chmod": "+x"}
+        ]
     }
   },
   
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "terminal",
+	"uisettings": "bash",
+	"exclusionPatterns": ["*verify*","*expect*"],
+	"hideHiddenFiles": true
   },
   "backend": {
     "imageid": "ubuntu:2004"

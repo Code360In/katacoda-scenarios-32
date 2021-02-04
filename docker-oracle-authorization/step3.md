@@ -56,3 +56,16 @@ Exit the sqlplus environment.
 Exit the docker container shell.
 `exit`{{execute}}
 
+
+- - -
+
+> **Checking and submission:
+>
+> Execute the following command and input your student ID and name.
+> 
+> `input_name`{{execute T1}}
+>
+> Click **Continue** below to check if the tasks have been completed successfully.
+>
+>
+
