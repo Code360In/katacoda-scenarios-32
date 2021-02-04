@@ -11,27 +11,27 @@
       },
 	  {
         "title": "Users and Privileges in Oracle (I)",
-        "text": "step2a.md"
+        "text": "step2.md"
       },
 	  {
         "title": "Users and Privileges in Oracle (II)",
-        "text": "step2b.md"
+        "text": "step3.md"
       },
 	  {
         "title": "Users and Privileges in Oracle (III)",
-        "text": "step2c.md"
+        "text": "step4.md"
       },
 	  {
         "title": "Users and Privileges in Oracle (IV)",
-        "text": "step2d.md"
+        "text": "step5.md"
       },
       {
         "title": "Exercise",
-        "text": "step3.md"
+        "text": "step6.md"
       },
       {
         "title": "Authorization Revocation",
-        "text": "step4.md"
+        "text": "step7.md"
       }
     ],
     "intro": {

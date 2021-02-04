@@ -1,161 +1,53 @@
 
-#### Task 1
+Switch to terminal 1. 
+As `SYSTEM` user, grant `micky` the "create session" permission.
 
-Connect to the Oracle database container as `system` user.
-
-`rlwrap sqlplus system/12345`{{execute}}
-
-Perform the following tasks
-
-* create  three local users u1, u2 and u3 (with password u1, u2, u3 respectively) with default tablespace APP_DATA in sqlplus. 
-* Grant the create session privilege to the three users. 
-* Grant create table privilege to u1 and grant u1 1MB quota on APP_DATA tablespace.
+`grant create session to mickey ;`{{execute T1}}
 
 
-#### Task 2
+Show the granted system privileges by querying the DBA_SYS_PRIVS view.
 
-Login as  user `u1` in sqlplus. 
-
-`conn u1/u1`{{execute}}.
-
-First, check that you are logged in as `u1` in sqlplus.
-
-`show user`{{execute}}.
-
-Sample output: `USER is "U1"`
-
-Create a table t and insert a row into t.
-
-`create table t (username varchar(10), pass varchar(10));`{{execute}}
-
-`insert into t values ('alice', '123');`{{execute}}
-
-Commit the updates.
-
-`commit;`{{execute}}
+`select * from DBA_SYS_PRIVS where GRANTEE = 'MICKEY';`{{execute T1}}
 
 
-Check that you can view the data from the created table.
+Describe the DBA_SYS_PRIVS table to understand  more about the attributes:
 
-`select * from t;`{{execute}}
+`describe DBA_SYS_PRIVS`{{execute T1}}
+
+> Visit https://docs.oracle.com/en/database/oracle/oracle-database/19/refrn/DBA_SYS_PRIVS.html to understand  the different columns of DBA_SYS_PRIVS.
+
+
+In terminal 2, login as mickey again. The login should be successful.
+
+`sqlplus mickey/mickey`{{execute T2}}
+
+You may ignore the warning related `pupbld.sql`.
+
+```
+Error accessing PRODUCT_USER_PROFILE
+Warning:  Product user profile information not loaded!
+You may need to run PUPBLD.SQL as SYSTEM
+```
+
+Show the current logged in user:
+
+`show user`{{execute T2}}
 
 Sample output:
 
 ```
-USERNAME   PASS
----------- ----------
-alice      123
-```
-
-Grant user u2 the `SELECT` privilege on table t.
-
-Login as user `u2` and verify that `u2` can view the table t in u1 schema.
-
-`conn u2/u2`{{execute}}
-
-`select * from u1.t;`{{execute}}
-
-
-Can u2 grant the select privilege to others?  
-
-`grant select on u1.t to u3; `{{execute}}
-
-View the object privileges associated with the table `t`.
-
-First, we specify the column width for formatting the output (if you are using sqlplus).
-
-```
-column grantee format a10;
-column grantor format a10;
-column owner format a10;
-column table_name format a10;
-column grantable format a10;
-column privilege format a12;
-set linesize 200;
-```{{execute}}
-
-
-Then, we may view the object privileges.
-
-`select GRANTEE, OWNER, TABLE_NAME, GRANTOR, PRIVILEGE, GRANTABLE from USER_TAB_PRIVS where type='TABLE';`{{execute}}
-
-Sample output:
-
-```
-GRANTEE    OWNER      TABLE_NAME GRANTOR    PRIVILEGE    GRANTABLE
----------- ---------- ---------- ---------- ------------ ----------
-U2         U1        T          SYS        SELECT       NO
-```
-
-The 'No' in GRANTABLE column indicates the grantee can further grant the permission to other users.
- 
-#### Task 3
- 
-The owner of an object can grant the associated object privilege to another user by specifying the **WITH GRANT OPTION** clause in the GRANT statement. The new grantee can then further grant the same level of access to other users or roles.
-
-As user u1, grant u2 the `SELECT` privilege `WITH GRANT` option.
-
-`conn u1/u1`{{execute}}
-
-`grant select on t to u2 with grant option;`{{execute}}
-
-
-Now, we will review the object privilege of the granted object privileges.
-
-View the object privileges associated with the create table.
-
-`select GRANTEE, OWNER, TABLE_NAME, GRANTOR, PRIVILEGE, GRANTABLE from USER_TAB_PRIVS where type='TABLE';`{{execute}}
-
-Sample output:
-
-```
-GRANTEE    OWNER      TABLE_NAME GRANTOR    PRIVILEGE    GRANTABLE
----------- ---------- ---------- ---------- ------------ ----------
-U2         U1         T          SYS        SELECT       YES  
-```
-
-The 'YES' in GRANTABLE column indicates the grantee can further grant the permission to other users.
-
-> Visit 
-https://docs.oracle.com/en/database/oracle/oracle-database/18/refrn/DBA_TAB_PRIVS.html to understand the different columns related to object privileges.
-
-#### Task 4
-
-As user u2, grant the SELECT privilege on u1.t to u3.
-
-
-As user u3, verify that that the user `u2` can select from the table `u1.t`.
-
-`select * from u1.t;`{{execute}}
-
-
-View the object privileges.
-
-`select GRANTEE, OWNER, TABLE_NAME, GRANTOR, PRIVILEGE, GRANTABLE from USER_TAB_PRIVS where type='TABLE';`{{execute}}
-
-Sample output:
-
-```
-GRANTEE    OWNER      TABLE_NAME GRANTOR    PRIVILEGE            GRANTABLE
----------- ---------- ---------- ---------- -------------------- ----------
-U2         U1         T          U1         SELECT               YES
-U3         U1         T          U2         SELECT               NO
+USER is "MICKEY"
 ```
 
 
-- - -
+As mickey, create a "customers" table .
 
-#### Checking and submission
+`CREATE TABLE customers(customer_id NUMBER, name VARCHAR2(255) NOT NULL);`{{execute T2}}
 
+You should receive the following error message as `Mickey` does not have the `Create Table` system privilege.
 
-> Open a new terminal. 
->
-> Execute the following command and input your student ID and name.
-> 
-> `input_name`{{execute}}
->
-> Click **Continue** below to check if the tasks have been completed successfully.
->
->
+```
+ERROR at line 1:
+ORA-01031: insufficient privileges
 
-
+```
