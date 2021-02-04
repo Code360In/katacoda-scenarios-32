@@ -10,18 +10,19 @@ fi
 
 cat <<EOF >script.sql
 SET HEADING OFF;
-select user from dual;
+select GRANTEE, GRANTOR, PRIVILEGE,GRANTABLE from DBA_TAB_PRIVS where TABLE_NAME='T';
 exit;
 EOF
 
 sqlplus -S system/12345 @script.sql | xargs >.output.txt
 result=`cat .output.txt`
 
-if [[ $result != 'SYSTEM' ]]
+if [[ $result != 'U2 U1 SELECT YES U3 U2 SELECT NO' ]]
 then
 	echo "Error: The tasks are not completed.">test_ex.log  && exit 1
 else
 	echo "done"
+	echo "task completed!">test_ex.log  
 fi
 
 

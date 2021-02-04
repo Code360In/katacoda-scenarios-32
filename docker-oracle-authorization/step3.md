@@ -33,7 +33,9 @@ As user u1, grant u2 the `SELECT` privilege `WITH GRANT` option.
 `grant select on t to u2 with grant option;`{{execute}}
 
 
-Review the object privilege of the granted object privileges (you should specify the column width for formatting the output in sqlplus).
+Review the object privilege of the granted object privileges.
+
+Specify  the column width for formatting the output if you are using sqlplus.
 
 `column grantee format a20;`{{execute}}
 
@@ -45,6 +47,8 @@ Review the object privilege of the granted object privileges (you should specify
 
 `column grantable format a20;`{{execute}}
 
+
+View the object privileges.
 
 `select * from USER_TAB_PRIVS;`{{execute}}
 
@@ -78,7 +82,7 @@ Exit the docker container shell.
 
 - - -
 
-> **Checking and submission:
+> **Checking and submission:**
 >
 > Execute the following command and input your student ID and name.
 > 
