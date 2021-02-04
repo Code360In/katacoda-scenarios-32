@@ -1,3 +1,5 @@
+
+
 ### Task 1
 
 Connect to the Oracle database container as `system` user and perform the following tasks
@@ -8,6 +10,7 @@ Connect to the Oracle database container as `system` user and perform the follow
 
 
 ### Task 2
+
 Login as  user `u1` in sqlplus. 
 
 `conn u1/u1`{{execute}}.
@@ -111,6 +114,7 @@ The 'YES' in GRANTABLE column indicates the grantee can further grant the permis
 https://docs.oracle.com/en/database/oracle/oracle-database/18/refrn/DBA_TAB_PRIVS.html to understand the different columns related to object privileges.
 
 ### Task 4
+
 As user u2, grant the SELECT privilege on u1.t to u3.
 
 
