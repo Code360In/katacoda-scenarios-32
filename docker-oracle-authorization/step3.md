@@ -47,9 +47,23 @@ Login as user `u2` and verify that `u2` can view the table t in u1 schema.
 `select * from u1.t;`{{execute}}
 
 
-Can u2 grant the select privilege to others?   Why?
+Can u2 grant the select privilege to others?  
 
 `grant select on u1.t to u3; `{{execute}}
+
+View the object privileges associated with the create table.
+
+`select GRANTEE, OWNER, TABLE_NAME, GRANTOR, PRIVILEGE, GRANTABLE,type from USER_TAB_PRIVS where type='TABLE';`{{execute}}
+
+Sample output:
+
+```
+GRANTEE    OWNER      TABLE_NAME GRANTOR    PRIVILEGE            GRANTABLE  TYPE
+---------- ---------- ---------- ---------- -------------------- ---------- ------------------------
+U2         U1         T          U1         SELECT               NO        TABLE
+```
+
+The 'No' in GRANTABLE column indicates the grantee can further grant the permission to other users.
  
 
  
@@ -85,8 +99,10 @@ Sample output:
 ```
 GRANTEE    OWNER      TABLE_NAME GRANTOR    PRIVILEGE            GRANTABLE  TYPE
 ---------- ---------- ---------- ---------- -------------------- ---------- ------------------------
-U2         U1         T          U1         SELECT               NO        TABLE
+U2         U1         T          U1         SELECT               YES        TABLE
 ```
+
+The 'YES' in GRANTABLE column indicates the grantee can further grant the permission to other users.
 
 > Visit 
 https://docs.oracle.com/en/database/oracle/oracle-database/18/refrn/DBA_TAB_PRIVS.html to understand the different columns related to object privileges.
