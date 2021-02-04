@@ -1,5 +1,4 @@
 
-
 Switch to terminal 1. 
 As `SYSTEM` user, grant `micky` the "create session" permission.
 
@@ -21,6 +20,15 @@ Describe the DBA_SYS_PRIVS table to understand  more about the attributes:
 In terminal 2, login as mickey again. The login should be successful.
 
 `sqlplus mickey/mickey`{{execute T2}}
+
+Show the current logged in user:
+
+`show user`{{execute T2}}
+
+Sample output:
+```
+USER is "MICKEY"
+```
 
 
 As mickey, create a "customers" table .
