@@ -23,7 +23,13 @@ docker cp .script.sql oracle-xe:/home/oracle
 
 #docker exec -it --user oracle  oracle-xe /opt/oracle/product/18c/dbhomeXE/bin/sqlplus -S / as sysdba @/.script.sql |  tr -d '[:space:]' >out2.txt
 
-docker exec -it --user oracle  oracle-xe /opt/oracle/product/18c/dbhomeXE/bin/sqlplus -S / as sysdba @/home/oracle/.script.sql 
+#docker exec -it --user oracle  oracle-xe /opt/oracle/product/18c/dbhomeXE/bin/sqlplus -S / as sysdba @/home/oracle/.script.sql 
+
+#docker exec -it --user root  oracle-xe /opt/oracle/product/18c/dbhomeXE/bin/sqlplus -S system/12345  @/home/oracle/.script.sql 
+
+docker exec -it --user oracle oracle-xe bash -c "/opt/oracle/product/18c/dbhomeXE/bin/sqlplus / as sysdba @/home/oracle/.script.sql "
+
+
 
 docker cp oracle-xe:/home/oracle/test.lst /root
 
