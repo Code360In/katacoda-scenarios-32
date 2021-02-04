@@ -40,7 +40,7 @@
     },
 	"assets": {
         "host01": [
-			{"file": "ex_test.py", "target": "/.tests" },
+
 			{"file": "input_name", "target": "/usr/local/bin/", "chmod": "+x"}
         ]
     }

@@ -56,21 +56,6 @@ Review the object privilege of the granted object privileges.
 
 Specify the column width for formatting the output (if you are using sqlplus).
 
-`column grantee format a20;`{{execute}}
-
-`column grantor format a20;`{{execute}}
-
-`column owner format a20;`{{execute}}
-
-`column table_name format a20;`{{execute}}
-
-`column grantable format a20;`{{execute}}
-
-`column privilege format a20;`{{execute}}
-
-`set linesize 200;`{{execute}}
-
-
 ```
 column grantee format a10;
 column grantor format a10;
