@@ -101,7 +101,7 @@ https://docs.oracle.com/en/database/oracle/oracle-database/18/refrn/DBA_TAB_PRIV
 As user u2, grant the SELECT privilege on u1.t to u3.
 
 
-As user u3, verify that that the user can select on the table u1.t.
+As user u3, verify that that the user `u2` can select from the table `u1.t`.
 
 `select * from u1.t;`{{execute}}
 

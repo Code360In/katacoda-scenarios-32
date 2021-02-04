@@ -8,13 +8,15 @@ then
 	echo "Error: Please input your name and ID">test_ex.log && exit 1
 fi
 
-cat <<EOF >script.sql
+cat <<EOF >.script.sql
 SET HEADING OFF;
 select GRANTEE, GRANTOR, PRIVILEGE,GRANTABLE from DBA_TAB_PRIVS where TABLE_NAME='T';
 exit;
 EOF
 
-sqlplus -S system/12345 @script.sql | xargs >.output.txt
+docker cp .script.sql oracle-xe:/opt/oracle/product/18c/dbhomeXE
+
+docker exec -it --user oracle  oracle-xe bash -c  "/opt/oracle/product/18c/dbhomeXE/bin/sqlplus -S system/12345 @.script.sql | xargs " >.output.txt
 result=`cat .output.txt`
 
 if [[ $result != 'U2 U1 SELECT YES U3 U2 SELECT NO' ]]
