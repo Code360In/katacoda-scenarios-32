@@ -1,8 +1,8 @@
 Connect to the Oracle database container as *system* user and perform the following tasks
 
-* create  three local users u1, u2 and u3 in SALESPDB in sqlplus. 
+* create  three local users u1, u2 and u3 (with password u1, u2, u3 respectively) in sqlplus. 
 * Grant the create session privilege to the three users. 
-* Grant create table privilege to u1 and grant u1 1MB quota on USERS tablespace.
+* Grant create table privilege to u1 and grant u1 1MB quota on APP_DATA tablespace.
 
 
 a) As user u1, create a table t and insert a row into t.
@@ -12,7 +12,8 @@ a) As user u1, create a table t and insert a row into t.
 `insert into t values ('alice', '123');`{{execute}}
 
 
-Grant user u2 the SELECT privilege on table t.
+Grant user u2 the `SELECT` privilege on table t.
+
 
 Login as user u2 and execute the following query to view the data.
 
@@ -27,15 +28,33 @@ Can u2 grant the select privilege to others?  Explain your answer.
 b) The owner of an object can grant it to another user by specifying the **WITH GRANT OPTION** clause in the GRANT statement. 
 The new grantee can further grant the same level of access to other users or roles.
 
-As user u1, grant u2 the SELECT privilege WITH GRANT option.
+As user u1, grant u2 the `SELECT` privilege `WITH GRANT` option.
 
-Review the object privilege of the granted object privileges.
+`grant select on t to u2 with grant option;`{{execute}}
+
+
+Review the object privilege of the granted object privileges (you should specify the column width for formatting the output in sqlplus).
+
+`column grantee format a20;`{{execute}}
+
+`column grantor format a20;`{{execute}}
+
+`column owner format a20;`{{execute}}
+
+`column table_name format a20;`{{execute}}
+
+`column grantable format a20;`{{execute}}
+
 
 `select * from USER_TAB_PRIVS;`{{execute}}
 
+
+
 As user u2, grant the SELECT privilege on u1.t to u3.
 
+
 As user u3, verify that that the user can select on the table u1.t.
+
 
 `select * from u1.t;`{{execute}}
 

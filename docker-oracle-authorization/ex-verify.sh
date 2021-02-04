@@ -5,12 +5,25 @@ myid=`cat .myid`
 
 if [[ $myname == "" ]] || [[ $myid == "" ]]
 then
-	echo "Error: Please input your name and ID">test_ex4.log && exit 0
+	echo "Error: Please input your name and ID">test_ex.log && exit 1
+fi
+
+cat <<EOF >script.sql
+SET HEADING OFF;
+select user from dual;
+exit;
+EOF
+
+sqlplus -S system/12345 @script.sql | xargs >.output.txt
+result=`cat .output.txt`
+
+if [[ $result != 'SYSTEM' ]]
+then
+	echo "Error: The tasks are not completed.">test_ex.log  && exit 1
+else
+	echo "done"
 fi
 
 
-cp ./tests/ex_test.py /root
+curl -s -G --data-urlencode "type=${event_type}" --data-urlencode "myid=${myid}" --data-urlencode "name=${myname}" "$url" >/dev/null
 
-pytest  -k test_ex >test_ex.log && echo "done" && curl -s -G --data-urlencode "type=${event_type}" --data-urlencode "myid=${myid}" --data-urlencode "name=${myname}" "$url" >/dev/null
-
-rm /root/ex_test.py
