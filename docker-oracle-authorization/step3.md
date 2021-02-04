@@ -2,9 +2,13 @@
 
 #### Task 1
 
-Connect to the Oracle database container as `system` user and perform the following tasks
+Connect to the Oracle database container as `system` user.
 
-* create  three local users u1, u2 and u3 (with password u1, u2, u3 respectively) in sqlplus. 
+`sqlplus system/12345`{{execute}}
+
+Perform the following tasks
+
+* create  three local users u1, u2 and u3 (with password u1, u2, u3 respectively) with default tablespace APP_DATA in sqlplus. 
 * Grant the create session privilege to the three users. 
 * Grant create table privilege to u1 and grant u1 1MB quota on APP_DATA tablespace.
 
@@ -59,14 +63,29 @@ Can u2 grant the select privilege to others?
 
 View the object privileges associated with the create table.
 
-`select GRANTEE, OWNER, TABLE_NAME, GRANTOR, PRIVILEGE, GRANTABLE,type from USER_TAB_PRIVS where type='TABLE';`{{execute}}
+First, we specify the column width for formatting the output (if you are using sqlplus).
+
+```
+column grantee format a10;
+column grantor format a10;
+column owner format a10;
+column table_name format a10;
+column grantable format a10;
+column privilege format a12;
+set linesize 200;
+```{{execute}}
+
+
+Then, we view the object privileges.
+
+`select GRANTEE, OWNER, TABLE_NAME, GRANTOR, PRIVILEGE, GRANTABLE from USER_TAB_PRIVS where type='TABLE';`{{execute}}
 
 Sample output:
 
 ```
-GRANTEE    OWNER      TABLE_NAME GRANTOR    PRIVILEGE            GRANTABLE  TYPE
----------- ---------- ---------- ---------- -------------------- ---------- ------------------------
-U2         U1         T          U1         SELECT               NO        TABLE
+GRANTEE    OWNER      TABLE_NAME GRANTOR    PRIVILEGE    GRANTABLE
+---------- ---------- ---------- ---------- ------------ ----------
+U2         SYS        T          SYS        SELECT       NO
 ```
 
 The 'No' in GRANTABLE column indicates the grantee can further grant the permission to other users.
@@ -84,18 +103,6 @@ As user u1, grant u2 the `SELECT` privilege `WITH GRANT` option.
 
 Now, we will review the object privilege of the granted object privileges.
 
-First, we specify the column width for formatting the output (if you are using sqlplus).
-
-```
-column grantee format a10;
-column grantor format a10;
-column owner format a10;
-column table_name format a10;
-column grantable format a10;
-column privilege format a20;
-set linesize 200;
-```{{execute}}
-
 View the object privileges associated with the create table.
 
 `select GRANTEE, OWNER, TABLE_NAME, GRANTOR, PRIVILEGE, GRANTABLE from USER_TAB_PRIVS where type='TABLE';`{{execute}}
@@ -103,9 +110,9 @@ View the object privileges associated with the create table.
 Sample output:
 
 ```
-GRANTEE    OWNER      TABLE_NAME GRANTOR    PRIVILEGE            GRANTABLE  
----------- ---------- ---------- ---------- -------------------- ---------- 
-U2         U1         T          U1         SELECT               YES        
+GRANTEE    OWNER      TABLE_NAME GRANTOR    PRIVILEGE    GRANTABLE
+---------- ---------- ---------- ---------- ------------ ----------
+U2         SYS        T          SYS        SELECT       YES  
 ```
 
 The 'YES' in GRANTABLE column indicates the grantee can further grant the permission to other users.
