@@ -21,6 +21,9 @@ EOF
 
 docker cp .script.sql oracle-xe:/opt/oracle/product/18c/dbhomeXE
 
+docker exec -it --user oracle  oracle-xe bash -c  "/opt/oracle/product/18c/dbhomeXE/bin/sqlplus -S u2/u2 @.script.sql | xargs ">exec_result.txt
+
+
 result=`docker exec -it --user oracle  oracle-xe bash -c  "/opt/oracle/product/18c/dbhomeXE/bin/sqlplus -S u2/u2 @.script.sql | xargs "`
 
 #remove last strange char from sqlplus
