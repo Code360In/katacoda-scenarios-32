@@ -41,8 +41,7 @@ Configure Disable host checking.
 ```
 cat <<EOF >vue.config.js
 
-```
-{{execute T2}}
+
 module.exports = {
     devServer: {
         disableHostCheck: true,
@@ -54,3 +53,4 @@ EOF
 `npm run serve`{{execute T2}}
 
 
+https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/ping
