@@ -55,7 +55,7 @@
   },
   
   "environment": {
-    "uilayout": "vscode-editor-terminal",
+    "uilayout": "vscode-terminal-split",
 	"showide": true
   },
   "backend": {
