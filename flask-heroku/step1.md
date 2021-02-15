@@ -1,4 +1,6 @@
 
+https://testdriven.io/blog/deploying-flask-to-heroku-with-docker-and-gitlab/
+
 
 `git clone https://github.com/testdrivenio/flask-vue-crud`{{execute}}
 
@@ -6,7 +8,9 @@
 
 `cd server`{{execute}}
 
-`virtenv -p python3 env`{{execute}}
+`apt-get install virtualenv`{{execute}}
+
+`virtualenv -p python3 env`{{execute}}
 
 `source env/bin/activate`{{execute}}
 
@@ -16,10 +20,31 @@
 
 https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/
 
-``{{execute}}
+Open terminal 2.
 
-``{{execute}}
 
-``{{execute}}
+modify app.py to run at host 0.0.0.0
+app.run(host='0.0.0.0')
 
-``{{execute}}
+
+`cd client`{{execute T2}}
+
+`npm install`{{execute T2}}
+
+Configure Disable host checking.
+
+```
+cat <<EOF >vue.config.js
+
+```{{execute T2}}
+module.exports = {
+    devServer: {
+        disableHostCheck: true,
+    }
+}
+EOF
+```{{execute T2}}
+
+`npm run serve`{{execute T2}}
+
+
