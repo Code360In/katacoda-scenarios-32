@@ -1,28 +1,45 @@
 
-Clone the following github repository.
+Pull the docker image from Docker Hub.
 
-`git clone https://github.com/cswclui/docker-lamp`{{execute}}
-
-
-View the docker compose file at `docker-lamp/docker-compose.yml` in the editor.
-
-Start up the servers by using docker-compose.
-
-Execute:
-`cd docker-lamp`{{execute}}
-
-`docker-compose up -d`{{execute}}}
+`docker pull cswclui/oracle18cxe`{{execute}}
 
 
-View the PHP application at at `localhost:8001`
-https://[[HOST_SUBDOMAIN]]-800-[[KATACODA_HOST]].environments.katacoda.com/me 
+Check that the image is available after the image is downloaded.
+
+`docker images`{{execute}}
 
 
-You may access the phpmyadmin tool at `localhost:8008` with the following username/password:
+Run the Oracle docker image
 
-```
-MYSQL_USER: user
-MYSQL_PASSWORD: test
-```
+`docker run --name oracle-xe -d -p 51521:1521  -v /docker_share:/share cswclui/oracle18cxe`{{execute}}
 
-https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com/me 
+*	--name specifies the container name
+*	-d runs the container in background mode
+*	-p maps a host port to a container port
+*	-v: bind the local drive (e.g. /docker_share) with the container’s folder /share
+
+After the container has started, run the following commands in the command prompt.
+
+`docker ps`{{execute}}
+
+
+Check the log of the container.
+
+`docker logs oracle-xe`{{execute}}
+
+If the database is started up successfully, the log will show:
+
+<pre>
+Database exists
+Starting Oracle Net Listener.
+Oracle Net Listener started.
+Starting Oracle Database instance XE.
+Oracle Database instance XE started.
+
+The Oracle base remains unchanged with value /opt/oracle
+#########################
+DATABASE IS READY TO USE!
+#########################
+...
+</pre>
+
