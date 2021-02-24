@@ -69,8 +69,8 @@ Execute:
 ```
 cat <<EOF >/etc/ansible/hosts
 [myservers]
-server1 ansible_sudo_pass='12345'
 server2 ansible_sudo_pass='12345'
+server3 ansible_sudo_pass='12345'
 EOF
 ```{{execute}}
 
