@@ -1,21 +1,22 @@
-``{{execute}}
 
-``{{execute}}
+View the PHP application at at `localhost:8001`
 
-``{{execute}}
+https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com
 
-``{{execute}}
 
-``{{execute}}
+You may access the phpmyadmin tool at `localhost:8008` with the following username/password:
 
-``{{execute}}
+```
+MYSQL_USER: user
+MYSQL_PASSWORD: test
+```
 
-``{{execute}}
+https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com
 
-``{{execute}}
 
-``{{execute}}
+You may also access the databse using mysql client.
 
-``{{execute}}
+`docker run -it mysql mysql -u user -ptest`{{execute}}
 
-``{{execute}}
+`show databases`{{execute}}
+
