@@ -22,7 +22,7 @@ Similarly, you can establish SSH connection to `server3`.
 
 Now, we will configure passwordless SSH such that the ansible at the host machine can connect to the various servers without using password.
 
-First, we generate a SSH key on the Ansible host for authentication. Type 'y' to overrride the key.
+First, we generate a SSH key on the Ansible host for authentication. 
 
 ` ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa`{{execute}}
 
@@ -32,11 +32,11 @@ The RSA public/private key pair will be located at `~/.ssh`.
 
 In order for the server to verify the authenticity of the ansible host, we need to copy the public key to the three servers with the `ssh-copy-id` tool
 
-`ssh-copy-id -p 2222 alice@server2`{{execute}}
+`ssh-copy-id  alice@server2`{{execute}}
 
-Type the `12345` as password.
+Type `yes` to to confirm the connection and `12345` as password.
 
-`ssh-copy-id -p 2223 alice@server3`{{execute}}
+`ssh-copy-id  alice@server3`{{execute}}
 
 Type the `12345` as password.
 
@@ -53,7 +53,7 @@ Close the connection and return to the host machine.
 `exit`{{execute T2}}
 
 
-In `server1`, install ansible.
+Install ansible in `server1`.
 
 `pip install ansible==2.9.6`{{execute}}
 
@@ -67,7 +67,7 @@ First, we define our servers in the inventory file.
 Execute:
 
 ```
-cat <<EOF >/etc/ansible/hosts
+cat <<EOF >hosts
 [myservers]
 server2 ansible_sudo_pass='12345'
 server3 ansible_sudo_pass='12345'
@@ -76,7 +76,7 @@ EOF
 
 Verify that the file is created:
 
-`cat /etc/ansible/hosts`{{execute T2}}
+`cat hosts`{{execute T2}}
 
 
 Ansible role  allows reuse of common configuration steps. There are a number of MySQL Ansible roles available in the Ansible Galaxy. We will use the role "mysql" by geerlinggu.
@@ -101,8 +101,6 @@ Define the  ansible playbook `deploy-mysql.yml` as follows.
 cat <<EOF >deploy-mysql.yml
 - hosts: myservers
   become: yes
-  vars_files:
-    - vars/main.yml
   roles:
     - { role: geerlingguy.mysql }
 EOF
@@ -115,19 +113,19 @@ Verify that the file is created:
 
 Define `main.yaml` with the mysql root password.
 
-`mkdir vars`{{execute T2}
 
-`echo 'mysql_root_password: "123456"'> vars/main.yml`{{execute T2}}
+
+`echo 'mysql_root_password: "12345"'> main.yml`{{execute T2}}
 
 
 Verify that the file is created:
 
-`cat vars/main.yml`
+`cat main.yml`{{execute T2}}
 
 
 Start the MySQL Server deployment:
 
-`ansible-playbook --user alice deploy-mysql.yml`{{execute T2}}
+`ansible-playbook -i hosts --user alice deploy-mysql.yml`{{execute T2}}
 
 
 
