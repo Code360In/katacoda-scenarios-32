@@ -5,16 +5,20 @@ View the list of SSH servers containers.
 
 `docker ps`{{execute T2}}
 
-Establish a SSH connection to `server1` at `localhost:2222`. 
-Input `123` as password.
+Launch a shell to `server1` (which will act as ansible host).
 
-`ssh -p 2222 alice@localhost`{{execute T2}}
+`docker exec -it server1 bash`{{execute T2}}
+
+Establish a SSH connection to `server2`. 
+Input `12345` as password.
+
+`ssh  alice@server2`{{execute T2}}
 
 Close the connection and return to the host machine.
 
 `exit`{{execute T2}}
 
-Similarly, you can establish SSH connection to `server2` and `server3` at `localhost:2223` and `localhost:2224` respectively.
+Similarly, you can establish SSH connection to `server3`.
 
 Now, we will configure passwordless SSH such that the ansible at the host machine can connect to the various servers without using password.
 
@@ -28,66 +32,64 @@ The RSA public/private key pair will be located at `~/.ssh`.
 
 In order for the server to verify the authenticity of the ansible host, we need to copy the public key to the three servers with the `ssh-copy-id` tool
 
-`ssh-copy-id -p 2222 alice@localhost`{{execute}}
+`ssh-copy-id -p 2222 alice@server2`{{execute}}
 
-Type the `123` as password.
+Type the `12345` as password.
 
-`ssh-copy-id -p 2223 alice@localhost`{{execute}}
+`ssh-copy-id -p 2223 alice@server3`{{execute}}
 
-Type the `123` as password.
+Type the `12345` as password.
 
-`ssh-copy-id -p 2224 alice@localhost`{{execute}}
-
-Type the `123` as password.
 
 
 Verify that you can login to the servers without using password from the ansible host.
 
-Establish a SSH connection to `server1` at `localhost:2222`. 
+Establish a SSH connection to `server2`. 
 
-`ssh -p 2222 alice@localhost`{{execute T2}}
+`ssh alice@server2`{{execute T2}}
 
 Close the connection and return to the host machine.
 
 `exit`{{execute T2}}
 
-First, we define the inventory file `inventory_file` which defines all the servers to be managed by ansible
+
+In `server1`, install ansible.
+
+`pip install ansible==2.9.6`{{execute}}
+
+
+First, we define our servers in the inventory file.
+
 
 ```
-[mysql]
-localhost ansible_port=2222 ansible_sudo_pass='123'
-localhost ansible_port=2223 ansible_sudo_pass='123'
-localhost ansible_port=2224 ansible_sudo_pass='123'
 ```
 
 Execute:
 
 ```
-cat <<EOF >inventory_file
-[mysql]
-localhost ansible_port=2222 ansible_sudo_pass='123'
-localhost ansible_port=2223 ansible_sudo_pass='123'
-localhost ansible_port=2224 ansible_sudo_pass='123'
+cat <<EOF >/etc/ansible/hosts
+[myservers]
+server1 ansible_sudo_pass='12345'
+server2 ansible_sudo_pass='12345'
 EOF
-
 ```{{execute}}
 
 Verify that the file is created:
 
-`cat inventory_file`
+`cat /etc/ansible/hosts`{{execute T2}}
+
 
 Ansible role  allows reuse of common configuration steps. There are a number of MySQL Ansible roles available in the Ansible Galaxy. We will use the role "mysql" by geerlinggu.
 
 Download the ansible role:
 
-`ansible-galaxy install geerlingguy.mysql`{{execute T2}
-
+`ansible-galaxy install geerlingguy.mysql`{{execute T2}}
 
 
 Define the  ansible playbook `deploy-mysql.yml` as follows.
 
 ```
-- hosts: mysql
+- hosts: myservers
   become: yes
   vars_files:
     - main.yml
@@ -97,14 +99,14 @@ Define the  ansible playbook `deploy-mysql.yml` as follows.
 
 ```
 cat <<EOF >deploy-mysql.yml
-- hosts: mysql
+- hosts: myservers
   become: yes
   vars_files:
-    - main.yml
+    - vars/main.yml
   roles:
     - { role: geerlingguy.mysql }
 EOF
-```{{execute}}
+```{{execute T2}}
 
 Verify that the file is created:
 
@@ -113,17 +115,19 @@ Verify that the file is created:
 
 Define `main.yaml` with the mysql root password.
 
-``{{execute}}
-echo 'mysql_root_password: "123456"'> main.yml
+`mkdir vars`{{execute T2}
+
+`echo 'mysql_root_password: "123456"'> vars/main.yml`{{execute T2}}
+
 
 Verify that the file is created:
 
-`cat main.yml`
+`cat vars/main.yml`
 
 
 Start the MySQL Server deployment:
 
-`ansible-playbook --user alice -i inventory_file deploy-mysql.yml`{{execute}}
+`ansible-playbook --user alice deploy-mysql.yml`{{execute T2}}
 
 
 
