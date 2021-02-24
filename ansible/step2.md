@@ -16,7 +16,7 @@ Similarly, you can establish SSH connection to `server2` and `server3` at `local
 
 Now, we will configure passwordless SSH such that the ansible at the host machine can connect to the various servers without using password.
 
-First, we generate a SSH key on the Ansible host for authentication:
+First, we generate a SSH key on the Ansible host for authentication. Type 'y' to overrride the key.
 
 ` ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa`{{execute}}
 
@@ -28,9 +28,16 @@ In order for the server to verify the authenticity of the ansible host, we need 
 
 `ssh-copy-id -p 2222 alice@localhost`{{execute}}
 
+Type the `123` as password.
+
 `ssh-copy-id -p 2223 alice@localhost`{{execute}}
 
+Type the `123` as password.
+
 `ssh-copy-id -p 2224 alice@localhost`{{execute}}
+
+Type the `123` as password.
+
 
 Verify that you can login to the servers without using password from the ansible host.
 
@@ -39,11 +46,46 @@ Establish a SSH connection to `server1` at `localhost:2222`.
 `ssh -p 2222 alice@localhost`{{execute T2}}
 
 Close the connection and return to the host machine.
+
 `exit`{{execute T2}}
 
-``{{execute}}
+First, we define the inventory file `inventory_file` which defines all the servers to be managed by ansible
 
-``{{execute}}
+```
+[webservers]
+web01.somedomain.com ansible_port=1234
+```
+
+Execute:
+
+```
+echo <<EOF >inventory_file
+[db-mysql]
+web01.somedomain.com ansible_port=1234
+EOF
+```{{execute}}
+
+Define the  ansible playbook `deploy-mysql.yml` as follows.
+
+```
+- hosts: db-mysql
+  become: yes
+  vars_files:
+    - vars/main.yml
+  roles:
+    - { role: geerlingguy.mysql }
+```
+
+```
+echo <<EOF >inventory_file
+- hosts: db-mysql
+  become: yes
+  vars_files:
+    - vars/main.yml
+  roles:
+    - { role: geerlingguy.mysql }
+EOF
+```{{execute}}
 
 ``{{execute}}
 
