@@ -54,19 +54,22 @@ Close the connection and return to the host machine.
 First, we define the inventory file `inventory_file` which defines all the servers to be managed by ansible
 
 ```
-[webservers]
-web01.somedomain.com ansible_port=1234
+[mysql]
+localhost ansible_port=2222 ansible_sudo_pass='123'
+localhost ansible_port=2223 ansible_sudo_pass='123'
+localhost ansible_port=2224 ansible_sudo_pass='123'
 ```
 
 Execute:
 
 ```
 cat <<EOF >inventory_file
-[db-mysql]
+[mysql]
 localhost ansible_port=2222 ansible_sudo_pass='123'
 localhost ansible_port=2223 ansible_sudo_pass='123'
 localhost ansible_port=2224 ansible_sudo_pass='123'
 EOF
+
 ```{{execute}}
 
 Verify that the file is created:
@@ -79,20 +82,22 @@ Download the ansible role:
 
 `ansible-galaxy install geerlingguy.mysql`{{execute T2}
 
+
+
 Define the  ansible playbook `deploy-mysql.yml` as follows.
 
 ```
-- hosts: db-mysql
+- hosts: mysql
   become: yes
   vars_files:
-    - vars/main.yml
+    - main.yml
   roles:
     - { role: geerlingguy.mysql }
 ```
 
 ```
 cat <<EOF >deploy-mysql.yml
-- hosts: db-mysql
+- hosts: mysql
   become: yes
   vars_files:
     - main.yml
@@ -118,7 +123,7 @@ Verify that the file is created:
 
 Start the MySQL Server deployment:
 
-`ansible-playbook -i inventory_file deploy-mysql.yml`{{execute}}
+`ansible-playbook --user alice -i inventory_file deploy-mysql.yml`{{execute}}
 
 
 
