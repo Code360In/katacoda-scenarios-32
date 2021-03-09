@@ -1,4 +1,5 @@
 First, create a docker network.
+
 `docker network create my-network`{{execute}}
 
 Start a Redis server in docker and run in background.

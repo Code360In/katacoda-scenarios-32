@@ -10,10 +10,14 @@ Wait for the application to start up. You may then access your Redis Insight Por
 
  https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com
  
+In RedisInsight
+* Accept the the EULA. 
+* Select `I already have a database` and choose `Connect to a Redis Database`.
+* Type `redis` as Host.
+* Type `6379` as Port.
+* Type `My-Redis` as Name. 
 
-Accept the the EULA. 
-Select `I already have a database` and choose `Connect to a Redis Database`.
-Type `redis` as Host, `6379` as Port and `My-Redis` as Name. Slect `Add Redis Database`.
+Select `Add Redis Database`.
 
 Select `My_Redis` database. 
 
