@@ -34,8 +34,12 @@
         "text": "step7.md"
       },
       {
-        "title": "Cleaning Up",
+        "title": "Redis Insight",
         "text": "step8.md"
+      },
+      {
+        "title": "Cleaning Up",
+        "text": "step9.md"
       }
     ],
     "intro": {

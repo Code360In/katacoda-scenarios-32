@@ -10,6 +10,7 @@ Launch a shell to `server1` (which will act as ansible host).
 `docker exec -it server1 bash`{{execute T2}}
 
 Establish a SSH connection to `server2`. 
+Type `yes` to confirm the connection.
 Input `12345` as password.
 
 `ssh  alice@server2`{{execute T2}}
@@ -34,11 +35,11 @@ In order for the server to verify the authenticity of the ansible host, we need 
 
 `ssh-copy-id  alice@server2`{{execute}}
 
-Type `yes` to to confirm the connection and `12345` as password.
+Type `12345` as password.
 
 `ssh-copy-id  alice@server3`{{execute}}
 
-Type the `12345` as password.
+Type `yes` to to confirm the connection and `12345` as password.
 
 
 
@@ -53,9 +54,9 @@ Close the connection and return to the host machine.
 `exit`{{execute T2}}
 
 
-Install ansible in `server1`.
+Install ansible in `server1` (ansible is already installed in the providede image and the following command is optional).
 
-`pip install ansible==2.9.6`{{execute}}
+`pip install ansible==2.9.6`
 
 
 First, we define our servers in the inventory file.
@@ -154,4 +155,5 @@ Start the MySQL Server deployment:
 
 
 Reference:
-- https://severalnines.com/database-blog/introduction-mysql-deployment-using-ansible-role
+
+- https://www.youtube.com/playlist?list=PLnFWJCugpwfzTlIJ-JtuATD2MBBD7_m3u
