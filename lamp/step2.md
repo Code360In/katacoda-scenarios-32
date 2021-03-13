@@ -16,7 +16,7 @@ https://[[HOST_SUBDOMAIN]]-8001-[[KATACODA_HOST]].environments.katacoda.com
 
 You may also access the databse using mysql client.
 
-`docker run -it mysql mysql -u user -ptest`{{execute}}
+`docker exec -it docker-lamp_db_1 mysql -u user -ptest`{{execute}}
 
 `show databases`{{execute}}
 
