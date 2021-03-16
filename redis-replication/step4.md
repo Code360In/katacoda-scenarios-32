@@ -14,7 +14,7 @@ sentinel down-after-milliseconds mymaster 5000
 sentinel failover-timeout mymaster 5000
 EOT
 ```{{execute T1}}
-
+ 
 Check the created config file.
 
 `cat sentinel.conf`{{execute T1}}
