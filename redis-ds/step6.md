@@ -35,9 +35,9 @@ To fetch the elements in reversed direction,
 
 To retrieve the score and rank for a certain member,
 
-`ZSCORE user2`{{execute}}
+`ZSCORE score user2`{{execute}}
 
-`ZRANK user2`{{execute}}
+`ZRANK score user2`{{execute}}
 
 
 Check the following article to learn how sorted set can be used to represent time-series data.
