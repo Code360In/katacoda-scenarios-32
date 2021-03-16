@@ -39,7 +39,7 @@ To retrieve the score and rank for a certain member,
 
 `ZRANK score user2`{{execute}}
 
-
+ 
 Check the following article to learn how sorted set can be used to represent time-series data.
 
 https://redislabs.com/redis-best-practices/time-series/sorted-set-time-series/
