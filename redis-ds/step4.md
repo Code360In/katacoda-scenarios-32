@@ -18,7 +18,7 @@ LRANGE gives a subset of the list given the starting and ending index. The value
 
 To show all tutorials
 
-`GET tutorials 0 -1`{{execute}}
+`LRANGE tutorials 0 -1`{{execute}}
 
 Use LLEN to obtain the current length of the list.
 `LLEN tutorials`{{execute}}
