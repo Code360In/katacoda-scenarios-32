@@ -43,6 +43,9 @@ Check the replication status of `redis2` and `redis3` servers to check if any of
 
 
 Suppose now the Redis server `redis1` is now up again. 
+
+`docker start redis1`{{execute T2}}
+
 Check the replication status of the three redis DB servers.
 
 `docker exec -it redis1 redis-cli info replication`{{execute T2}}
