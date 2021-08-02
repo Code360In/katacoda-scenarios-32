@@ -18,8 +18,7 @@ Check that there are TWO running nginx containers:
 
 `docker exec ws2 /bin/bash -c "echo 'This is server 2' > /usr/share/nginx/html/index.html"`{{execute}}
 
-Similarly, create the third web instance of the webserver  which outputs "This is server 3". 
-Map the container port "80" to host port "20082".
+Similarly, create the third web instance of the webserver  which outputs "This is server 3". Map the container port "80" to host port "20082".
 
 Access the three instances of webservers at
 <pre>http://localhost:20080/, http://localhost:20081/, http://localhost:20082/</pre>

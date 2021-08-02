@@ -25,7 +25,8 @@ https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/add?op
 
 Stop the python flask server with Ctrl+C.
 
-Stop and remove the app's docker container
+Stop and remove the app's docker container.
+
 `docker rm -f app`{{execute}}
 
 

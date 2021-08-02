@@ -1,4 +1,4 @@
-<h1>Running a Debian Linux Image</h1>
+# Running a Debian Linux Image
 
 The following pull command fetches the Debian official image from the Docker Hub and saves it to our system. 
 
@@ -29,7 +29,7 @@ You may append a command to execute when the container starts:
 
 `docker run debian echo "hello"`{{execute}}
 
-
+# Running docker container interactively
 
 Connect container to terminal with -it option (which runs the docker container interactively):
 `docker run -it debian`{{execute}}
@@ -74,10 +74,53 @@ Execute the following command again.
 
 ```                  
 
+Exit the docker container.
+
+`exit`{{execute}}
+
+Check the container status.
+
+`docker ps -a`
+
+Note that the two containers we executed before are now in the "Stopped" state.
+
+
+# Docker Commit
+
+Run the Debian docker image again:
+
+`docker run debian`{{execute}}
+
+Is the `figlet` program installed in the new container? Why?
 
 Exit the docker container.
 
 `exit`{{execute}}
+
+If we need something installed in our container, we should build a custom Docker image.
+
+The `docker commit` allows you to commit a container's file changes or settings into a new image. 
+
+Execute in the terminal (replace [container ID] with the ID of the container with figlet installed):
+
+`docker commit [Container ID]] debian-figlet`{{copy}}
+
+Verify that a new image nanmed `debian-figlet` is created.
+
+Execute the followng command to check if `figlet` is installed in the image.
+
+`docker run debian-figlet figlet Hello PolyU'`
+
+Sample Output:
+
+```
+ _   _      _ _         ____       _       _   _ 
+| | | | ___| | | ___   |  _ \ ___ | |_   _| | | |
+| |_| |/ _ \ | |/ _ \  | |_) / _ \| | | | | | | |
+|  _  |  __/ | | (_) | |  __/ (_) | | |_| | |_| |
+|_| |_|\___|_|_|\___/  |_|   \___/|_|\__, |\___/ 
+                                     |___/       
+```
 
 
 
