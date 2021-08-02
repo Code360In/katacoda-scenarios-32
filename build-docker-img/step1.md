@@ -26,6 +26,7 @@ Build the docker image:
 
 
 Check that the image is created:
+
 `docker image ls`{{execute}}
 
 

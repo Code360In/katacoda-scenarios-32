@@ -13,12 +13,14 @@ def add():
 Wait until the above updates are saved. 
 
 In the second terminal, execute:
+
 `docker cp app.py app:/app`{{execute T2}}
 
 
 Test the application in browser at 
 
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/add?op1=3&op2=5
+
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/add?op1=100&op2=200
 
 Stop the python flask server with Ctrl+C.

@@ -25,6 +25,12 @@ Show all containers (including stopped one):<br/>
 `docker ps -a`{{execute}}
 
 
+You may append a command to execute when the container starts:
+
+`docker run debian echo "hello"`{{execute}}
+
+
+
 Connect container to terminal with -it option (which runs the docker container interactively):
 `docker run -it debian`{{execute}}
 
@@ -34,33 +40,45 @@ In the docker container, type some commands, e.g.<br/>
 
 `curl` is a command line tool in Linux to transfer data to or from a server.
 
-Execute the following command to get the web page of PolyU :
-
-`curl https://www.lib.polyu.edu.hk`{{execute}}
 
 What's the output? Why?
 
+Try to run figlet in our container.
+
+`figlet hello`{{execute}}
+
+The program is not installed in the image.
+
 `apt` is a command-line utility for installing, updating, removing and managing deb packages on Ubuntu/Debian Linux. Execute the following command to install `curl` using `apt`.
 
-First, updates the list of available packages and their versions.
+Let's install it using `apt` utility. First, updates the list of available packages and their versions.
 
-`apt update`{{execute}}
+`apt update `{{execute}}
 
-After that, install the `curl` tool.
+After that, install the `figlet` program.
 
-`apt install curl`{{execute}}
+`apt install figlet `{{execute}}
 
 Execute the following command again.
 
-`curl https://www.lib.polyu.edu.hk`{{execute}}
+` figlet hello`{{execute}}
+
+ Sample output:
+
+ ```
+ _          _ _       
+| |__   ___| | | ___  
+| '_ \ / _ \ | |/ _ \ 
+| | | |  __/ | | (_) |
+|_| |_|\___|_|_|\___/ 
+
+```                  
+
 
 Exit the docker container.
 
 `exit`{{execute}}
 
 
-You may append a command to execute when the container starts:
-
-`docker run debian echo "hello"`{{execute}}
 
 
