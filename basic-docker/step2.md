@@ -97,15 +97,15 @@ Exit the docker container.
 
 `exit`{{execute}}
 
-If we need something installed in our container, we should build a custom Docker image.
-
-The `docker commit` allows you to commit a container's file changes or settings into a new image. 
+If we need something installed in our container, we should build a custom Docker image. We can write a DockerFile to build a Docker image. Alternatively, we can use  the `docker commit`  to commit a container's file changes or settings into a new image. 
 
 Execute in the terminal (replace [container ID] with the ID of the container with figlet installed):
 
 `docker commit [Container ID]] debian-figlet`{{copy}}
 
 Verify that a new image nanmed `debian-figlet` is created.
+
+`docker image ls`{{execute}}
 
 Execute the followng command to check if `figlet` is installed in the image.
 
@@ -121,6 +121,7 @@ Sample Output:
 |_| |_|\___|_|_|\___/  |_|   \___/|_|\__, |\___/ 
                                      |___/       
 ```
+
 
 
 
